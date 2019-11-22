@@ -1,0 +1,630 @@
+/* =============================================================================
+   HTML5 CSS Reset Minified - Eric Meyer
+   ========================================================================== */
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+nav ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+}
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+input,
+select {
+  vertical-align: middle;
+}
+li {
+  list-style: none;
+}
+
+/* =============================================================================
+   My CSS
+   ========================================================================== */
+
+/* ---- base ---- */
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: #111;
+}
+
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font: normal 75% Arial, Helvetica, sans-serif;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+  background-color: #085895;
+  background-image: url("");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+#profile {
+  font-family: "Montserrat", sans-serif;
+  padding: 5% 15%;
+  text-align: center;
+  background-color: #085895;
+}
+
+#profile h1,
+h3 {
+  color: #45b29a;
+  font-family: "Montserrat-Black", sans-serif;
+}
+
+#profile img {
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  border: 10px solid #006994;
+}
+
+#profile h1 {
+  line-height: 2;
+  font-weight: bold;
+}
+
+#profile h3,
+h5 {
+  line-height: 1.5;
+}
+
+#profile h5 {
+  margin-bottom: 3rem;
+  color: #ededed;
+  font-family: "Montserrat-Black", sans-serif;
+}
+
+#profile hr {
+  margin-bottom: 3rem;
+}
+
+#profile h3 {
+  margin-bottom: 1rem;
+}
+
+#profile p {
+  line-height: 1.6;
+  color: white;
+}
+
+#profile strong {
+  line-height: 1.6;
+  font-family: "Montserrat-Black", sans-serif;
+}
+
+.about-container {
+  text-align: left;
+}
+
+@media (max-width: 1150px) {
+  #profile {
+    padding: 3% 3%;
+  }
+}
+
+@media (max-width: 992px) {
+  #profile {
+    padding: 8% 8%;
+  }
+
+  #profile h1 {
+    font-size: 4em;
+  }
+
+  #profile h5 {
+    font-size: 2.5em;
+  }
+
+  #profile h3 {
+    font-size: 2.5em;
+  }
+
+  #profile p {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 700px) {
+  #profile {
+    padding: 4% 4%;
+  }
+  #profile h1 {
+    font-size: 2em;
+  }
+
+  #profile h5 {
+    font-size: 1.1em;
+  }
+
+  #profile h3 {
+    font-size: 1.5em;
+  }
+
+  #profile p {
+    font-size: 1em;
+  }
+
+  #profile img {
+    width: 176px;
+    height: 176px;
+  }
+}
+#experiences {
+  /* background-color: #e0ebe8; */
+  background-color: #ededed;
+  padding: 7% 15%;
+  font-family: "Montserrat", sans-serif;
+}
+
+#experiences h1 {
+  text-align: center;
+  color: #45b29a;
+  line-height: 2;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+#experiences h3 {
+  font-weight: lighter;
+  color: #45b29a;
+  line-height: 1.5;
+  margin: 2rem 0;
+  font-size: 1.5rem;
+}
+
+#experiences h4 {
+  font-weight: 700;
+  line-height: 1.5;
+  font-size: 1.1rem;
+  color: black;
+  font-family: "Montserrat-Black";
+}
+
+.experience-period,
+.col-md-8 p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.marker {
+  color: #45b29a;
+  font-size: 0.9rem;
+  padding-right: 1rem;
+}
+
+.experience {
+  padding-bottom: 2rem;
+}
+
+@media (max-width: 1000px) {
+  #experiences {
+    padding: 8% 24% 0;
+  }
+}
+
+@media (max-width: 700px) {
+  #experiences .hidden-phone {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  #experiences {
+    padding: 8% 8%;
+  }
+
+  #experiences h1 {
+    font-size: 4em;
+  }
+
+  #experiences h3 {
+    font-size: 3em;
+  }
+
+  #experiences p {
+    font-size: 1.5em;
+  }
+
+  #experiences h4 {
+    font-size: 2em;
+  }
+
+  #experiences i {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 767px) {
+  #experiences {
+    padding: 3% 3%;
+  }
+
+  #experiences h1 {
+    font-size: 2em;
+  }
+
+  #experiences h3 {
+    font-size: 1.25em;
+  }
+
+  #experiences p {
+    font-size: 0.9em;
+  }
+
+  #experiences h4 {
+    font-size: 1.25em;
+  }
+
+  #experiences i {
+    font-size: 0.6em;
+  }
+}
+
+/* Section Habilities */
+
+#habilities {
+  background-color: #fefefe;
+  padding: 5% 15% 0;
+  font-family: "Montserrat";
+}
+
+#habilities .row {
+  padding: 5%;
+  text-align: center;
+}
+
+.img-h {
+  width: 192px;
+  height: 192px;
+}
+
+#habilities h1 {
+  text-align: center;
+  color: #45b29a;
+  line-height: 2;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  font-family: "Montserrat";
+}
+
+#habilities h3 {
+  margin: 2rem 0;
+}
+
+#habilities p {
+  line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+  #habilities {
+    padding: 5% 5%;
+  }
+  .img-h {
+    margin-top: 3.5em;
+  }
+  #habilities h3 {
+    font-size: 2.6em;
+  }
+  #habilities p {
+    font-size: 1.8em;
+  }
+  #habilities h1 {
+    font-size: 5em;
+  }
+}
+
+@media (max-width: 700px) {
+  #habilities {
+    padding: 1% 2%;
+  }
+  .img-h {
+    width: 78px;
+    height: 78px;
+    margin-top: 7em;
+  }
+  #habilities h1 {
+    font-size: 2em;
+  }
+  #habilities h3 {
+    font-size: 1.25em;
+  }
+  #habilities p {
+    font-size: 0.9em;
+  }
+}
+
+/* portifolio Section */
+
+#portifolio {
+  background-color: #e0ebe8;
+  font-family: "Montserrat";
+  padding: 3% 15% 5%;
+}
+
+#portifolio h1 {
+  text-align: center;
+  color: #45b29a;
+  line-height: 2;
+  padding-bottom: 4rem;
+  font-weight: bold;
+}
+
+#portifolio a {
+  color: #45b29a;
+}
+
+.card-text {
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.download-button {
+  margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+  #portifolio {
+    padding: 8% 8%;
+  }
+
+  #portifolio h3 {
+    font-size: 2.6em;
+  }
+  #portifolio p {
+    font-size: 1.8em;
+  }
+  #portifolio h1 {
+    font-size: 4em;
+  }
+
+  #portifolio a {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 700px) {
+  #portifolio {
+    padding: 5% 5%;
+  }
+
+  #portifolio h1 {
+    font-size: 2em;
+  }
+  #portifolio h3 {
+    font-size: 1.6rem;
+  }
+  #portifolio p {
+    font-size: 0.9rem;
+  }
+
+  #portifolio a {
+    font-size: 1.2em;
+  }
+}
+
+/* roda Section */
+
+#rodape {
+  padding: 4% 8%;
+  text-align: center;
+  background-color: #fdfdfd;
+  font-family: "Montserrat";
+}
+
+#rodape .contact {
+  text-decoration: none;
+  color: white;
+}
+
+#rodape button {
+  margin-bottom: 2rem;
+}
+
+#rodape a {
+  text-decoration: none;
+  color: #45b29a;
+  font-size: 0.8rem;
+  padding-right: 10px;
+}
+
+canvas {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@media (max-width: 992px) {
+  #rodape {
+    padding: 8% 8%;
+  }
+
+  #rodape h3 {
+    font-size: 2.6rem;
+  }
+  #rodape p {
+    font-size: 1.8rem;
+  }
+  #rodape h1 {
+    font-size: 4rem;
+  }
+
+  #rodape a {
+    font-size: 1.8rem;
+  }
+  #rodape i {
+    font-size: 2.1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  #rodape {
+    padding: 5% 5%;
+  }
+
+  #rodape h1 {
+    font-size: 2em;
+  }
+  #rodape h3 {
+    font-size: 1.6em;
+  }
+  #rodape p {
+    font-size: 0.9em;
+  }
+
+  #rodape a {
+    font-size: 0.9em;
+  }
+  #rodape i {
+    font-size: 1em;
+  }
+}
