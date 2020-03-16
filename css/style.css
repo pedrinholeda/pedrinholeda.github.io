@@ -1,5 +1,5 @@
 /* =============================================================================
-   HTML5 CSS Reset Minified - Eric Meyer
+   Resetando configurações padrões do CSS
    ========================================================================== */
 
 html,
@@ -151,7 +151,7 @@ li {
 }
 
 /* =============================================================================
-   My CSS
+   CSS
    ========================================================================== */
 
 /* ---- base ---- */
@@ -549,6 +549,32 @@ h5 {
   #portifolio a {
     font-size: 1.2em;
   }
+}
+
+/*skills section*/
+#skills {
+  background-color: #fefefe;
+  padding: 5% 10% 0;
+  font-family: "Montserrat";
+}
+#skills .row {
+  padding: 5%;
+  text-align: center;
+}
+
+#skills h1 {
+  text-align: center;
+  color: #45b29a;
+  line-height: 2;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  font-family: "Montserrat";
+}
+
+#skills img {
+  padding: 10px;
+  width: 75px;
+  height: 75px;
 }
 
 /* roda Section */
