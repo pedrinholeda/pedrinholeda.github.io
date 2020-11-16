@@ -507,6 +507,14 @@ h5 {
   text-align: justify;
 }
 
+.card-img-top{
+    widows: 640px;
+    height:370px;
+    object-fit: cover;
+    object-position:center;
+    border-radius: 10px;
+}
+
 .download-button {
   margin: 0 auto;
 }
