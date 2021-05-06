@@ -585,6 +585,12 @@ h5 {
   height: 75px;
 }
 
+.skillsicons{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
 /* roda Section */
 
 #rodape {
@@ -608,6 +614,11 @@ h5 {
   color: #45b29a;
   font-size: 0.8rem;
   padding-right: 10px;
+}
+
+.logo{
+  margin-bottom: 15px;
+  height: 100px;
 }
 
 canvas {
