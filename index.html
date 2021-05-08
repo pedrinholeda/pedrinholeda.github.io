@@ -61,9 +61,9 @@
       <ul>
         <li><a href="#profile" class="nav-link scrollto active"><i class="bx bx-coffee"></i> <span>About me</span></a></li>
         <li><a href="#experiences" class="nav-link scrollto"><i class="bx bx-book-alt"></i> <span>Experiences</span></a></li>
-        <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-code-alt"></i> <span>skills</span></a></li>
-        <li><a href="#habilities" class="nav-link scrollto"><i class="bx bx-rocket"></i> <span>habilities</span></a></li>
-        <li><a href="#portifolio" class="nav-link scrollto"><i class="bx bx-code-block"></i> <span>portifolio</span></a></li>
+        <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-code-alt"></i> <span>Skills</span></a></li>
+        <li><a href="#habilities" class="nav-link scrollto"><i class="bx bx-rocket"></i> <span>Habilities</span></a></li>
+        <li><a href="#portifolio" class="nav-link scrollto"><i class="bx bx-code-block"></i> <span>Portifolio</span></a></li>
         <li><a href="#rodape" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
       </ul>
     </nav><!-- .nav-menu -->
@@ -261,7 +261,7 @@
   </section>
 
   <section id="skills">
-    <h1>Conhecimentos Basicos em </h1>
+    <h1>Skills</h1>
 
     <div class="skillsicons">
       <img src="./images/skills/icons8-html_5.png" alt="HTML 5">
@@ -464,10 +464,60 @@
   </section>
 
 <!-- ======= Contact Section ======= -->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
 <section id="contact" class="contact">
+  <script>
+    function sendContact() {
+      var valid;	
+      valid = validateContact();
+      if(valid) {
+        jQuery.ajax({
+        url: "contact_mail.php",
+        data:'userName='+$("#userName").val()+'&userEmail='+$("#userEmail").val()+'&subject='+$("#subject").val()+'&content='+$(content).val(),
+        type: "POST",
+        success:function(data){
+        $("#mail-status").html(data);
+        },
+        error:function (){}
+        });
+      }
+    }
+    function validateContact() {
+      var valid = true;	
+      $(".demoInputBox").css('background-color','');
+      $(".info").html('');
+      
+      if(!$("#userName").val()) {
+        $("#userName-info").html("(required)");
+        $("#userName").css('background-color','#FFFFDF');
+        valid = false;
+      }
+      if(!$("#userEmail").val()) {
+        $("#userEmail-info").html("(required)");
+        $("#userEmail").css('background-color','#FFFFDF');
+        valid = false;
+      }
+      if(!$("#userEmail").val().match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)) {
+        $("#userEmail-info").html("(invalid)");
+        $("#userEmail").css('background-color','#FFFFDF');
+        valid = false;
+      }
+      if(!$("#subject").val()) {
+        $("#subject-info").html("(required)");
+        $("#subject").css('background-color','#FFFFDF');
+        valid = false;
+      }
+      if(!$("#content").val()) {
+        $("#content-info").html("(required)");
+        $("#content").css('background-color','#FFFFDF');
+        valid = false;
+      }   
+      return valid;
+    }
+    </script>
+
 
     <h1>Contact</h1>
-
     <div class="row mt-1">
 
       <div class="col-lg-4">
@@ -494,7 +544,7 @@
 
       </div>
 
-      <div class="col-lg-8 mt-5 mt-lg-0">
+      <!-- <div class="col-lg-8 mt-5 mt-lg-0">
 
         <form action="forms/contact.php" method="post" role="form" class="php-email-form">
           <div class="row">
@@ -519,7 +569,7 @@
           <div class="text-center"><button type="submit">Send Message</button></div>
         </form>
 
-      </div>
+      </div> -->
 
     </div>
 </section><!-- End Contact Section -->
