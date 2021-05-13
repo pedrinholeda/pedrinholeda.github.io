@@ -824,6 +824,7 @@ h5 {
   background-color: #fff;
   padding: 5% 10% 0;
   font-family: 'Roboto', sans-serif;
+  
 }
 
 #contact h1 {
@@ -835,9 +836,11 @@ h5 {
   font-family: 'Roboto', sans-serif;
 }
 
+
 .contact .info {
   width: 100%;
   background: #fff;
+  padding-bottom: 40px;
 }
 
 .contact .info i {
