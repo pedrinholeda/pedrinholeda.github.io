@@ -1,0 +1,41 @@
+// i18n.js
+const i18n = {
+  en: {
+    aboutMe: "About me",
+    experiences: "Experiences",
+    skills: "Skills",
+    mainCompetences: "Main Competences",
+    portfolio: "Portfolio",
+    contact: "Contact",
+    toggleLanguage: "Switch Language",
+    toggleIcon: "🇺🇸",
+    infos: "Information",
+    location: "Location",
+    name: "Name",
+    languages: "Languages",
+    portuguese: "Portuguese: Native",
+    english: "English: Intermediate",
+    socialNetworks: "Social Networks",
+    aboutMeContent:
+      "Mobile developer specializing in iOS and React Native, with additional skills in frontend development. Passionate about crafting intuitive and innovative user experiences. Constantly seeking challenges to expand my skills and contribute to high-impact projects.",
+  },
+  pt: {
+    aboutMe: "Sobre mim",
+    experiences: "Experiências",
+    skills: "Habilidades",
+    mainCompetences: "Competências Principais",
+    portfolio: "Portfólio",
+    contact: "Contato",
+    toggleLanguage: "Trocar Idioma",
+    toggleIcon: "🇧🇷",
+    infos: "Informações",
+    location: "Localização",
+    name: "Nome",
+    languages: "Idiomas",
+    portuguese: "Portugues: Nativo",
+    english: "Ingles: intermediario",
+    socialNetworks: "Redes Sociais",
+    aboutMeContent:
+      "Desenvolvedor mobile especializado em iOS e React Native, com habilidades adicionais em desenvolvimento frontend. Apaixonado por criar experiências de usuário intuitivas e inovadoras. Constantemente em busca de desafios para expandir minhas habilidades e contribuir para projetos de alto impacto.",
+  },
+};
