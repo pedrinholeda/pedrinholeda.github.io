@@ -2,6 +2,7 @@
    Resetando configurações padrões do CSS
    ========================================================================== */
 
+/* Reset básico */
 html,
 body,
 div,
@@ -14,9 +15,7 @@ h3,
 h4,
 h5,
 h6,
-p{
-  font-size: 15px;
-}
+p,
 blockquote,
 pre,
 abbr,
@@ -77,65 +76,24 @@ video {
   padding: 0;
   border: 0;
   outline: 0;
-  font-size: 100%;
+  font-size: 15px;
   vertical-align: baseline;
   background: transparent;
 }
+
+/* Body e fontes */
 body {
   line-height: 1;
+  font: normal 75% Arial, Helvetica, sans-serif;
 }
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-nav ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: none;
-}
-a {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-  text-decoration: none;
-}
-mark {
-  background-color: #ff9;
-  color: #000;
-  font-style: italic;
-  font-weight: bold;
-}
-del {
-  text-decoration: line-through;
-}
-abbr[title],
-dfn[title] {
-  border-bottom: 1px dotted;
-  cursor: help;
-}
+
+/* Tabelas e listas */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+/* Linha horizontal */
 hr {
   display: block;
   height: 1px;
@@ -144,56 +102,35 @@ hr {
   margin: 1em 0;
   padding: 0;
 }
+
+/* Inputs e selects */
 input,
 select {
   vertical-align: middle;
 }
+
+/* Lista sem marcadores */
 li {
   list-style: none;
 }
 
-
-
 /* =============================================================================
-   CSS
+   CSS Personalizado
    ========================================================================== */
 
-/* ---- base ---- */
-
+/* Body e HTML */
 html,
 body {
   width: 100%;
   height: 100%;
-  background: #111;
 }
 
 html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-body {
-  font: normal 75% Arial, Helvetica, sans-serif;
-}
-
-canvas {
-  display: block;
-  vertical-align: bottom;
-}
-
-/* ---- particles.js container ---- */
-
-#particles-js {
-  width: 100%;
-  height: 100%;
-  background-color: #085895;
-  background-image: url("");
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-}
-
 /*--------------------------------------------------------------
-# Header
+   # Header
 --------------------------------------------------------------*/
 #header {
   position: fixed;
@@ -222,11 +159,9 @@ canvas {
 }
 
 /*--------------------------------------------------------------
-# Navigation Menu
+   # Navigation Menu
 --------------------------------------------------------------*/
-/**
-* Desktop Navigation 
-*/
+/* Menu de navegação */
 .nav-menu {
   padding: 0;
   display: block;
@@ -246,7 +181,7 @@ canvas {
 .nav-menu a {
   display: flex;
   align-items: center;
-  color: #45505b;
+  color: #1b2845;
   padding: 10px 18px;
   margin-bottom: 8px;
   transition: 0.3s;
@@ -256,7 +191,6 @@ canvas {
   height: 56px;
   width: 100%;
   overflow: hidden;
-  transition: 0.3s;
 }
 
 .nav-menu a i {
@@ -265,7 +199,7 @@ canvas {
 
 .nav-menu a span {
   padding: 0 5px 0 7px;
-  color: #45505b;
+  color: #1b2845;
 }
 
 @media (min-width: 992px) {
@@ -278,27 +212,33 @@ canvas {
   }
 }
 
-.nav-menu a:hover, .nav-menu .active, .nav-menu li:hover > a {
+.nav-menu a:hover,
+.nav-menu .active,
+.nav-menu li:hover > a {
   color: #fff;
-  background: #0563bb;
+  background: #335c81;
 }
 
-.nav-menu a:hover span, .nav-menu .active span, .nav-menu li:hover > a span {
+.nav-menu a:hover span,
+.nav-menu .active span,
+.nav-menu li:hover > a span {
   color: #fff;
 }
 
-.nav-menu a:hover, .nav-menu li:hover > a {
+.nav-menu a:hover,
+.nav-menu li:hover > a {
   width: 100%;
   color: #fff;
 }
 
-.nav-menu a:hover span, .nav-menu li:hover > a span {
+.nav-menu a:hover span,
+.nav-menu li:hover > a span {
   display: block;
 }
 
 /**
-* Mobile Navigation 
-*/
+ * Mobile Navigation Toggle
+ */
 .mobile-nav-toggle {
   position: fixed;
   right: 10px;
@@ -331,7 +271,6 @@ canvas {
   color: #fff;
   background-color: #0563bb;
 }
-
 
 /*--------------------------------------------------------------
 # Hero Section
@@ -371,7 +310,7 @@ canvas {
   color: #45505b;
   margin: 15px 0 0 0;
   font-size: 26px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 #hero p span {
@@ -411,25 +350,23 @@ canvas {
   }
 }
 
-
+/*--------------------------------------------------------------
+# Profile Section
+--------------------------------------------------------------*/
 #profile {
-  font-family: 'Roboto', sans-serif;
   padding: 5% 15%;
   text-align: center;
-  background-color: #085895;
 }
 
 #profile h1,
-h3 {
-  color: #45b29a;
-  font-family: 'Roboto', sans-serif;
+#profile h3 {
+  color: #65afff;
+  font-family: "Roboto", sans-serif;
 }
 
 #profile img {
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
   border-radius: 100%;
-  border: 10px solid #006994;
+  border: 10px solid #335c81;
 }
 
 #profile h1 {
@@ -438,14 +375,13 @@ h3 {
 }
 
 #profile h3,
-h5 {
+#profile h5 {
   line-height: 1.5;
 }
 
 #profile h5 {
   margin-bottom: 3rem;
   color: #ededed;
-  font-family: 'Roboto', sans-serif;
 }
 
 #profile hr {
@@ -456,18 +392,11 @@ h5 {
   margin-bottom: 1rem;
 }
 
-#profile p {
-  line-height: 1.6;
-  color: white;
-}
-
+#profile p,
 #profile strong {
   line-height: 1.6;
-  font-family: 'Roboto', sans-serif;
-}
-
-.about-container {
-  text-align: left;
+  color: white;
+  font-family: "Roboto", sans-serif;
 }
 
 @media (max-width: 1150px) {
@@ -481,14 +410,8 @@ h5 {
     padding: 8% 8%;
   }
 
-  #profile h1 {
-    font-size: 4em;
-  }
-
-  #profile h5 {
-    font-size: 2.5em;
-  }
-
+  #profile h1,
+  #profile h5,
   #profile h3 {
     font-size: 2.5em;
   }
@@ -502,6 +425,7 @@ h5 {
   #profile {
     padding: 4% 4%;
   }
+
   #profile h1 {
     font-size: 2em;
   }
@@ -523,11 +447,11 @@ h5 {
     height: 176px;
   }
 }
+
 #experiences {
-  /* background-color: #e0ebe8; */
   background-color: #ededed;
   padding: 7% 15%;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 #experiences h1 {
@@ -551,7 +475,7 @@ h5 {
   line-height: 1.5;
   font-size: 1.1rem;
   color: black;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .experience-period,
@@ -576,12 +500,6 @@ h5 {
   }
 }
 
-@media (max-width: 700px) {
-  #experiences .hidden-phone {
-    display: none;
-  }
-}
-
 @media (max-width: 992px) {
   #experiences {
     padding: 8% 8%;
@@ -603,7 +521,7 @@ h5 {
     font-size: 2em;
   }
 
-  #experiences i {
+  #experiences .marker {
     font-size: 1em;
   }
 }
@@ -629,17 +547,17 @@ h5 {
     font-size: 1.25em;
   }
 
-  #experiences i {
+  #experiences .marker {
     font-size: 0.6em;
   }
 }
 
-/* Section Habilities */
+//* Section Habilities */
 
 #habilities {
   background-color: #fefefe;
   padding: 5% 15% 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 #habilities .row {
@@ -648,7 +566,6 @@ h5 {
 }
 
 .img-h {
- 
   height: 192px;
 }
 
@@ -658,7 +575,6 @@ h5 {
   line-height: 2;
   margin-bottom: 2rem;
   font-weight: bold;
-  font-family: 'Roboto', sans-serif;
 }
 
 #habilities h3 {
@@ -674,25 +590,6 @@ h5 {
     padding: 5% 5%;
   }
   .img-h {
-    margin-top: 3.5em;
-  }
-  #habilities h3 {
-    font-size: 2.6em;
-  }
-  #habilities p {
-    font-size: 1.8em;
-  }
-  #habilities h1 {
-    font-size: 5em;
-  }
-}
-
-@media (max-width: 700px) {
-  #habilities {
-    padding: 1% 2%;
-  }
-  .img-h {
-   
     height: 78px;
     margin-top: 7em;
   }
@@ -707,15 +604,34 @@ h5 {
   }
 }
 
-/* portifolio Section */
+@media (max-width: 700px) {
+  #habilities {
+    padding: 1% 2%;
+  }
+  .img-h {
+    height: 78px;
+    margin-top: 7em;
+  }
+  #habilities h1 {
+    font-size: 2em;
+  }
+  #habilities h3 {
+    font-size: 1.25em;
+  }
+  #habilities p {
+    font-size: 0.9em;
+  }
+}
 
-#portifolio {
+/* Portfolio Section */
+
+#portfolio {
   background-color: #e0ebe8;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   padding: 3% 15% 5%;
 }
 
-#portifolio h1 {
+#portfolio h1 {
   text-align: center;
   color: #45b29a;
   line-height: 2;
@@ -723,7 +639,7 @@ h5 {
   font-weight: bold;
 }
 
-#portifolio a {
+#portfolio a {
   color: #45b29a;
 }
 
@@ -732,12 +648,11 @@ h5 {
   text-align: justify;
 }
 
-.card-img-top{
-    widows: 640px;
-    height:370px;
-    object-fit: cover;
-    object-position:center;
-    border-radius: 10px;
+.card-img-top {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .download-button {
@@ -745,51 +660,48 @@ h5 {
 }
 
 @media (max-width: 992px) {
-  #portifolio {
+  #portfolio {
     padding: 8% 8%;
   }
-
-  #portifolio h3 {
-    font-size: 2.6em;
-  }
-  #portifolio p {
-    font-size: 1.8em;
-  }
-  #portifolio h1 {
+  #portfolio h1 {
     font-size: 4em;
   }
-
-  #portifolio a {
+  #portfolio h3 {
+    font-size: 2.6em;
+  }
+  #portfolio p {
+    font-size: 1.8em;
+  }
+  #portfolio a {
     font-size: 2em;
   }
 }
 
 @media (max-width: 700px) {
-  #portifolio {
+  #portfolio {
     padding: 5% 5%;
   }
-
-  #portifolio h1 {
+  #portfolio h1 {
     font-size: 2em;
   }
-  #portifolio h3 {
+  #portfolio h3 {
     font-size: 1.6rem;
   }
-  #portifolio p {
+  #portfolio p {
     font-size: 0.9rem;
   }
-
-  #portifolio a {
+  #portfolio a {
     font-size: 1.2em;
   }
 }
+/* Skills Section */
 
-/*skills section*/
 #skills {
   background-color: #fefefe;
   padding: 5% 10% 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
+
 #skills .row {
   padding: 5%;
   text-align: center;
@@ -801,7 +713,6 @@ h5 {
   line-height: 2;
   margin-bottom: 2rem;
   font-weight: bold;
-  font-family: 'Roboto', sans-serif;
 }
 
 #skills img {
@@ -810,21 +721,18 @@ h5 {
   height: 75px;
 }
 
-.skillsicons{
+.skillsicons {
   text-align: center;
   justify-content: center;
   align-items: center;
 }
 
+/* Contact Section */
 
-/*--------------------------------------------------------------
-# Contact
---------------------------------------------------------------*/
-#contact{
+#contact {
   background-color: #fff;
   padding: 5% 10% 0;
-  font-family: 'Roboto', sans-serif;
-  
+  font-family: "Roboto", sans-serif;
 }
 
 #contact h1 {
@@ -833,9 +741,7 @@ h5 {
   line-height: 2;
   margin-bottom: 2rem;
   font-weight: bold;
-  font-family: 'Roboto', sans-serif;
 }
-
 
 .contact .info {
   width: 100%;
@@ -857,8 +763,12 @@ h5 {
   transition: all 0.3s ease-in-out;
 }
 
+.contact .info h4,
+.contact .info p {
+  padding-left: 60px;
+}
+
 .contact .info h4 {
-  padding: 0 0 0 60px;
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 5px;
@@ -866,17 +776,17 @@ h5 {
 }
 
 .contact .info p {
-  padding: 0 0 0 60px;
-  margin-bottom: 0;
   font-size: 14px;
   color: #45b29a;
 }
 
-.contact .info .email, .contact .info .phone {
+.contact .info .email,
+.contact .info .phone {
   margin-top: 40px;
 }
 
-.contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
+.contact .info .email:hover i,
+.contact .info .phone:hover i {
   background: #0563bb;
   color: #fff;
 }
@@ -890,33 +800,27 @@ h5 {
   padding-bottom: 8px;
 }
 
-.contact .php-email-form .error-message {
+.contact .php-email-form .error-message,
+.contact .php-email-form .sent-message,
+.contact .php-email-form .loading {
   display: none;
   color: #fff;
-  background: #ed3c0d;
-  text-align: left;
   padding: 15px;
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br + br {
-  margin-top: 25px;
+.contact .php-email-form .error-message {
+  background: #ed3c0d;
 }
 
 .contact .php-email-form .sent-message {
-  display: none;
-  color: #fff;
   background: #18d26e;
   text-align: center;
-  padding: 15px;
-  font-weight: 600;
 }
 
 .contact .php-email-form .loading {
-  display: none;
   background: #fff;
   text-align: center;
-  padding: 15px;
 }
 
 .contact .php-email-form .loading:before {
@@ -925,14 +829,15 @@ h5 {
   border-radius: 50%;
   width: 24px;
   height: 24px;
-  margin: 0 10px -6px 0;
+  margin-right: 10px;
   border: 3px solid #18d26e;
   border-top-color: #eee;
   -webkit-animation: animate-loading 1s linear infinite;
   animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form input, .contact .php-email-form textarea {
+.contact .php-email-form input,
+.contact .php-email-form textarea {
   border-radius: 4px;
   box-shadow: none;
   font-size: 14px;
@@ -978,14 +883,14 @@ h5 {
   }
 }
 
-/* roda Section */
+/* Footer Section */
 
 #rodape {
   padding: 4% 8%;
   text-align: center;
   background-color: #fdfdfd;
   color: #45505b;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 #rodape .contact {
@@ -998,7 +903,7 @@ h5 {
 }
 
 #rodape p {
-  font-size: 15;
+  font-size: 15px;
   font-style: italic;
   padding: 0;
   margin: 0 0 20px 0;
@@ -1011,7 +916,7 @@ h5 {
   padding-right: 10px;
 }
 
-.logo{
+.logo {
   margin-bottom: 15px;
   height: 100px;
 }
@@ -1027,7 +932,6 @@ canvas {
   #rodape {
     padding: 8% 8%;
   }
-
   #rodape h3 {
     font-size: 2.6rem;
   }
@@ -1037,7 +941,6 @@ canvas {
   #rodape h1 {
     font-size: 4rem;
   }
-
   #rodape a {
     font-size: 1.8rem;
   }
@@ -1050,7 +953,6 @@ canvas {
   #rodape {
     padding: 5% 5%;
   }
-
   #rodape h1 {
     font-size: 2em;
   }
@@ -1060,7 +962,6 @@ canvas {
   #rodape p {
     font-size: 0.9em;
   }
-
   #rodape a {
     font-size: 0.9em;
   }
