@@ -1,713 +1,674 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-<head>
-  <meta name="viewport" content="width=device-width/2, initial-scale=1" />
+    <title>Pedro Léda</title>
 
-  <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="favicon.ico" />
 
-  <meta charset="utf-8" />
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
 
-  <title>Pedro Léda</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
 
-  <!-- Links-->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
+    <!-- Custom Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Arquivos referentes ao fontawesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-  <!-- Arquivos de Script do bootstrap -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" media="screen" href="css/style.css" />
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-    crossorigin="anonymous"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-  <!-- fontes personalizadas -->
-  <!-- <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Sacramento" rel="stylesheet" /> -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet">
-    
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <body>
+    <!-- ======= Mobile nav toggle button ======= -->
+    <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
+    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
-  <link rel="stylesheet" media="screen" href="css/style.css" />
-</head>
-
-<body>
-  <!-- ======= Mobile nav toggle button ======= -->
-  <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
-  <!-- ======= Header ======= -->
-  <header id="header" class="d-flex flex-column justify-content-center">
-
-    <nav id="navbar" class="navbar nav-menu">
-      <ul>
-        <li><a href="#profile" class="nav-link scrollto active"><i class="bx bx-coffee"></i> <span>About me</span></a>
-        </li>
-        <li><a href="#experiences" class="nav-link scrollto"><i class="bx bx-book-alt"></i> <span>Experiences</span></a>
-        </li>
-        <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-code-alt"></i> <span>Skills</span></a></li>
-        <li><a href="#habilities" class="nav-link scrollto"><i class="bx bx-rocket"></i> <span>Main
-              Competences</span></a>
-        </li>
-        <li><a href="#portifolio" class="nav-link scrollto"><i class="bx bx-code-block"></i> <span>Portifolio</span></a>
-        </li>
-        <li><a href="#rodape" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-      </ul>
-    </nav><!-- .nav-menu -->
-
-  </header><!-- End Header -->
-  <section>
-    <!-- particles.js container -->
-    <div id="particles-js"></div>
-
-    <!-- scripts -->
-    <script src="particles.js"></script>
-    <script src="js/app.js"></script>
-  </section>
-  <section id="profile">
-    <img src="images/profile.jpeg" alt="Pedro Léda" width="246" height="246" aling="center" />
-    <h1><strong> Pedro Henrique Léda</strong></h1>
-    <div class="container" data-aos="zoom-in" data-aos-delay="100">
-      <p>I'm <span class="typed" data-typed-items="Frontend, Mobile, IOS"></span> Developer</p>
-    </div>
-    <hr />
-    <div class="row">
-      <div class="col-lg-4 about-container info">
-        <h3>Informations</h3>
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex flex-column justify-content-center">
+      <nav id="navbar" class="navbar nav-menu">
+        <ul>
+          <li>
+            <a href="#profile" class="nav-link scrollto active"
+              ><i class="bx bx-coffee"></i> <span data-i18n="aboutMe"></span
+            ></a>
+          </li>
+          <li>
+            <a href="#experiences" class="nav-link scrollto"
+              ><i class="bx bx-book-alt"></i
+              ><span data-i18n="experiences"></span
+            ></a>
+          </li>
+          <li>
+            <a href="#skills" class="nav-link scrollto"
+              ><i class="bx bx-code-alt"></i> <span data-i18n="skills"></span
+            ></a>
+          </li>
+          <li>
+            <a href="#habilities" class="nav-link scrollto"
+              ><i class="bx bx-rocket"></i>
+              <span data-i18n="mainCompetences"></span
+            ></a>
+          </li>
+          <li>
+            <a href="#portifolio" class="nav-link scrollto"
+              ><i class="bx bx-code-block"></i>
+              <span data-i18n="portfolio"></span
+            ></a>
+          </li>
+          <li>
+            <a href="#rodape" class="nav-link scrollto"
+              ><i class="bx bx-envelope"></i><span data-i18n="contact"></span
+            ></a>
+          </li>
+          <li>
+            <a id="lang-switch-btn" class="btn btn-primary"
+              ><i data-i18n="toggleIcon"></i>
+              <span data-i18n="toggleLanguage"></span
+            ></a>
+          </li>
+        </ul>
+      </nav>
+      <!-- .nav-menu -->
+    </header>
+    <!-- End Header -->
+    <section
+      id="profile"
+      style="
+        position: relative;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        z-index: 2;
+        overflow: hidden;
+        background-color: transparent;
+      "
+    >
+      <img
+        src="images/profile.jpg"
+        alt="Pedro Léda"
+        width="246"
+        height="246"
+        class="center"
+      />
+      <h1><strong>Pedro Henrique Léda</strong></h1>
+      <div class="container" data-aos="zoom-in" data-aos-delay="100">
         <p>
-          <strong>Name:</strong><br />
-          Pedro Henrique Léda<br />
-          <strong>Age:</strong><br />
-          21 years<br />
-          <strong>Localization:</strong><br />
-          Brasília, Distrito Federal, Brazil<br>
-          <strong>Languages:</strong><br />
-          Portuguese: Native fluent<br>
-          English: intermediate level
-        </p>
-        <br>
-      </div>
-      <div class="col-lg-4 about-container">
-        <h3>Social networks</h3>
-        <p>
-          <i class="fab fa-linkedin"></i>
-          <a href="https://www.linkedin.com/in/pedro-henrique-l-4b1658145/" style="color: rgb(255, 255, 255)">Pedro
-            Henrique Leda</a>
-        </p>
-        <br />
-        <p>
-          <i class="fab fa-instagram"></i>
-          <a href="https://www.instagram.com/pedrinholeda" style="color: rgb(255, 255, 255)">@pedrinholeda</a>
-        </p>
-        <br />
-        <p>
-          <i class="fab fa-github"></i>
-          <a href="https://github.com/pedrinholeda" style="color: rgb(255, 255, 255)">@pedrinholeda</a>
-        </p>
-        <br>
-      </div>
-      <div class="col-lg-4 about-container">
-        <h3>About Me</h3>
-        <p>
-          Inquisitive computer science student. Looking to leverage strong programming skills as a IOS Developer.
-        </p>
-      </div>
-    </div>
-  </section>
-  <section id="experiences">
-    <h1>Experience</h1>
-    <hr />
-    <h3>Academic Education</h3>
-    <div class="experiences">
-      <div class="experience row">
-        <div class="col-lg-4">
-          <h4>Universidade Estácio de Sá</h4>
-          <p class="experience-period">
-            fev 2018 - Current
-          </p>
-        </div>
-        <div class="col-lg-8">
-          <h4>
-            Bachelor in Computer Science
-          </h4>
-          <p class="hidden-phone">
-            Bachelor of computer science (BCS) courses vary by school and program, but they typically cover areas like
-            computer programming, software engineering, computer hardware, and artificial intelligence engineering.
-            Students may examine topics such as computability, information, automata, and algorithm design.
-          </p>
-          <br />
-          <i class="marker fas fa-map-marker-alt">
-            <span> s/n G Sul 9 Q CS - Taguatinga, Brasília</span>
-          </i>
-        </div>
-      </div>
-    </div>
-    <hr />
-    <h3> Employment History</h3>
-    <div class="experiences">
-      <div class="experience row">
-        <div class="col-lg-4">
-          <h4>Instituto Nacional do Seguro Social</h4>
-          <p class="experience-period">
-            Apr 2019 - Jul 2019
-          </p>
-        </div>
-        <div class="col-lg-8">
-          <h4>Technical Support Internship</h4>
-
-          <p class="hidden-phone">
-            User support activities such as machine repairs, software configurations,
-            network configurations like proxies and tokens, hardware repair, formatting and
-            installation of OS's among other activities.
-          </p>
-          <br />
-          <i class="marker fas fa-map-marker-alt ">
-            <span>10º, SAUS S/N BL O - Asa Sul, DF</span>
-          </i>
-        </div>
-      </div>
-
-      <div class="experience row">
-        <div class="col-lg-4">
-          <h4>Instituto Nacional de Estudos e Pesquisas</h4>
-          <p class="experience-period">
-            jul 2019 - Jul 2019
-          </p>
-        </div>
-        <div class="col-lg-8">
-          <h4>Software Development Intern</h4>
-
-          <p class="hidden-phone">
-            Worked on the software architects team, on small projects
-            web using NodeJs tools to deal with the
-            backend operation, Framewoks like Angular above 1x version
-            to deal with the front-end, and tools like GitLab for
-            work in teams and versioning.
-          </p>
-          <br />
-          <i class="marker fas fa-map-marker-alt ">
-            <span>
-              Setor de Indústrias Gráficas - SIG Quadra 4 Lote 327
-              Brasília</span>
-          </i>
-        </div>
-      </div>
-
-      <div class="experience row">
-        <div class="col-lg-4">
-          <h4>First Decision</h4>
-          <p class="experience-period">
-            Ago 2019 - Set 2020
-          </p>
-        </div>
-        <div class="col-lg-8">
-          <h4>Full Stack Development Intern</h4>
-          <p class="hidden-phone">
-            Web and Mobile Application Development with Programming Languages
-            Javascript, using Node.js in function of the Back end and Frameworks like React and React
-            Native to Front end and Mobile. MongoDB for Database and tools like Git for versioning
-            and agile methodologies for project management and Ux Design to test usability.
-            <center>
-              <p style="color: #44B29A;">Node.js | ReactJS | MongoDB | React Native | Swift | SAPUI5</p>
-            </center>
-          </p>
-          <br />
-          <i class="marker fas fa-map-marker-alt ">
-            <span>Edificio Parque Brasilia - SIG, Brasília - DF</span>
-          </i>
-        </div>
-      </div>
-
-      <div class="experience row">
-        <div class="col-lg-4">
-          <h4>BB Tecnologia e Serviços</h4>
-          <p class="experience-period">
-            Set 2020 - 2021
-          </p>
-        </div>
-        <div class="col-lg-8">
-          <h4>IT Analyst | Junior Developer</h4>
-          <p class="hidden-phone">
-            Creation and Stylization of web pages, maintenance of micro services and mobile application.
-            <center>
-              <p style="color: #44B29A;">AngularJS | Java | React Native | Javascript </p>
-            </center>
-          </p>
-          <br />
-          <i class="marker fas fa-map-marker-alt ">
-            <span>SEPN Comércio Residencial Norte 508 - Asa Norte, Brasília - DF</span>
-          </i>
-        </div>
-      </div>
-
-      <div class="experience row">
-        <div class="col-lg-4">
-          <h4>UseMobile</h4>
-          <p class="experience-period">
-            jun 2021 - oct 2021
-          </p>
-        </div>
-        <div class="col-lg-8">
-          <h4>Junior Ios Developer</h4>
-          <p class="hidden-phone">
-            Developing applications for IOS platform using and implementing knowledge such as Clean Architecture, Clean
-            Code and sing gitflow and MVVM architecture.
-            <center>
-              <p style="color: #44B29A;">Swift | IOS | Git | MVVM</p>
-            </center>
-          </p>
-          <br />
-          <i class="marker fas fa-map-marker-alt ">
-            <span>Av. Juscelino Kubitscheck, 909 - Bauxita, Ouro Preto - MG, 35400-000</span>
-          </i>
-        </div>
-      </div>
-
-      <div class="experience row">
-        <div class="col-lg-4">
-          <h4>Compass Uol</h4>
-          <p class="experience-period">
-            oct 2021 - Current
-          </p>
-        </div>
-        <div class="col-lg-8">
-          <h4>Junior Ios Developer</h4>
-          <p class="hidden-phone">
-            Working as junior iOS Developer.
-            Helping a mobile team, creating and adjusting features and fixing bugs.<br>
-            Main Projects:<br>
-            Ipad App for Dass ( https://dass.selecty.com.br/ ), to take inventory requests off-line.<br>
-            Cartão Carrefour ( https://www.carrefoursolucoes.com.br/ ), app to manager finances <br>
-            Iguatemi 365 ( https://www.iguatemi365.com/ ), e-commerce for Iguatemi mall
-            <center>
-              <p style="color: #44B29A;">Swift | IOS | Git </p>
-            </center>
-          </p>
-          <br />
-          <i class="marker fas fa-map-marker-alt ">
-            <span>São Paulo, Brazil</span>
-          </i>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="skills">
-    <h1>Skills</h1>
-
-    <div class="skillsicons">
-      <img src="./images/skills/icons8-html_5.png" alt="HTML 5">
-      <img src="./images/skills/icons8-css3.png" alt="CSS 3">
-      <img src="./images/skills/icons8-javascript.png" alt="JavaScript">
-      <img src="./images/skills/icons8-swift.png" alt="Swift">
-      <img src="./images/skills/icons8-xcode.png" alt="Xcode">
-      <img src="./images/skills/icons8-ios_logo.png" alt="IOS">
-      <img src="./images/skills/icons8-angularjs.png" alt="angularjs">
-      <img src="./images/skills/icons8-react.png" alt="React">
-      <img src="./images/skills/icons8-nodejs.png" alt="NodeJs">
-      <img src="./images/skills/icons8-npm.png" alt="NPM">
-      <img src="./images/skills/icons8-mongodb.png" alt="MongoDB">
-      <img src="./images/skills/icons8-mysql.png" alt="MYSQL">
-      <img src="./images/skills/icons8-git.png" alt="Git">
-
-    </div>
-  </section>
-
-  <section id="habilities">
-    <h1>Main Competences</h1>
-    <div class="row row-tr">
-      <div class="col">
-        <img class="img-h" src="images/mobile.png" alt="xcode" />
-      </div>
-      <div class="col">
-        <h3>Mobile</h3>
-        <p>
-          Desenvolvimento de aplicações Mobile nativas no IOS com swift, Android usando Kotlin e hibrido com React
-          Native.
+          I'm a
+          <span class="typed" data-typed-items="Frontend, Mobile, iOS"></span>
+          Developer
         </p>
       </div>
-    </div>
-    <div class="row row-tl">
-      <div class="col">
-        <h3>Fron-End</h3>
-        <p>
-          Desenvolvimento Frontend Usando HTML, CSS, JavaScript e Frameworks como React e Angular.
-        </p>
+      <hr />
+      <div class="row">
+        <div class="col-lg-4 about-container info">
+          <h3><span data-i18n="infos" /></h3>
+          <p>
+            <strong><span data-i18n="name" /></strong><br />
+            Pedro Henrique Léda<br />
+            <strong><span data-i18n="location" /></strong><br />
+            Brasília, Distrito Federal, Brazil<br />
+            <strong><span data-i18n="languages" /></strong><br />
+            <span data-i18n="portuguese" /><br />
+          </p>
+          <p>
+            <span data-i18n="english" />
+          </p>
+        </div>
+        <div class="col-lg-4 about-container">
+          <h3 data-i18n="socialNetworks"></h3>
+          <p>
+            <i class="fab fa-linkedin"></i>
+            <a
+              href="https://www.linkedin.com/in/pedroleda/"
+              style="color: rgb(255, 255, 255)"
+              >Pedro Léda</a
+            >
+          </p>
+          <p>
+            <i class="fab fa-instagram"></i>
+            <a
+              href="https://www.instagram.com/pedrinholeda"
+              style="color: rgb(255, 255, 255)"
+              >@pedrinholeda</a
+            >
+          </p>
+          <p>
+            <i class="fab fa-github"></i>
+            <a
+              href="https://github.com/pedrinholeda"
+              style="color: rgb(255, 255, 255)"
+              >@pedrinholeda</a
+            >
+          </p>
+        </div>
+        <div class="col-lg-4 about-container">
+          <h3 data-i18n="aboutMe"></h3>
+          <p data-i18n="aboutMeContent"></p>
+        </div>
       </div>
-      <div class="col">
-        <img class="img-h" src="images/front.png" alt="" />
-      </div>
-    </div>
-    <div class="row row-tr">
-      <div class="col">
-        <img class="img-h" src="images/back.png" alt="" />
-      </div>
-      <div class="col">
-        <h3>Back-End</h3>
-        <p>
-          Desenvolvimento Web utilizando tecnlogias back-end JavaScript.
-        </p>
-      </div>
-    </div>
-    <div class="row row-tr">
-      <div class="col">
-        <h3>Servidores Web</h3>
-        <p>
-          Configuração de servidores em ambiente Linux e desenvolvimento
-          utilizando Node.js.
-        </p>
-      </div>
-      <div class="col">
-        <img class="img-h" src="images/server.png" alt="" />
-      </div>
-    </div>
-    <div class="row row-tl">
-      <div class="col">
-        <img class="img-h" src="images/database.png" alt="" />
-      </div>
-      <div class="col">
-        <h3>Databases</h3>
-        <p>
-          Experiência com SAP HANA, Power Designer, Sequelize e
-          MongoDB.
-        </p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="portifolio">
-    <h1 class="my-4">Projetos desenvolvidos</h1>
-    <div class="row">
+    <section
+      id="particles-section"
+      style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: #274060;
+      "
+    >
+      <!-- particles.js container -->
+      <div id="particles-js"></div>
+      <!-- scripts -->
+      <script src="particles.js"></script>
+      <script src="js/app.js"></script>
+    </section>
 
-      <div class="col-lg-6 portfolio-item" style="margin-top: 20px;">
-        <div class="card h-100">
-          <a href="https://github.com/pedrinholeda/Tinder-Clone" target="_blank"><img class="card-img-top"
-              src="images/tinder.png" alt="Tinder Clone" /></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="https://github.com/pedrinholeda/Tinder-Clone" target="_blank">Tinder Clone</a>
-            </h4>
-            <p class="card-text">
-              O app se entende com dados estaticos, e algumas Funções, as funções principais se encontram nos botões
-              inferios do app (passar, super like e like), essas funções também estão atribuidas aos gestos como no App
-              tradicional (Arrastar para a direita e esquerda).
+    <section id="experiences">
+      <h1>Experience</h1>
+      <hr />
+      <h3>Academic Education</h3>
+      <div class="experiences">
+        <div class="experience row">
+          <div class="col-lg-4">
+            <h4>Universidade Estácio de Sá</h4>
+            <p class="experience-period">Feb 2018 - Current</p>
+          </div>
+          <div class="col-lg-8">
+            <h4>Bachelor in Computer Science</h4>
+            <p class="hidden-phone">
+              Bachelor of Computer Science (BCS) courses vary by school and
+              program, but they typically cover areas like computer programming,
+              software engineering, computer hardware, and artificial
+              intelligence engineering. Students may examine topics such as
+              computability, information, automata, and algorithm design.
             </p>
+            <i class="marker fas fa-map-marker-alt">
+              <span>s/n G Sul 9 Q CS - Taguatinga, Brasília</span>
+            </i>
           </div>
         </div>
       </div>
-
-
-      <div class="col-lg-6 portfolio-item" style="margin-top: 20px;">
-        <div class="card h-100">
-          <a href="https://github.com/pedrinholeda/Movie4You" target="_blank"><img class="card-img-top"
-              src="images/movie4you.png" alt="Movie4You" /></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="https://github.com/pedrinholeda/Movie4You" target="_blank">Movie4You</a>
-            </h4>
-            <p class="card-text">
-              Nesse repositório está o projeto que desenvolvi para aprender e fixar os conhecimentos em Swift.
-
-              O Movie4You é um projeto feito para dispositivos IOS, como parte do teste tecnico da empresa Mobile2you
-              com algumas adaptações.
-
-              Consiste em um app que é basicamente um catalogo de filmes que consome a api do TMDB, onde são exibidos
-              filmes por categorias como: Em breve (proximos lançamemtos) ou Mais assistidos no momento.
+      <hr />
+      <h3>Employment History</h3>
+      <div class="experiences">
+        <div class="experience row">
+          <div class="col-lg-4">
+            <h4>Instituto Nacional do Seguro Social</h4>
+            <p class="experience-period">Apr 2019 - Jul 2019</p>
+          </div>
+          <div class="col-lg-8">
+            <h4>Technical Support Internship</h4>
+            <p class="hidden-phone">
+              User support activities such as machine repairs, software
+              configurations, network configurations like proxies and tokens,
+              hardware repair, formatting, and installation of OS's among other
+              activities.
             </p>
+            <i class="marker fas fa-map-marker-alt">
+              <span>10º, SAUS S/N BL O - Asa Sul, DF</span>
+            </i>
+          </div>
+        </div>
+
+        <div class="experience row">
+          <div class="col-lg-4">
+            <h4>Instituto Nacional de Estudos e Pesquisas</h4>
+            <p class="experience-period">Jul 2019 - Jul 2019</p>
+          </div>
+          <div class="col-lg-8">
+            <h4>Software Development Intern</h4>
+            <p class="hidden-phone">
+              Worked on the software architects team on small web projects using
+              Node.js for backend operations, Angular (version 1.x) for
+              frontend, and GitLab for teamwork and versioning.
+            </p>
+            <i class="marker fas fa-map-marker-alt">
+              <span
+                >Setor de Indústrias Gráficas - SIG Quadra 4 Lote 327,
+                Brasília</span
+              >
+            </i>
+          </div>
+        </div>
+
+        <div class="experience row">
+          <div class="col-lg-4">
+            <h4>First Decision</h4>
+            <p class="experience-period">Aug 2019 - Sep 2020</p>
+          </div>
+          <div class="col-lg-8">
+            <h4>Full Stack Development Intern</h4>
+            <p>
+              Web and Mobile Application Development with JavaScript, using
+              Node.js for backend, and React and React Native for frontend and
+              mobile development. Used MongoDB for database, Git for versioning,
+              and agile methodologies for project management and UX design for
+              usability testing.
+            </p>
+            <p style="color: #44b29a">
+              Node.js | ReactJS | MongoDB | React Native | Swift | SAPUI5
+            </p>
+            <i class="marker fas fa-map-marker-alt">
+              <span>Edificio Parque Brasília - SIG, Brasília - DF</span>
+            </i>
+          </div>
+        </div>
+
+        <div class="experience row">
+          <div class="col-lg-4">
+            <h4>BB Tecnologia e Serviços</h4>
+            <p class="experience-period">Sep 2020 - 2021</p>
+          </div>
+          <div class="col-lg-8">
+            <h4>IT Analyst | Junior Developer</h4>
+            <p>
+              Creation and stylization of web pages, maintenance of
+              microservices, and mobile application development.
+            </p>
+            <p style="color: #44b29a">
+              AngularJS | Java | React Native | JavaScript
+            </p>
+            <i class="marker fas fa-map-marker-alt">
+              <span
+                >SEPN Comércio Residencial Norte 508 - Asa Norte, Brasília -
+                DF</span
+              >
+            </i>
+          </div>
+        </div>
+
+        <div class="experience row">
+          <div class="col-lg-4">
+            <h4>UseMobile</h4>
+            <p class="experience-period">Jun 2021 - Oct 2021</p>
+          </div>
+          <div class="col-lg-8">
+            <h4>Junior iOS Developer</h4>
+            <p>
+              Developing applications for the iOS platform using and
+              implementing knowledge such as Clean Architecture, Clean Code, and
+              using Gitflow and MVVM architecture.
+            </p>
+            <p style="color: #44b29a">Swift | iOS | Git | MVVM</p>
+
+            <i class="marker fas fa-map-marker-alt">
+              <span
+                >Av. Juscelino Kubitschek, 909 - Bauxita, Ouro Preto - MG,
+                35400-000</span
+              >
+            </i>
+          </div>
+        </div>
+
+        <div class="experience row">
+          <div class="col-lg-4">
+            <h4>Compass Uol</h4>
+            <p class="experience-period">Oct 2021 - Current</p>
+          </div>
+          <div class="col-lg-8">
+            <h4>Junior iOS Developer</h4>
+            <p class="hidden-phone">
+              Working as a junior iOS Developer. Assisting the mobile team,
+              creating and adjusting features, and fixing bugs.<br />
+              Main Projects:<br />
+              - iPad App for Dass (https://dass.selecty.com.br/), for offline
+              inventory requests.<br />
+              - Cartão Carrefour (https://www.carrefoursolucoes.com.br/), app to
+              manage finances.<br />
+              - Iguatemi 365 (https://www.iguatemi365.com/), e-commerce for
+              Iguatemi mall.<br />
+              <span style="color: #44b29a">Swift | iOS | Git</span>
+            </p>
+            <i class="marker fas fa-map-marker-alt">
+              <span>São Paulo, Brazil</span>
+            </i>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="col-lg-6 portfolio-item" style="margin-top: 20px;">
-        <div class="card h-100">
-          <a href="https://github.com/pedrinholeda/IMC" target="_blank"><img class="card-img-top" src="images/imc.png"
-              alt="IMC" /></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="https://github.com/pedrinholeda/IMC" target="_blank">IMC</a>
-            </h4>
-            <p class="card-text">
-              Nesse repositório está o projeto que desenvolvi como proposta de desafio interno da empresa em que sou
-              colaborador, com proposito de revisar conceitos como autolayout e closures.
-              IMC calculate é um app que pega dados de altura e peso e retorna o seu indice de massa corporal, e um
-              resultado mediante a ele.
-            </p>
-          </div>
+    <section id="skills">
+      <h1>Skills</h1>
+      <div class="skillsicons">
+        <img src="./images/skills/icons8-html_5.png" alt="HTML 5" />
+        <img src="./images/skills/icons8-css3.png" alt="CSS 3" />
+        <img src="./images/skills/icons8-javascript.png" alt="JavaScript" />
+        <img src="./images/skills/icons8-swift.png" alt="Swift" />
+        <img src="./images/skills/icons8-xcode.png" alt="Xcode" />
+        <img src="./images/skills/icons8-ios_logo.png" alt="IOS" />
+        <img src="./images/skills/icons8-angularjs.png" alt="AngularJS" />
+        <img src="./images/skills/icons8-react.png" alt="React" />
+        <img src="./images/skills/icons8-nodejs.png" alt="NodeJs" />
+        <img src="./images/skills/icons8-npm.png" alt="NPM" />
+        <img src="./images/skills/icons8-mongodb.png" alt="MongoDB" />
+        <img src="./images/skills/icons8-mysql.png" alt="MYSQL" />
+        <img src="./images/skills/icons8-git.png" alt="Git" />
+      </div>
+    </section>
+
+    <section id="habilities">
+      <h1>Main Competences</h1>
+
+      <div class="row row-tr">
+        <div class="col">
+          <img class="img-h" src="images/mobile.png" alt="Mobile" />
+        </div>
+        <div class="col">
+          <h3>Mobile</h3>
+          <p>
+            Desenvolvimento de aplicações Mobile nativas no iOS com Swift,
+            Android usando Kotlin e híbrido com React Native.
+          </p>
         </div>
       </div>
 
-      <div class="col-lg-6 portfolio-item" style="margin-top: 20px;">
-        <div class="card h-100">
-          <a href="https://github.com/pedrinholeda/dog-age" target="_blank"><img class="card-img-top"
-              src="images/dogage.png" alt="Dog age" /></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="https://github.com/pedrinholeda/dog-age" target="_blank">Dog age</a>
-            </h4>
-            <p class="card-text">
-              Nesse repositório está o projeto que desenvolvi para aprender e fixar os conhecimentos em Swift usando
-              Storyboard.
-              O aplicativo trata de uma interface bem simples cujo o proposito é mensurar a idade do seu cachorro em
-              anos humanos partindo so suposto que cada 1 ano de cachorro vale 7 anos humanos.
-            </p>
-          </div>
+      <div class="row row-tl">
+        <div class="col">
+          <h3>Front-End</h3>
+          <p>
+            Desenvolvimento Frontend utilizando HTML, CSS, JavaScript e
+            Frameworks como React e Angular.
+          </p>
+        </div>
+        <div class="col">
+          <img class="img-h" src="images/front.png" alt="Front-End" />
         </div>
       </div>
 
-      <div class="col-lg-6 portfolio-item" style="margin-top: 20px;">
-        <div class="card h-100">
-          <a href="https://github.com/pedrinholeda/frases-do-dia" target="_blank"><img class="card-img-top"
-              src="images/frasesdodia.png" alt="frasesdodia" /></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="https://github.com/pedrinholeda/frases-do-dia" target="_blank">Frases do Dia</a>
-            </h4>
-            <p class="card-text">
-              Nesse repositório está o projeto que desenvolvi para aprender e fixar os conhecimentos em Swift usando o
-              Storyboard.
-              Frases do dia é um app que gera frases na tela toda vez que o usuario aperta um botão.
-            </p>
-          </div>
+      <div class="row row-tr">
+        <div class="col">
+          <img class="img-h" src="images/back.png" alt="Back-End" />
+        </div>
+        <div class="col">
+          <h3>Back-End</h3>
+          <p>Desenvolvimento Web utilizando tecnologias back-end JavaScript.</p>
         </div>
       </div>
 
-      <div class="col-lg-6 portfolio-item" style="margin-top: 20px;">
-        <div class="card h-100">
-          <a href="https://github.com/pedrinholeda/pedrinhoflix" target="_blank"><img class="card-img-top"
-              src="images/pedrinhoflix.png" alt="Pedrinhoflix" /></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="https://github.com/pedrinholeda/pedrinhoflix" target="_blank">Pedrinhoflix</a>
-            </h4>
-            <p class="card-text">
-              Aplicação feita em React para simular uma aplicação similar a netflix, com layout parecido porém linkado
-              com videos do youtube separados por sessões.
-            </p>
-          </div>
+      <div class="row row-tr">
+        <div class="col">
+          <h3>Servidores Web</h3>
+          <p>
+            Configuração de servidores em ambiente Linux e desenvolvimento
+            utilizando Node.js.
+          </p>
+        </div>
+        <div class="col">
+          <img class="img-h" src="images/server.png" alt="Servidores Web" />
         </div>
       </div>
 
+      <div class="row row-tl">
+        <div class="col">
+          <img class="img-h" src="images/database.png" alt="Databases" />
+        </div>
+        <div class="col">
+          <h3>Databases</h3>
+          <p>Experiência com SAP HANA, Power Designer, Sequelize e MongoDB.</p>
+        </div>
+      </div>
+    </section>
 
-      <div class="col-lg-6 portfolio-item">
-        <div class="card h-100">
-          <a href="https://github.com/pedrinholeda/aircnc"><img class="card-img-top" src="images/aircnc.png"
-              alt="Aircnc" /></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="https://github.com/pedrinholeda/aircnc">
-                Aircnc
-              </a>
-            </h4>
-            <p class="card-text">
-              O projeto propõe um sistema de disponibilização e aluguel de
-              salas. O objetivo dessa aplicação e que novos talentos possa
-              conviver e trocar experiências com quem ja está a mais tempo no
-              mercado de trabalho. Assim, possibilitando que empresas encontre
-              novos talentos, no repositorio se encontra a parte Web e Mobile. Desenvolvido com React, ReactNative,
-              NodeJs e MongoDB.
-            </p>
-          </div>
+    <section id="portfolio">
+      <h1 class="my-4">Projetos desenvolvidos</h1>
+      <div class="row">
+        <!-- Projeto 1 -->
+        <div class="col-lg-6 portfolio-item">
+          <article class="card h-100">
+            <a
+              href="https://github.com/pedrinholeda/Tinder-Clone"
+              target="_blank"
+            >
+              <img
+                class="card-img-top"
+                src="images/tinder.png"
+                alt="Tinder Clone"
+              />
+            </a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a
+                  href="https://github.com/pedrinholeda/Tinder-Clone"
+                  target="_blank"
+                  >Tinder Clone</a
+                >
+              </h4>
+              <p class="card-text">
+                O app utiliza dados estáticos e funções principais como passar,
+                super like e like, implementadas tanto por botões quanto por
+                gestos.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Projeto 2 -->
+        <div class="col-lg-6 portfolio-item">
+          <article class="card h-100">
+            <a href="https://github.com/pedrinholeda/Movie4You" target="_blank">
+              <img
+                class="card-img-top"
+                src="images/movie4you.png"
+                alt="Movie4You"
+              />
+            </a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a
+                  href="https://github.com/pedrinholeda/Movie4You"
+                  target="_blank"
+                  >Movie4You</a
+                >
+              </h4>
+              <p class="card-text">
+                Projeto para dispositivos iOS que utiliza a API do TMDB para
+                exibir filmes por categorias como próximos lançamentos e mais
+                assistidos.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Incluir os demais projetos seguindo a mesma estrutura -->
+      </div>
+    </section>
+
+    <!-- ======= Contact Section ======= -->
+    <script
+      src="https://code.jquery.com/jquery-2.1.1.min.js"
+      type="text/javascript"
+    ></script>
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+
+      <div class="contact-info">
+        <div class="address">
+          <i class="bi bi-geo-alt"></i>
+          <h4>Location:</h4>
+          <p>Brasília, Distrito Federal</p>
+        </div>
+
+        <div class="email">
+          <i class="bi bi-envelope"></i>
+          <h4>Email:</h4>
+          <p>pedro.henrique.leda@gmail.com</p>
+        </div>
+
+        <div class="phone">
+          <i class="bi bi-phone"></i>
+          <h4>Call:</h4>
+          <p>+55 61 985638530</p>
         </div>
       </div>
 
-      <div class="col-lg-6 portfolio-item">
-        <div class="card h-100">
-          <a href="https://github.com/pedrinholeda/sistema-faculdade" target="_blank"><img class="card-img-top"
-              src="images/facultech.png" alt="Facultech" /></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="https://github.com/pedrinholeda/sistema-faculdade" target="_blank">Facultech</a>
-            </h4>
-            <p class="card-text">
-              O projeto propõe um sistema de uma Faculdade de forma simples com niveis de acessos, exibições e
-              permissões diferentes. Se pode gerenciar cursos, materias e notas. Construido com NodeJs, Handlebars e
-              MongoDB.
-            </p>
-          </div>
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="userName">Name</label>
+          <input type="text" id="userName" class="form-control demoInputBox" />
+          <span id="userName-info" class="info"></span>
         </div>
-      </div>
 
-      <div class="col-lg-6 portfolio-item" style="margin-top: 20px;">
-        <div class="card h-100">
-          <a href="https://github.com/pedrinholeda/Seven-Sides" target="_blank"><img class="card-img-top"
-              src="images/seven-sides.png" alt="Seven Sides" /></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="https://github.com/pedrinholeda/Seven-Sides" target="_blank">Seven Sides</a>
-            </h4>
-            <p class="card-text">
-              O 7 Sides é um game simples com o objetivo de sincronizar as bolinhas que ficam spawnando do centro da
-              tela de diferentes cores com as cores de cada barra, atraves de touchs na tela para controlar a rotação do
-              conjunto de barras.
-              O jogo foi criado com intuito de por em pratica alguns topicos de estudo sobre a linguagem swift, criado
-              com SKScenes no qual a tela inicial foi feita de modo dinâmico e a tela de game feita de modo
-              programatico.
-            </p>
-          </div>
+        <div class="form-group">
+          <label for="userEmail">Email</label>
+          <input type="text" id="userEmail" class="form-control demoInputBox" />
+          <span id="userEmail-info" class="info"></span>
         </div>
-      </div>
 
-      <div class="col-lg-6 portfolio-item" style="margin-top: 20px;">
-        <div class="card h-100">
-          <a href="https://github.com/pedrinholeda/Calculadora-React" target="_blank"><img class="card-img-top"
-              src="images/calculator-react.png" alt="Calculator developed with React" /></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="https://github.com/pedrinholeda/Calculadora-React" target="_blank">Calculator developed with
-                React</a>
-            </h4>
-            <p class="card-text">
-              My first project with React, the intention in this project is made more or less the same calculator that
-              iPhone's. This project was bootstrapped with Create React App.
-              For Testing this project access the repository in Github.
-            </p>
-          </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" class="form-control demoInputBox" />
+          <span id="subject-info" class="info"></span>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ======= Contact Section ======= -->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
-  <section id="contact" class="contact">
+        <div class="form-group">
+          <label for="content">Message</label>
+          <textarea id="content" class="form-control demoInputBox"></textarea>
+          <span id="content-info" class="info"></span>
+        </div>
+
+        <button type="button" class="btn btn-primary" onclick="sendContact()">
+          Send Message
+        </button>
+        <div id="mail-status"></div>
+      </form>
+    </section>
+    <!-- End Contact Section -->
+
+    <section id="footer">
+      <img src="images/logo.png" class="logo" alt="logo" />
+      <br />
+      <p>Follow your dreams always making good choices.</p>
+      <br />
+
+      <button class="btn btn-dark btn-md download-button">
+        <i class="far fa-envelope"></i>
+        <a href="mailto:pedro.henrique.leda@gmail.com">Entre em contato</a>
+      </button>
+
+      <p>
+        <i class="fab fa-linkedin"></i>
+        <a href="https://www.linkedin.com/in/pedro-henrique-l-4b1658145/"
+          >Pedro Henrique Leda</a
+        >
+      </p>
+
+      <p>
+        <i class="fab fa-github"></i>
+        <a href="https://github.com/pedrinholeda">@pedrinholeda</a>
+      </p>
+
+      <br />
+      <a href="https://icons8.com/icon/51974/xcode">Xcode icon by Icons8</a>
+      <a href="https://icons8.com/icon/11973/database"
+        >Database icon by Icons8</a
+      >
+      <a href="https://icons8.com/icon/13051/server">Server icon by Icons8</a>
+      <a href="https://icons8.com/icon/32313/responsive"
+        >Responsive icon by Icons8</a
+      >
+    </section>
+
+    <script src="assets/js/i18n.js"></script>
     <script>
-      function sendContact() {
-        var valid;
-        valid = validateContact();
-        if (valid) {
-          jQuery.ajax({
-            url: "contact_mail.php",
-            data: 'userName=' + $("#userName").val() + '&userEmail=' + $("#userEmail").val() + '&subject=' + $("#subject").val() + '&content=' + $(content).val(),
-            type: "POST",
-            success: function (data) {
-              $("#mail-status").html(data);
-            },
-            error: function () { }
-          });
-        }
+      // Função para alterar o idioma
+      function changeLanguage(lang) {
+        const elements = document.querySelectorAll("[data-i18n]");
+        elements.forEach((element) => {
+          const key = element.getAttribute("data-i18n");
+          element.innerHTML = i18n[lang][key];
+        });
       }
-      function validateContact() {
-        var valid = true;
-        $(".demoInputBox").css('background-color', '');
-        $(".info").html('');
 
-        if (!$("#userName").val()) {
-          $("#userName-info").html("(required)");
-          $("#userName").css('background-color', '#FFFFDF');
-          valid = false;
-        }
-        if (!$("#userEmail").val()) {
-          $("#userEmail-info").html("(required)");
-          $("#userEmail").css('background-color', '#FFFFDF');
-          valid = false;
-        }
-        if (!$("#userEmail").val().match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)) {
-          $("#userEmail-info").html("(invalid)");
-          $("#userEmail").css('background-color', '#FFFFDF');
-          valid = false;
-        }
-        if (!$("#subject").val()) {
-          $("#subject-info").html("(required)");
-          $("#subject").css('background-color', '#FFFFDF');
-          valid = false;
-        }
-        if (!$("#content").val()) {
-          $("#content-info").html("(required)");
-          $("#content").css('background-color', '#FFFFDF');
-          valid = false;
-        }
-        return valid;
-      }
+      // Alternar idioma ao clicar no botão
+      document
+        .getElementById("lang-switch-btn")
+        .addEventListener("click", () => {
+          const currentLang =
+            document.documentElement.lang === "en" ? "pt" : "en";
+          document.documentElement.lang = currentLang;
+          changeLanguage(currentLang);
+        });
+
+      // Definir idioma padrão
+      document.addEventListener("DOMContentLoaded", () => {
+        const defaultLang = "en";
+        document.documentElement.lang = defaultLang;
+        changeLanguage(defaultLang);
+      });
     </script>
 
-    <h1>Contact</h1>
-
-    <div class="info">
-      <div class="address">
-        <i class="bi bi-geo-alt"></i>
-        <h4>Location:</h4>
-        <p>Brasília, Distrito Federal</p>
-      </div>
-
-      <div class="email">
-        <i class="bi bi-envelope"></i>
-        <h4>Email:</h4>
-        <p>pedro.henrique.leda@gmail.com</p>
-      </div>
-
-      <div class="phone">
-        <i class="bi bi-phone"></i>
-        <h4>Call:</h4>
-        <p>+55 61 985638530</p>
-      </div>
-
-
-
-    </div>
-
-  </section><!-- End Contact Section -->
-
-  <section id="rodape">
-    <img src="images/logo.png" class="logo" alt="logo" />
-
-    <br />
-    <p>Follow your dreams always making good choices.</p>
-    <br />
-
-    <button class="btn btn-dark btn-md download-button" type="button">
-      <i class="far fa-envelope"></i>
-      <a class="contact" href="mailto:pedro.henrique.leda@gmail.com"></a>
-      Entre em contato</a>
-    </button>
-    <p>
-      <i class="fab fa-linkedin"></i>
-      <a href="https://www.linkedin.com/in/pedro-henrique-l-4b1658145/">Pedro Henrique Leda</a>
-    </p>
-    <br>
-    <p>
-      <i class="fab fa-github"></i>
-      <a href="https://github.com/pedrinholeda">@pedrinholeda</a>
-    </p>
-    <br />
-    <a href="https://icons8.com/icon/51974/xcode">Xcode icon by Icons8</a>
-    <a href="https://icons8.com/icon/11973/database">Database icon by Icons8</a>
-    <a href="https://icons8.com/icon/13051/server">Server icon by Icons8</a>
-    <a href="https://icons8.com/icon/32313/responsive">Responsive icon by Icons8</a>
-  </section>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
-
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/purecounter/purecounter.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/typed.js/typed.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
