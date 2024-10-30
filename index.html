@@ -225,9 +225,9 @@
     </section>
 
     <section id="experiences">
-      <h1>Experience</h1>
+      <h1 data-i18n="experience"></h1>
       <hr />
-      <h3>Academic Education</h3>
+      <h3 data-i18n="academicEducation"></h3>
       <div class="experiences">
         <div class="experience row">
           <div class="col-lg-4">
@@ -235,7 +235,7 @@
             <p class="experience-period">Feb 2018 - Current</p>
           </div>
           <div class="col-lg-8">
-            <h4>Bachelor in Computer Science</h4>
+            <h4 data-i18n="bachelorDegree"></h4>
             <p class="hidden-phone">
               Bachelor of Computer Science (BCS) courses vary by school and
               program, but they typically cover areas like computer programming,
@@ -250,7 +250,7 @@
         </div>
       </div>
       <hr />
-      <h3>Employment History</h3>
+      <h3 data-i18n="employmentHistory"></h3>
       <div class="experiences">
         <div class="experience row">
           <div class="col-lg-4">
@@ -277,7 +277,7 @@
             <p class="experience-period">Jul 2019 - Jul 2019</p>
           </div>
           <div class="col-lg-8">
-            <h4>Software Development Intern</h4>
+            <h4 data-i18n="softwareDevIntern"></h4>
             <p class="hidden-phone">
               Worked on the software architects team on small web projects using
               Node.js for backend operations, Angular (version 1.x) for
@@ -540,58 +540,90 @@
       type="text/javascript"
     ></script>
     <section id="contact" class="contact">
-      <h2>Contact</h2>
+      <h2 data-i18n="contactMe"></h2>
 
       <div class="contact-info">
         <div class="address">
           <i class="bi bi-geo-alt"></i>
-          <h4>Location:</h4>
-          <p>Brasília, Distrito Federal</p>
+          <h4 data-i18n="locationInfo"></h4>
+          <p data-i18n="location"></p>
         </div>
 
         <div class="email">
           <i class="bi bi-envelope"></i>
-          <h4>Email:</h4>
+          <h4 data-i18n="emailInfo"></h4>
           <p>pedro.henrique.leda@gmail.com</p>
         </div>
 
         <div class="phone">
           <i class="bi bi-phone"></i>
-          <h4>Call:</h4>
+          <h4 data-i18n="callInfo"></h4>
           <p>+55 61 985638530</p>
         </div>
       </div>
 
       <form id="contact-form">
         <div class="form-group">
-          <label for="userName">Name</label>
+          <label data-i18n="name"></label>
           <input type="text" id="userName" class="form-control demoInputBox" />
           <span id="userName-info" class="info"></span>
         </div>
 
         <div class="form-group">
-          <label for="userEmail">Email</label>
+          <label data-i18n="emailInfo"></label>
           <input type="text" id="userEmail" class="form-control demoInputBox" />
           <span id="userEmail-info" class="info"></span>
         </div>
 
         <div class="form-group">
-          <label for="subject">Subject</label>
+          <label data-i18n="contact"></label>
           <input type="text" id="subject" class="form-control demoInputBox" />
           <span id="subject-info" class="info"></span>
         </div>
 
         <div class="form-group">
-          <label for="content">Message</label>
+          <label data-i18n="sendMessage"></label>
           <textarea id="content" class="form-control demoInputBox"></textarea>
           <span id="content-info" class="info"></span>
         </div>
 
-        <button type="button" class="btn btn-primary" onclick="sendContact()">
+        <button
+          type="button"
+          class="btn btn-primary"
+          onclick="sendContact()"
+          data-i18n="sendMessage"
+        >
           Send Message
         </button>
         <div id="mail-status"></div>
       </form>
+    </section>
+
+    <section id="footer">
+      <img src="images/logo.png" class="logo" alt="logo" />
+      <br />
+      <p data-i18n="followYourDreams"></p>
+      <br />
+
+      <button class="btn btn-dark btn-md download-button">
+        <i class="far fa-envelope"></i>
+        <a
+          href="mailto:pedro.henrique.leda@gmail.com"
+          data-i18n="contactMe"
+        ></a>
+      </button>
+
+      <p>
+        <i class="fab fa-linkedin"></i>
+        <a href="https://www.linkedin.com/in/pedro-henrique-l-4b1658145/"
+          >Pedro Henrique Leda</a
+        >
+      </p>
+
+      <p>
+        <i class="fab fa-github"></i>
+        <a href="https://github.com/pedrinholeda">@pedrinholeda</a>
+      </p>
     </section>
     <!-- End Contact Section -->
 
