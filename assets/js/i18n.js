@@ -71,10 +71,28 @@ const i18n = {
     databaseExperience:
       "Experience with SAP HANA, Power Designer, Sequelize, and MongoDB.",
     backendTechnologies: "Backend Technologies",
-    developer: "Developer",
-    imA: "I'm a",
+    bachelorDescription:
+      "Bachelor of Computer Science (BCS) courses vary by school and program, but they typically cover areas like computer programming, software engineering, computer hardware, and artificial intelligence engineering. Students may examine topics such as computability, information, automata, and algorithm design.",
+    userSupportActivities:
+      "User support activities such as machine repairs, software configurations, network configurations like proxies and tokens, hardware repair, formatting, and installation of OS's among other activities.",
+    softwareDevExperience:
+      "Worked on the software architects team on small web projects using Node.js for backend operations, Angular (version 1.x) for frontend, and GitLab for teamwork and versioning.",
+    fullStackDevelopmentExperience:
+      "Web and Mobile Application Development with JavaScript, using Node.js for backend, and React and React Native for frontend and mobile development. Used MongoDB for database, Git for versioning, and agile methodologies for project management and UX design for usability testing.",
+    iosDevelopmentExperience:
+      "Developing applications for the iOS platform using and implementing knowledge such as Clean Architecture, Clean Code, and using Gitflow and MVVM architecture.",
   },
   pt: {
+    iosDevelopmentExperience:
+      "Desenvolvimento de aplicativos para a plataforma iOS, utilizando e implementando conhecimentos como Clean Architecture, Clean Code e Gitflow, além da arquitetura MVVM.",
+    fullStackDevelopmentExperience:
+      "Desenvolvimento de Aplicações Web e Mobile com JavaScript, utilizando Node.js para o backend, e React e React Native para o frontend e desenvolvimento mobile. Utilizou MongoDB como banco de dados, Git para versionamento, e metodologias ágeis para gestão de projetos e design de UX para testes de usabilidade.",
+    softwareDevExperience:
+      "Trabalhei na equipe de arquitetos de software em pequenos projetos web, utilizando Node.js para operações de backend, Angular (versão 1.x) para frontend, e GitLab para trabalho em equipe e versionamento.",
+    userSupportActivities:
+      "Atividades de suporte ao usuário, como reparo de máquinas, configurações de software, configurações de rede como proxies e tokens, reparo de hardware, formatação e instalação de sistemas operacionais, entre outras atividades.",
+    bachelorDescription:
+      "Os cursos de Bacharelado em Ciência da Computação (BCC) variam de acordo com a instituição e o programa, mas normalmente abrangem áreas como programação de computadores, engenharia de software, hardware de computadores e engenharia de inteligência artificial. Os estudantes podem estudar tópicos como computabilidade, informação, autômatos e design de algoritmos.",
     aboutMe: "Sobre mim",
     experiences: "Experiências",
     skills: "Habilidades",
