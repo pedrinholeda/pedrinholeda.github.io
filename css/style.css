@@ -216,7 +216,7 @@ html {
 .nav-menu .active,
 .nav-menu li:hover > a {
   color: #fff;
-  background: #335c81;
+  background: #484848;
 }
 
 .nav-menu a:hover span,
@@ -360,13 +360,13 @@ html {
 
 #profile h1,
 #profile h3 {
-  color: #65afff;
+  color: #e5e5e5;
   font-family: "Roboto", sans-serif;
 }
 
 #profile img {
   border-radius: 100%;
-  border: 10px solid #335c81;
+  border: 10px solid #484848;
 }
 
 #profile h1 {
