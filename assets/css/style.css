@@ -560,6 +560,7 @@ a {
 .imagem-sobre img {
   width: 90%;
   z-index: 99;
+  border-radius: 100%;
 }
 
 /*************** SKILLS *****/
