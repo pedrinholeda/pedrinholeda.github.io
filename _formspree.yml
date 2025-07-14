@@ -1,0 +1,53 @@
+# Configuração do Formspree
+# Este arquivo configura o formulário de contato para funcionar com o Formspree
+
+# Configurações do formulário
+form:
+  # ID do formulário no Formspree (você precisa criar em formspree.io)
+  id: "xpzgwqzg"
+
+  # Configurações de notificação
+  notifications:
+    # Email de notificação
+    email:
+      to: "seu-email@exemplo.com" # Substitua pelo seu email
+      subject: "Nova mensagem do portfólio - Pedro Leda"
+
+    # Slack (opcional)
+    # slack:
+    #   webhook: "https://hooks.slack.com/services/YOUR/WEBHOOK/URL"
+    #   channel: "#contato"
+
+  # Configurações de spam
+  spam:
+    # Honeypot field
+    honeypot: "website"
+
+    # Rate limiting
+    rate_limit:
+      window: 3600 # 1 hora
+      max_requests: 5
+
+  # Configurações de redirecionamento
+  redirect:
+    # URL de sucesso
+    success: "https://pedrinholeda.github.io/#contato"
+
+    # URL de erro
+    error: "https://pedrinholeda.github.io/#contato"
+
+  # Configurações de validação
+  validation:
+    # Campos obrigatórios
+    required:
+      - nome
+      - email
+      - mensagem
+
+    # Validação de email
+    email:
+      - email
+
+    # Validação de telefone (formato brasileiro)
+    phone:
+      - telefone
