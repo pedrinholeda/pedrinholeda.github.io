@@ -198,8 +198,303 @@
   }
 
   .credits-column {
-    width: auto;
-    text-align: right;
-    margin-top: 0;
+    text-align: center;
+  }
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem;
+  }
+
+  .logo img {
+    width: 80px;
+  }
+
+  .titulo-inicio h1 {
+    font-size: 2.5rem;
+  }
+
+  .destaque-inicio {
+    font-size: 2rem;
+  }
+
+  .paragrafo-inicio p {
+    font-size: 1.2rem;
+  }
+
+  .cta {
+    width: 180px;
+    padding: 0.8rem 0;
+  }
+
+  .cta span {
+    font-size: 1rem;
+  }
+
+  /* Skills */
+  .text-headline-skills h2 {
+    font-size: 2.5rem;
+  }
+
+  .text-headline-skills p {
+    font-size: 1.2rem;
+  }
+
+  .box-skills {
+    padding: 1.5rem;
+  }
+
+  .box-skills h3 {
+    font-size: 1.3rem;
+  }
+
+  .box-skills p {
+    font-size: 1rem;
+  }
+
+  /* Serviços */
+  .titulo-servicos h1 {
+    font-size: 3rem;
+  }
+
+  .descricao-servicos p {
+    font-size: 1.2rem;
+  }
+
+  .card-servicos,
+  .card-servicos-left {
+    padding: 1.5rem;
+  }
+
+  .card-titulo h1 {
+    font-size: 1.5rem;
+  }
+
+  /* Portfolio */
+  .headline-portfolio .titulo {
+    font-size: 2.5rem;
+  }
+
+  .headline-portfolio .descricao {
+    font-size: 1.2rem;
+  }
+
+  .conteudo-textos-case h1 {
+    font-size: 1.8rem;
+  }
+
+  .conteudo-textos-case p {
+    font-size: 1rem;
+  }
+
+  .conteudo-textos-case span {
+    font-size: 0.9rem;
+  }
+
+  /* Contato */
+  .titulo-contato h1 {
+    font-size: 3rem;
+  }
+
+  .formulario-contato h2 {
+    font-size: 1.8rem;
+  }
+
+  .formulario-contato p {
+    font-size: 1.2rem;
+  }
+
+  /* Footer */
+  .container-footer {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .footer-column {
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+    padding: 0 2px;
+  }
+  .logo-column img {
+    width: 60px;
+  }
+  .footer-nav a {
+    font-size: 1rem;
+  }
+  .social-links a {
+    font-size: 1rem;
+  }
+  .social-links {
+    gap: 0.2rem;
+  }
+  .credits-column {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Responsividade para dispositivos muito pequenos */
+@media (max-width: 480px) {
+  .header {
+    padding: 0.8rem;
+  }
+
+  .logo img {
+    width: 70px;
+  }
+
+  .titulo-inicio h1 {
+    font-size: 2rem;
+  }
+
+  .destaque-inicio {
+    font-size: 1.5rem;
+  }
+
+  .paragrafo-inicio p {
+    font-size: 1rem;
+  }
+
+  .cta {
+    width: 160px;
+    padding: 0.7rem 0;
+  }
+
+  .cta span {
+    font-size: 0.9rem;
+  }
+
+  /* Skills */
+  .text-headline-skills h2 {
+    font-size: 2rem;
+  }
+
+  .text-headline-skills p {
+    font-size: 1rem;
+  }
+
+  .box-skills {
+    padding: 1rem;
+  }
+
+  .box-skills h3 {
+    font-size: 1.2rem;
+  }
+
+  .box-skills p {
+    font-size: 0.9rem;
+  }
+
+  /* Serviços */
+  .titulo-servicos h1 {
+    font-size: 2.5rem;
+  }
+
+  .descricao-servicos p {
+    font-size: 1rem;
+  }
+
+  .card-servicos,
+  .card-servicos-left {
+    padding: 1rem;
+  }
+
+  .card-titulo h1 {
+    font-size: 1.3rem;
+  }
+
+  /* Portfolio */
+  .headline-portfolio .titulo {
+    font-size: 2rem;
+  }
+
+  .headline-portfolio .descricao {
+    font-size: 1rem;
+  }
+
+  .conteudo-textos-case h1 {
+    font-size: 1.5rem;
+  }
+
+  .conteudo-textos-case p {
+    font-size: 0.9rem;
+  }
+
+  .conteudo-textos-case span {
+    font-size: 0.8rem;
+  }
+
+  /* Contato */
+  .titulo-contato h1 {
+    font-size: 2.5rem;
+  }
+
+  .formulario-contato h2 {
+    font-size: 1.5rem;
+  }
+
+  .formulario-contato p {
+    font-size: 1rem;
+  }
+
+  .form input,
+  .form textarea {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 180px;
+    padding: 0.8rem 0;
+  }
+
+  /* Melhorias de acessibilidade para touch */
+  .fixed-button {
+    width: 60px;
+    height: 60px;
+  }
+
+  .fixed-button i {
+    font-size: 28px;
+  }
+
+  /* Melhor espaçamento para touch */
+  .nav-menu a {
+    padding: 1rem 0;
+  }
+
+  .redes-sociais a {
+    padding: 1rem 0;
+  }
+}
+
+/* Melhorias de acessibilidade para navegação por teclado */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Suporte para modo escuro do sistema */
+@media (prefers-color-scheme: dark) {
+  /* O site já usa tema escuro, então não há mudanças necessárias */
+}
+
+/* Melhorias para telas de alta resolução */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .logo img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
   }
 }
