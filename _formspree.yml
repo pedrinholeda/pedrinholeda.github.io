@@ -4,13 +4,13 @@
 # Configurações do formulário
 form:
   # ID do formulário no Formspree (você precisa criar em formspree.io)
-  id: "xpzgwqzg"
+  id: "mwpqedyk"
 
   # Configurações de notificação
   notifications:
     # Email de notificação
     email:
-      to: "seu-email@exemplo.com" # Substitua pelo seu email
+      to: "pedro.henrique.leda@gmail.com" # Substitua pelo seu email
       subject: "Nova mensagem do portfólio - Pedro Leda"
 
     # Slack (opcional)
