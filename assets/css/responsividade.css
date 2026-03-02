@@ -1,3 +1,15 @@
+/**
+ * Responsividade - Breakpoints utilizados:
+ * - 1024px: Tablet (iPad e similares)
+ * - 768px: Mobile
+ * - 480px: Mobile pequeno
+ * - 360px: Telas muito estreitas (iPhone SE, Galaxy Fold)
+ *
+ * Proteções adicionais no style.css:
+ * - min-width: 320px em html, body e container
+ * - safe-area-inset para dispositivos com notch
+ * - overflow-wrap para quebra de palavras longas
+ */
 /* Responsividade para iPad (tablet) */
 @media (max-width: 1024px) {
   .container {
@@ -37,17 +49,6 @@
   .imagem-sobre {
     justify-content: center;
     position: unset;
-  }
-
-  .complemento-sobre {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .complemento-sobre img {
-    position: unset;
-    width: 100%;
   }
 
   /************************** SERVIÇOS ***/
@@ -120,7 +121,6 @@
     flex-direction: column-reverse;
     gap: 1rem;
     height: auto;
-    height: auto;
     justify-content: center;
   }
 
@@ -180,17 +180,6 @@
   .conteudo-contato {
     padding-top: 2rem;
     flex-direction: column-reverse;
-  }
-
-  .logo-contato {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .logo-contato img {
-    width: 100%;
-    max-height: 500px;
-    object-fit: cover;
   }
 
   .formulario-contato {
@@ -472,6 +461,49 @@
 
   .redes-sociais a {
     padding: 1rem 0;
+  }
+}
+
+/* Telas muito estreitas (iPhone SE, Galaxy Fold, etc) */
+@media (max-width: 360px) {
+  .header {
+    padding: 0.6rem;
+  }
+
+  .logo img {
+    width: 60px;
+  }
+
+  .titulo-inicio h1 {
+    font-size: 1.75rem;
+  }
+
+  .destaque-inicio {
+    font-size: 1.25rem;
+  }
+
+  .paragrafo-inicio p {
+    font-size: 0.9rem;
+  }
+
+  .cta {
+    width: 140px;
+    padding: 0.6rem 0;
+  }
+
+  .headline-portfolio .titulo,
+  .titulo-servicos h1,
+  .titulo-contato h1 {
+    font-size: 1.75rem;
+  }
+
+  .conteudo-textos-case h1 {
+    font-size: 1.25rem;
+  }
+
+  .fixed-button {
+    width: 44px;
+    height: 44px;
   }
 }
 

@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const container = document.getElementById("particles-js");
+  if (!container || typeof particlesJS !== "function") return;
+
   particlesJS("particles-js", {
     particles: {
       number: { value: 80, density: { enable: true, value_area: 800 } },

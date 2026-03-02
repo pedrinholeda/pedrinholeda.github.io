@@ -47,7 +47,9 @@ document.addEventListener("DOMContentLoaded", function () {
       experiences: "Experiências",
       contact: "Contato",
 
-      // Textos da seção início
+      // Textos da seção início (Hero) - "Sou desenvolvedor [Frontend/Mobile/iOS]"
+      hero_prefix: "Sou desenvolvedor ",
+      hero_suffix: "",
       intro_text:
         "Trabalho criando aplicativos móveis usando tecnologias nativas e híbridas.",
       cta_button: "Fale Comigo",
@@ -55,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Textos da seção sobre
       about_title: "Olá, me chamo Pedro :)",
       about_description:
-        "Sou desenvolvedor mobile se especializando em desenvolvimento hibrido e nativo, com habilidades adicionais em desenvolvimento frontend. Apaixonado por criar experiências de usuário intuitivas e inovadoras. Constantemente em busca de desafios para expandir minhas habilidades e contribuir para projetos de alto impacto.",
+        "Desenvolvedor mobile especializado em React Native, Flutter e iOS nativo. Apaixonado por criar experiências intuitivas e colaborar em projetos de alto impacto.",
 
       // Textos da seção skills
       skills_subtitle: "Competências Principais",
@@ -89,7 +91,8 @@ document.addEventListener("DOMContentLoaded", function () {
       // Textos da seção contato
       contact_title: "Entre em contato",
       contact_description:
-        "Tem alguma dúvida, sugestão ou deseja falar? Estamos aqui para ajudar! Entre em contato através do formulário abaixo. Responderei o mais rápido possível!",
+        "Tem alguma dúvida ou deseja conversar? Entre em contato pelo formulário ou pelas redes abaixo. Respondo o mais rápido possível!",
+      contact_connect: "Ou conecte-se diretamente:",
 
       // Formulário
       name_placeholder: "Digite seu nome completo",
@@ -111,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Free your mind section
       made_with: "FEITO COM",
       coffee: "CAFÉ",
-      and_code: "E CODIGO",
+      and_code: "E CÓDIGO",
 
       // Aria labels
       back_to_top: "Voltar ao topo",
@@ -129,6 +132,20 @@ document.addEventListener("DOMContentLoaded", function () {
       visit_github: "Visitar GitHub",
       visit_linkedin: "Visitar LinkedIn",
       footer_menu: "Menu do rodapé",
+
+      // Validação do formulário
+      validation_name_required: "Nome é obrigatório",
+      validation_name_min: "Nome deve ter pelo menos 2 caracteres",
+      validation_email_required: "Email é obrigatório",
+      validation_email_invalid: "Email inválido",
+      validation_phone_invalid: "Telefone inválido (formato: (11) 99999-9999)",
+      validation_message_required: "Mensagem é obrigatória",
+      validation_form_errors: "Por favor, corrija os erros no formulário.",
+      validation_success: "Mensagem enviada com sucesso! Entrarei em contato em breve.",
+      validation_error: "Erro ao enviar mensagem. Tente novamente ou entre em contato diretamente.",
+
+      // Typed (efeito de digitação)
+      typed_strings: ["Frontend", "Mobile", "iOS"],
     },
     en: {
       // Menu
@@ -144,7 +161,9 @@ document.addEventListener("DOMContentLoaded", function () {
       experiences: "Experiences",
       contact: "Contact",
 
-      // Textos da seção início
+      // Textos da seção início (Hero)
+      hero_prefix: "I'm a ",
+      hero_suffix: " developer",
       intro_text:
         "I work creating mobile applications using native and hybrid technologies.",
       cta_button: "Get in Touch",
@@ -152,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Textos da seção sobre
       about_title: "Hello, I'm Pedro :)",
       about_description:
-        "I'm a mobile developer specializing in hybrid and native development, with additional skills in frontend development. Passionate about creating intuitive and innovative user experiences. Constantly seeking challenges to expand my skills and contribute to high-impact projects.",
+        "Mobile developer specialized in React Native, Flutter and native iOS. Passionate about creating intuitive experiences and collaborating on high-impact projects.",
 
       // Textos da seção skills
       skills_subtitle: "Main Competencies",
@@ -186,7 +205,8 @@ document.addEventListener("DOMContentLoaded", function () {
       // Textos da seção contato
       contact_title: "Get in touch",
       contact_description:
-        "Have any questions, suggestions or want to talk? We're here to help! Get in touch through the form below. I'll respond as quickly as possible!",
+        "Have questions or want to chat? Get in touch via the form or through the links below. I'll respond as soon as possible!",
+      contact_connect: "Or connect directly:",
 
       // Formulário
       name_placeholder: "Enter your full name",
@@ -226,6 +246,20 @@ document.addEventListener("DOMContentLoaded", function () {
       visit_github: "Visit GitHub",
       visit_linkedin: "Visit LinkedIn",
       footer_menu: "Footer menu",
+
+      // Form validation
+      validation_name_required: "Name is required",
+      validation_name_min: "Name must be at least 2 characters",
+      validation_email_required: "Email is required",
+      validation_email_invalid: "Invalid email",
+      validation_phone_invalid: "Invalid phone (format: (11) 99999-9999)",
+      validation_message_required: "Message is required",
+      validation_form_errors: "Please fix the errors in the form.",
+      validation_success: "Message sent successfully! I'll get in touch soon.",
+      validation_error: "Error sending message. Try again or contact me directly.",
+
+      // Typed (typing effect)
+      typed_strings: ["Frontend", "Mobile", "iOS"],
     },
   };
 
@@ -234,10 +268,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function updateTexts() {
     try {
-      // Atualiza textos com data-i18n
+      // Atualiza textos com data-i18n (usa "in" para aceitar strings vazias)
       document.querySelectorAll("[data-i18n]").forEach((el) => {
         const key = el.getAttribute("data-i18n");
-        if (translations[currentLang][key]) {
+        if (key && key in translations[currentLang]) {
           el.innerText = translations[currentLang][key];
         }
       });
@@ -245,7 +279,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Atualiza placeholders
       document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
         const key = el.getAttribute("data-i18n-placeholder");
-        if (translations[currentLang][key]) {
+        if (key && key in translations[currentLang]) {
           el.setAttribute("placeholder", translations[currentLang][key]);
         }
       });
@@ -253,7 +287,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Atualiza valores
       document.querySelectorAll("[data-i18n-value]").forEach((el) => {
         const key = el.getAttribute("data-i18n-value");
-        if (translations[currentLang][key]) {
+        if (key && key in translations[currentLang]) {
           el.value = translations[currentLang][key];
         }
       });
@@ -261,7 +295,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Atualiza aria-labels
       document.querySelectorAll("[data-i18n-aria-label]").forEach((el) => {
         const key = el.getAttribute("data-i18n-aria-label");
-        if (translations[currentLang][key]) {
+        if (key && key in translations[currentLang]) {
           el.setAttribute("aria-label", translations[currentLang][key]);
         }
       });
@@ -279,9 +313,19 @@ document.addEventListener("DOMContentLoaded", function () {
     langToggle.onclick = () => {
       currentLang = currentLang === "pt" ? "en" : "pt";
       updateTexts();
+      window.dispatchEvent(new CustomEvent("langChange", { detail: { lang: currentLang } }));
     };
     updateTexts();
   }
+
+  // Expõe i18n para form.js e typed.js
+  window.getI18n = function () {
+    return {
+      t: (key) => translations[currentLang]?.[key] ?? translations.pt?.[key] ?? key,
+      lang: currentLang,
+      typedStrings: translations[currentLang]?.typed_strings ?? translations.pt?.typed_strings,
+    };
+  };
 
   // Melhorias de acessibilidade - navegação por teclado
   document.addEventListener("keydown", function (e) {

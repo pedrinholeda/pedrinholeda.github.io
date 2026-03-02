@@ -2,6 +2,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contactForm");
   const submitBtn = document.getElementById("submitBtn");
+
+  if (!form || !submitBtn) return;
+
   const btnText = submitBtn.querySelector(".btn-text");
   const btnLoading = submitBtn.querySelector(".btn-loading");
 
@@ -66,33 +69,38 @@ document.addEventListener("DOMContentLoaded", function () {
     errorInputs.forEach((input) => input.classList.remove("error"));
   }
 
+  // Helper para pegar texto traduzido
+  const t = (key) => (window.getI18n ? window.getI18n().t(key) : key);
+
   // Função para validar campo
   function validateField(field, value) {
     const errorElement = document.getElementById(`${field.id}-error`);
 
     switch (field.type) {
       case "text":
-        if (!value.trim()) {
-          field.classList.add("error");
-          errorElement.textContent = "Nome é obrigatório";
-          return false;
-        }
-        if (value.trim().length < 2) {
-          field.classList.add("error");
-          errorElement.textContent = "Nome deve ter pelo menos 2 caracteres";
-          return false;
+        if (field.name === "nome") {
+          if (!value.trim()) {
+            field.classList.add("error");
+            errorElement.textContent = t("validation_name_required");
+            return false;
+          }
+          if (value.trim().length < 2) {
+            field.classList.add("error");
+            errorElement.textContent = t("validation_name_min");
+            return false;
+          }
         }
         break;
 
       case "email":
         if (!value.trim()) {
           field.classList.add("error");
-          errorElement.textContent = "Email é obrigatório";
+          errorElement.textContent = t("validation_email_required");
           return false;
         }
         if (!validateEmail(value)) {
           field.classList.add("error");
-          errorElement.textContent = "Email inválido";
+          errorElement.textContent = t("validation_email_invalid");
           return false;
         }
         break;
@@ -100,14 +108,21 @@ document.addEventListener("DOMContentLoaded", function () {
       case "tel":
         if (value.trim() && !validatePhone(value)) {
           field.classList.add("error");
-          errorElement.textContent =
-            "Telefone inválido (formato: (11) 99999-9999)";
+          errorElement.textContent = t("validation_phone_invalid");
           return false;
         }
         break;
     }
 
-    // Se chegou até aqui, campo é válido
+    // Validação do textarea (mensagem)
+    if (field.tagName === "TEXTAREA" && field.hasAttribute("required")) {
+      if (!value.trim()) {
+        field.classList.add("error");
+        errorElement.textContent = t("validation_message_required");
+        return false;
+      }
+    }
+
     field.classList.remove("error");
     errorElement.textContent = "";
     return true;
@@ -155,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     if (!isValid) {
-      showFeedback("Por favor, corrija os erros no formulário.", "error");
+      showFeedback(t("validation_form_errors"), "error");
       return;
     }
 
@@ -178,35 +193,18 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       if (response.ok) {
-        showFeedback(
-          "Mensagem enviada com sucesso! Entrarei em contato em breve.",
-          "success"
-        );
+        showFeedback(t("validation_success"), "success");
         form.reset();
       } else {
         throw new Error("Erro ao enviar mensagem");
       }
     } catch (error) {
       console.error("Erro:", error);
-      showFeedback(
-        "Erro ao enviar mensagem. Tente novamente ou entre em contato diretamente.",
-        "error"
-      );
+      showFeedback(t("validation_error"), "error");
     } finally {
       hideLoading();
     }
   });
-
-  // Função para scroll suave para seções
-  window.scrollToSection = function (sectionId) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  };
 
   // Melhoria de acessibilidade para navegação por teclado
   const focusableElements = form.querySelectorAll("input, textarea, button");
