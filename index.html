@@ -119,6 +119,14 @@
             loading="lazy"
           />
         </div>
+        <nav class="nav-desktop" role="navigation" aria-label="Menu principal">
+          <a href="#inicio" data-i18n="menu_home" data-section="inicio">Início</a>
+          <a href="#sobre" data-i18n="menu_about" data-section="sobre">Sobre</a>
+          <a href="#skills" data-i18n="menu_skills" data-section="skills">Skills</a>
+          <a href="#servicos" data-i18n="menu_services" data-section="servicos">Serviços</a>
+          <a href="#portfolio" data-i18n="menu_portfolio" data-section="portfolio">Portfolio</a>
+          <a href="#contato" data-i18n="menu_contact" data-section="contato">Contato</a>
+        </nav>
         <div class="menu">
           <button
             id="lang-toggle"
@@ -150,6 +158,8 @@
               href="#inicio"
               data-i18n-aria-label="go_to_home"
               aria-label="Ir para seção início"
+              data-i18n="menu_home"
+              data-section="inicio"
               >INÍCIO</a
             >
             <a
@@ -157,13 +167,23 @@
               data-i18n-aria-label="go_to_about"
               aria-label="Ir para seção sobre"
               data-i18n="menu_about"
+              data-section="sobre"
               >SOBRE</a
+            >
+            <a
+              href="#skills"
+              data-i18n-aria-label="go_to_skills"
+              aria-label="Ir para seção skills"
+              data-i18n="menu_skills"
+              data-section="skills"
+              >SKILLS</a
             >
             <a
               href="#servicos"
               data-i18n-aria-label="go_to_services"
               aria-label="Ir para seção serviços"
               data-i18n="menu_services"
+              data-section="servicos"
               >SERVIÇOS</a
             >
             <a
@@ -171,6 +191,7 @@
               data-i18n-aria-label="go_to_portfolio"
               aria-label="Ir para seção portfolio"
               data-i18n="menu_portfolio"
+              data-section="portfolio"
               >PORTFOLIO</a
             >
             <a
@@ -178,6 +199,7 @@
               data-i18n-aria-label="go_to_contact"
               aria-label="Ir para seção contato"
               data-i18n="menu_contact"
+              data-section="contato"
               >CONTATO</a
             >
           </nav>
@@ -465,7 +487,8 @@
               data-aos-duration="1000"
             >
               <div class="card-titulo">
-                <h1 data-i18n="frontend_service">Front-End</h1>
+                <h2 data-i18n="frontend_service">Front-End</h2>
+                <p data-i18n="frontend_service_desc">Interfaces web responsivas e performáticas</p>
               </div>
               <div class="card-icon">
                 <i class="bi bi-code-slash" aria-hidden="true"></i>
@@ -480,7 +503,8 @@
               data-aos-duration="1000"
             >
               <div class="card-titulo">
-                <h1 data-i18n="ios_native_service">iOS Nativo</h1>
+                <h2 data-i18n="ios_native_service">iOS Nativo</h2>
+                <p data-i18n="ios_native_service_desc">Apps nativos com Swift e SwiftUI</p>
               </div>
               <div class="card-icon">
                 <i class="bi bi-apple" aria-hidden="true"></i>
@@ -495,7 +519,8 @@
               data-aos-duration="1000"
             >
               <div class="card-titulo">
-                <h1 data-i18n="hybrid_service">Híbrido</h1>
+                <h2 data-i18n="hybrid_service">Híbrido</h2>
+                <p data-i18n="hybrid_service_desc">Apps multiplataforma com React Native e Flutter</p>
               </div>
               <div class="card-icon">
                 <i class="bi bi-phone" aria-hidden="true"></i>
@@ -510,7 +535,8 @@
               data-aos-duration="1000"
             >
               <div class="card-titulo">
-                <h1 data-i18n="uiux_service">UI/UX</h1>
+                <h2 data-i18n="uiux_service">UI/UX</h2>
+                <p data-i18n="uiux_service_desc">Design centrado no usuário e prototipação</p>
               </div>
               <div class="card-icon">
                 <i class="bi bi-brush" aria-hidden="true"></i>
@@ -525,7 +551,8 @@
               data-aos-duration="1000"
             >
               <div class="card-titulo">
-                <h1 data-i18n="versioning_service">Versionamento</h1>
+                <h2 data-i18n="versioning_service">Versionamento</h2>
+                <p data-i18n="versioning_service_desc">Git Flow e integração contínua</p>
               </div>
               <div class="card-icon">
                 <i class="bi bi-git" aria-hidden="true"></i>
@@ -540,7 +567,8 @@
               data-aos-duration="1000"
             >
               <div class="card-titulo">
-                <h1 data-i18n="performance_service">Performance</h1>
+                <h2 data-i18n="performance_service">Performance</h2>
+                <p data-i18n="performance_service_desc">Otimização de apps e experiência fluida</p>
               </div>
               <div class="card-icon">
                 <i class="bi bi-speedometer2" aria-hidden="true"></i>
@@ -598,13 +626,18 @@
                       >BB Tecnologia e Serviços</a
                     >
                   </h1>
-                  <p>
+                  <p data-i18n="exp_bb_desc">
                     Desenvolvimento web e mobile com JavaScript, Angular e React
                     Native, além de desenvolvimento de microserviços para
                     produtos internos criando soluções internas para otimizar
                     processos e melhorar a experiência do usuário.
                   </p>
-                  <span>set 2020/jun 2021</span>
+                  <div class="exp-techs">
+                    <span>Angular</span>
+                    <span>React Native</span>
+                    <span>JavaScript</span>
+                  </div>
+                  <span class="exp-date">set 2020/jun 2021</span>
                 </div>
               </div>
             </div>
@@ -620,13 +653,18 @@
                       >Usemobile</a
                     >
                   </h1>
-                  <p>
+                  <p data-i18n="exp_usemobile_desc">
                     Desenvolvimento de aplicativos Nativos iOS com Swift,
                     seguindo padrões de código e implementando novas
                     funcionalidades. Trabalho com GitFlow para controle de
                     versionamento.
                   </p>
-                  <span>jun 2021/set 2021 </span>
+                  <div class="exp-techs">
+                    <span>Swift</span>
+                    <span>iOS</span>
+                    <span>Git Flow</span>
+                  </div>
+                  <span class="exp-date">jun 2021/set 2021</span>
                 </div>
               </div>
               <div class="imagens-case">
@@ -670,13 +708,18 @@
                       >Compass.uol</a
                     >
                   </h1>
-                  <p>
+                  <p data-i18n="exp_compass_desc">
                     Atuação no desenvolvimento de aplicações IOS e React Native,
                     colaborando em projetos de grande escala. Foco em
                     arquitetura, boas práticas e melhorias de usabilidade e
                     performance.
                   </p>
-                  <span>out 2021/dez 2023</span>
+                  <div class="exp-techs">
+                    <span>React Native</span>
+                    <span>Swift</span>
+                    <span>iOS</span>
+                  </div>
+                  <span class="exp-date">out 2021/dez 2023</span>
                 </div>
               </div>
             </div>
@@ -692,13 +735,18 @@
                       >Akross</a
                     >
                   </h1>
-                  <p>
+                  <p data-i18n="exp_akross_desc">
                     Desenvolvimento de apps híbridos com React Native e Flutter,
                     além de soluções nativas para iOS com Swift. Foco em
                     performance, experiência do usuário, implementação de novas
                     funcionalidades e otimização de código.
                   </p>
-                  <span>Atualmente</span>
+                  <div class="exp-techs">
+                    <span>React Native</span>
+                    <span>Flutter</span>
+                    <span>Swift</span>
+                  </div>
+                  <span class="exp-date" data-i18n="exp_current">Atualmente</span>
                 </div>
               </div>
               <div class="imagens-case">
@@ -771,6 +819,7 @@
                 method="POST"
               >
                 <div class="form-group">
+                  <label for="nome" class="sr-only" data-i18n="name_label">Nome</label>
                   <input
                     type="text"
                     name="nome"
@@ -782,6 +831,7 @@
                   <span class="error-message" id="nome-error"></span>
                 </div>
                 <div class="form-group">
+                  <label for="telefone" class="sr-only" data-i18n="phone_label">Telefone</label>
                   <input
                     type="tel"
                     name="telefone"
@@ -792,6 +842,7 @@
                   <span class="error-message" id="telefone-error"></span>
                 </div>
                 <div class="form-group">
+                  <label for="email" class="sr-only" data-i18n="email_label">Email</label>
                   <input
                     type="email"
                     name="email"
@@ -803,6 +854,7 @@
                   <span class="error-message" id="email-error"></span>
                 </div>
                 <div class="form-group">
+                  <label for="mensagem" class="sr-only" data-i18n="message_label">Mensagem</label>
                   <textarea
                     name="mensagem"
                     id="mensagem"
@@ -839,7 +891,7 @@
             data-aos-duration="1000"
           >
             <span data-i18n="made_with"> FEITO COM </span>
-            <span class="line"></span>
+            <span class="divider-line"></span>
           </div>
           <div
             class="line-container center"
@@ -847,10 +899,10 @@
             data-aos-delay="400"
             data-aos-duration="1000"
           >
-            <span class="line"></span>
+            <span class="divider-line"></span>
             <span data-i18n="coffee"> CAFÉ </span>
             <i class="bi bi-cup-hot-fill" aria-hidden="true"></i>
-            <span class="line"></span>
+            <span class="divider-line"></span>
           </div>
           <div
             class="line-container right"
@@ -858,7 +910,7 @@
             data-aos-delay="600"
             data-aos-duration="1000"
           >
-            <span class="line"></span>
+            <span class="divider-line"></span>
             <span data-i18n="and_code">E CÓDIGO</span>
             <i class="bi bi-code-slash" aria-hidden="true"></i>
           </div>
@@ -884,6 +936,7 @@
             >
               <a href="#inicio" data-i18n="footer_home">Início</a>
               <a href="#sobre" data-i18n="footer_about">Sobre</a>
+              <a href="#skills" data-i18n="footer_skills">Skills</a>
               <a href="#servicos" data-i18n="footer_services">Serviços</a>
               <a href="#portfolio" data-i18n="footer_portfolio">Portfolio</a>
               <a href="#contato" data-i18n="footer_contact">Contato</a>
@@ -928,7 +981,7 @@
           </div>
         </div>
         <div class="credits-column">
-          <p data-i18n="copyright">&copy; 2025 Todos os direitos reservados.</p>
+          <p data-i18n="copyright">&copy; 2026 Todos os direitos reservados.</p>
           <p data-i18n="developed_by">Desenvolvido por Pedro│Dev.</p>
         </div>
       </footer>

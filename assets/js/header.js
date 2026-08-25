@@ -3,7 +3,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.getElementById("menuToggle");
   const menuAberto = document.querySelector(".menu-aberto");
   const navLinks = document.querySelectorAll(".nav-menu a");
+  const desktopNavLinks = document.querySelectorAll(".nav-desktop a");
+  const allNavLinks = document.querySelectorAll("[data-section]");
   const body = document.body;
+  const header = document.querySelector(".header");
 
   // Verificação de elementos antes de usar
   if (!menuToggle || !menuAberto) {
@@ -23,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Fecha o menu ao clicar em um link de navegação
-  navLinks.forEach((link) => {
+  [...navLinks, ...desktopNavLinks].forEach((link) => {
     link.addEventListener("click", function () {
       menuToggle.checked = false;
       menuAberto.classList.remove("active");
@@ -31,11 +34,40 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Header compacto ao rolar
+  function handleHeaderScroll() {
+    if (!header) return;
+    header.classList.toggle("header-scrolled", window.scrollY > 50);
+  }
+  window.addEventListener("scroll", handleHeaderScroll, { passive: true });
+  handleHeaderScroll();
+
+  // Destaca seção ativa na navegação
+  const sections = document.querySelectorAll("main, section[id]");
+  function updateActiveNav() {
+    const scrollPos = window.scrollY + 120;
+    let current = "inicio";
+
+    sections.forEach((section) => {
+      if (section.id && section.offsetTop <= scrollPos) {
+        current = section.id;
+      }
+    });
+
+    allNavLinks.forEach((link) => {
+      link.classList.toggle("active", link.dataset.section === current);
+    });
+  }
+  window.addEventListener("scroll", updateActiveNav, { passive: true });
+  updateActiveNav();
+
   // Internacionalização completa
   const translations = {
     pt: {
       // Menu
+      menu_home: "INÍCIO",
       menu_about: "SOBRE",
+      menu_skills: "SKILLS",
       menu_services: "SERVIÇOS",
       menu_portfolio: "PORTFOLIO",
       menu_contact: "CONTATO",
@@ -83,10 +115,27 @@ document.addEventListener("DOMContentLoaded", function () {
       uiux_service: "UI/UX",
       versioning_service: "Versionamento",
       performance_service: "Performance",
+      frontend_service_desc: "Interfaces web responsivas e performáticas",
+      ios_native_service_desc: "Apps nativos com Swift e SwiftUI",
+      hybrid_service_desc: "Apps multiplataforma com React Native e Flutter",
+      uiux_service_desc: "Design centrado no usuário e prototipação",
+      versioning_service_desc: "Git Flow e integração contínua",
+      performance_service_desc: "Otimização de apps e experiência fluida",
 
       // Textos da seção portfolio
       portfolio_subtitle:
         "Experiência em desenvolvimento, design e criação de projetos digitais.",
+
+      // Experiências profissionais
+      exp_bb_desc:
+        "Desenvolvimento web e mobile com JavaScript, Angular e React Native, além de microserviços para produtos internos, criando soluções para otimizar processos e melhorar a experiência do usuário.",
+      exp_usemobile_desc:
+        "Desenvolvimento de aplicativos nativos iOS com Swift, seguindo padrões de código e implementando novas funcionalidades. Trabalho com Git Flow para controle de versionamento.",
+      exp_compass_desc:
+        "Atuação no desenvolvimento de aplicações iOS e React Native, colaborando em projetos de grande escala. Foco em arquitetura, boas práticas e melhorias de usabilidade e performance.",
+      exp_akross_desc:
+        "Desenvolvimento de apps híbridos com React Native e Flutter, além de soluções nativas para iOS com Swift. Foco em performance, experiência do usuário e otimização de código.",
+      exp_current: "Atualmente",
 
       // Textos da seção contato
       contact_title: "Entre em contato",
@@ -99,16 +148,21 @@ document.addEventListener("DOMContentLoaded", function () {
       phone_placeholder: "(55) 22222-2222",
       email_placeholder: "Seu melhor email",
       message_placeholder: "Escreva o que você deseja aqui...",
+      name_label: "Nome",
+      phone_label: "Telefone",
+      email_label: "Email",
+      message_label: "Mensagem",
       submit_button: "Enviar",
       sending_text: "Enviando...",
 
       // Footer
       footer_home: "Início",
       footer_about: "Sobre",
+      footer_skills: "Skills",
       footer_services: "Serviços",
       footer_portfolio: "Portfolio",
       footer_contact: "Contato",
-      copyright: "© 2025 Todos os direitos reservados.",
+      copyright: "© 2026 Todos os direitos reservados.",
       developed_by: "Desenvolvido por Pedro│Dev.",
 
       // Free your mind section
@@ -122,6 +176,7 @@ document.addEventListener("DOMContentLoaded", function () {
       change_language: "Trocar idioma",
       go_to_home: "Ir para seção início",
       go_to_about: "Ir para seção sobre",
+      go_to_skills: "Ir para seção skills",
       go_to_services: "Ir para seção serviços",
       go_to_portfolio: "Ir para seção portfolio",
       go_to_contact: "Ir para seção contato",
@@ -149,7 +204,9 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     en: {
       // Menu
+      menu_home: "HOME",
       menu_about: "ABOUT",
+      menu_skills: "SKILLS",
       menu_services: "SERVICES",
       menu_portfolio: "PORTFOLIO",
       menu_contact: "CONTACT",
@@ -197,10 +254,27 @@ document.addEventListener("DOMContentLoaded", function () {
       uiux_service: "UI/UX",
       versioning_service: "Versioning",
       performance_service: "Performance",
+      frontend_service_desc: "Responsive and high-performance web interfaces",
+      ios_native_service_desc: "Native apps with Swift and SwiftUI",
+      hybrid_service_desc: "Cross-platform apps with React Native and Flutter",
+      uiux_service_desc: "User-centered design and prototyping",
+      versioning_service_desc: "Git Flow and continuous integration",
+      performance_service_desc: "App optimization and smooth experience",
 
       // Textos da seção portfolio
       portfolio_subtitle:
         "Experience in development, design and creation of digital projects.",
+
+      // Experiências profissionais
+      exp_bb_desc:
+        "Web and mobile development with JavaScript, Angular and React Native, plus microservices for internal products, creating solutions to optimize processes and improve user experience.",
+      exp_usemobile_desc:
+        "Native iOS app development with Swift, following code standards and implementing new features. Working with Git Flow for version control.",
+      exp_compass_desc:
+        "Working on iOS and React Native application development, collaborating on large-scale projects. Focus on architecture, best practices and usability and performance improvements.",
+      exp_akross_desc:
+        "Hybrid app development with React Native and Flutter, plus native iOS solutions with Swift. Focus on performance, user experience and code optimization.",
+      exp_current: "Currently",
 
       // Textos da seção contato
       contact_title: "Get in touch",
@@ -213,16 +287,21 @@ document.addEventListener("DOMContentLoaded", function () {
       phone_placeholder: "(55) 22222-2222",
       email_placeholder: "Your best email",
       message_placeholder: "Write what you want here...",
+      name_label: "Name",
+      phone_label: "Phone",
+      email_label: "Email",
+      message_label: "Message",
       submit_button: "Send",
       sending_text: "Sending...",
 
       // Footer
       footer_home: "Home",
       footer_about: "About",
+      footer_skills: "Skills",
       footer_services: "Services",
       footer_portfolio: "Portfolio",
       footer_contact: "Contact",
-      copyright: "© 2025 All rights reserved.",
+      copyright: "© 2026 All rights reserved.",
       developed_by: "Developed by Pedro│Dev.",
 
       // Free your mind section
@@ -236,6 +315,7 @@ document.addEventListener("DOMContentLoaded", function () {
       change_language: "Change language",
       go_to_home: "Go to home section",
       go_to_about: "Go to about section",
+      go_to_skills: "Go to skills section",
       go_to_services: "Go to services section",
       go_to_portfolio: "Go to portfolio section",
       go_to_contact: "Go to contact section",
