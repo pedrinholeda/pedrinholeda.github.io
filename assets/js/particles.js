@@ -2,15 +2,26 @@ document.addEventListener("DOMContentLoaded", function () {
   const container = document.getElementById("particles-js");
   if (!container || typeof particlesJS !== "function") return;
 
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+  if (prefersReducedMotion) {
+    container.remove();
+    return;
+  }
+
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+  const particleCount = isMobile ? 28 : 80;
+
   particlesJS("particles-js", {
     particles: {
-      number: { value: 80, density: { enable: true, value_area: 800 } },
+      number: { value: particleCount, density: { enable: true, value_area: 800 } },
       color: { value: "#ffffff" },
       shape: { type: "circle" },
       opacity: { value: 0.5, random: true },
-      size: { value: 5, random: true },
+      size: { value: isMobile ? 3 : 5, random: true },
       line_linked: {
-        enable: true,
+        enable: !isMobile,
         distance: 150,
         color: "#ffffff",
         opacity: 0.5,
@@ -18,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       move: {
         enable: true,
-        speed: 2,
+        speed: isMobile ? 1 : 2,
         direction: "none",
         random: false,
         straight: false,
@@ -29,8 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
     interactivity: {
       detect_on: "canvas",
       events: {
-        onhover: { enable: true, mode: "repulse" },
-        onclick: { enable: true, mode: "push" },
+        onhover: { enable: !isMobile, mode: "repulse" },
+        onclick: { enable: !isMobile, mode: "push" },
         resize: true,
       },
       modes: {

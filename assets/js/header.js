@@ -14,52 +14,54 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
+  const menuToggleLabel = document.getElementById("menuToggleLabel");
+
+  function setMenuOpen(isOpen) {
+    menuToggle.checked = isOpen;
+    menuAberto.classList.toggle("active", isOpen);
+    body.classList.toggle("no-scroll", isOpen);
+    if (menuToggleLabel) {
+      menuToggleLabel.setAttribute("aria-expanded", String(isOpen));
+    }
+  }
+
   // Abre/fecha o menu ao mudar o estado do checkbox
   menuToggle.addEventListener("change", function () {
-    if (menuToggle.checked) {
-      menuAberto.classList.add("active");
-      body.classList.add("no-scroll");
-    } else {
-      menuAberto.classList.remove("active");
-      body.classList.remove("no-scroll");
-    }
+    setMenuOpen(menuToggle.checked);
   });
 
   // Fecha o menu ao clicar em um link de navegação
   [...navLinks, ...desktopNavLinks].forEach((link) => {
     link.addEventListener("click", function () {
-      menuToggle.checked = false;
-      menuAberto.classList.remove("active");
-      body.classList.remove("no-scroll");
+      setMenuOpen(false);
     });
   });
 
-  // Header compacto ao rolar
-  function handleHeaderScroll() {
-    if (!header) return;
-    header.classList.toggle("header-scrolled", window.scrollY > 50);
-  }
-  window.addEventListener("scroll", handleHeaderScroll, { passive: true });
-  handleHeaderScroll();
-
-  // Destaca seção ativa na navegação
-  const sections = document.querySelectorAll("main, section[id]");
-  function updateActiveNav() {
-    const scrollPos = window.scrollY + 120;
-    let current = "inicio";
-
-    sections.forEach((section) => {
-      if (section.id && section.offsetTop <= scrollPos) {
-        current = section.id;
+  // Header compacto + seção ativa (requestAnimationFrame)
+  let scrollTicking = false;
+  function onScroll() {
+    if (scrollTicking) return;
+    scrollTicking = true;
+    requestAnimationFrame(() => {
+      if (header) {
+        header.classList.toggle("header-scrolled", window.scrollY > 50);
       }
-    });
-
-    allNavLinks.forEach((link) => {
-      link.classList.toggle("active", link.dataset.section === current);
+      const scrollPos = window.scrollY + 120;
+      let current = "inicio";
+      sections.forEach((section) => {
+        if (section.id && section.offsetTop <= scrollPos) {
+          current = section.id;
+        }
+      });
+      allNavLinks.forEach((link) => {
+        link.classList.toggle("active", link.dataset.section === current);
+      });
+      scrollTicking = false;
     });
   }
-  window.addEventListener("scroll", updateActiveNav, { passive: true });
-  updateActiveNav();
+  const sections = document.querySelectorAll("main, section[id]");
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
 
   // Internacionalização completa
   const translations = {
@@ -67,14 +69,14 @@ document.addEventListener("DOMContentLoaded", function () {
       // Menu
       menu_home: "INÍCIO",
       menu_about: "SOBRE",
-      menu_skills: "SKILLS",
+      menu_skills: "STACK",
       menu_services: "SERVIÇOS",
       menu_portfolio: "PORTFOLIO",
       menu_contact: "CONTATO",
 
       // Seções principais
       welcome: "Pedro Léda",
-      skills: "Skills",
+      skills: "Stack",
       services: "Serviços",
       experiences: "Experiências",
       contact: "Contato",
@@ -93,36 +95,36 @@ document.addEventListener("DOMContentLoaded", function () {
       about_description:
         "Desenvolvedor mobile especializado em React Native, Flutter e iOS nativo. Apaixonado por criar experiências intuitivas e colaborar em projetos de alto impacto.",
 
-      // Textos da seção skills
-      skills_subtitle: "Competências Principais",
-      hybrid_dev_title: "Desenvolvimento Híbrido",
+      // Skills (stack / competências técnicas)
+      skills_subtitle: "Tecnologias e ferramentas que domino no dia a dia",
+      hybrid_dev_title: "Mobile híbrido",
       hybrid_dev_desc:
-        "Criação de apps multiplataforma com React Native e Flutter, garantindo desempenho e design responsivo.",
-      native_ios_title: "Desenvolvimento Nativo iOS",
+        "React Native e Flutter para apps multiplataforma com tipagem forte e UI consistente.",
+      native_ios_title: "iOS nativo",
       native_ios_desc:
-        "Apps nativos para iOS com Swift e SwiftUI, focando em usabilidade e integração com o ecossistema Apple.",
-      frontend_title: "Front-End",
+        "Swift e SwiftUI com foco em APIs da Apple, padrões de arquitetura e qualidade de código.",
+      frontend_title: "Web front-end",
       frontend_desc:
-        "Desenvolvimento com HTML, CSS e JavaScript, criando interfaces dinâmicas e responsivas com React e Angular.",
-      versioning_title: "Versionamento",
+        "HTML, CSS, TypeScript, React e Angular para interfaces modernas e acessíveis.",
+      versioning_title: "Git & entrega",
       versioning_desc:
-        "Gerenciamento de código com Git e Git Flow, garantindo um fluxo de desenvolvimento seguro e organizado.",
+        "Git, Git Flow e práticas de CI/CD para colaboração segura e releases previsíveis.",
 
-      // Textos da seção serviços
+      // Serviços (o que ofereço ao cliente)
       services_subtitle:
-        "Desenvolvimento de soluções digitais modernas, responsivas e escaláveis.",
-      frontend_service: "Front-End",
-      ios_native_service: "iOS Nativo",
-      hybrid_service: "Híbrido",
-      uiux_service: "UI/UX",
-      versioning_service: "Versionamento",
-      performance_service: "Performance",
-      frontend_service_desc: "Interfaces web responsivas e performáticas",
-      ios_native_service_desc: "Apps nativos com Swift e SwiftUI",
-      hybrid_service_desc: "Apps multiplataforma com React Native e Flutter",
-      uiux_service_desc: "Design centrado no usuário e prototipação",
-      versioning_service_desc: "Git Flow e integração contínua",
-      performance_service_desc: "Otimização de apps e experiência fluida",
+        "Como posso ajudar no seu produto — da ideia ao app publicado.",
+      frontend_service: "Interfaces web",
+      ios_native_service: "Apps iOS",
+      hybrid_service: "Apps multiplataforma",
+      uiux_service: "UI/UX para produto",
+      versioning_service: "Fluxo de entrega",
+      performance_service: "Otimização",
+      frontend_service_desc: "Landing pages e painéis responsivos sob medida",
+      ios_native_service_desc: "Do protótipo à App Store com Swift/SwiftUI",
+      hybrid_service_desc: "Um código, iOS e Android com RN ou Flutter",
+      uiux_service_desc: "Fluxos claros, prototipação e handoff para dev",
+      versioning_service_desc: "Git Flow, reviews e pipelines de CI/CD",
+      performance_service_desc: "Auditoria, profiling e ganhos de fluidez",
 
       // Textos da seção portfolio
       portfolio_subtitle:
@@ -136,7 +138,14 @@ document.addEventListener("DOMContentLoaded", function () {
       exp_compass_desc:
         "Atuação no desenvolvimento de aplicações iOS e React Native, colaborando em projetos de grande escala. Foco em arquitetura, boas práticas e melhorias de usabilidade e performance.",
       exp_akross_desc:
-        "Desenvolvimento de apps híbridos com React Native e Flutter, além de soluções nativas para iOS com Swift. Foco em performance, experiência do usuário e otimização de código.",
+        "Desenvolvimento de aplicações mobile com React Native e Flutter, evolução de apps em produção e SDK nativa iOS em Swift. Atuação em plataforma de rewards white-label, integrações Firebase e SDKs de parceiros.",
+      exp_akross_date: "dez 2023 — mai 2026",
+      exp_segware_desc:
+        "Mobile Developer em soluções de segurança eletrônica e monitoramento. Desenvolvimento principalmente com React Native, e ocasionalmente iOS e Android nativos, para produtos usados por centrais e clientes finais.",
+      exp_segware_date: "mai 2026 — presente",
+      exp_bb_date: "set 2020 — jun 2021",
+      exp_usemobile_date: "jun 2021 — set 2021",
+      exp_compass_date: "out 2021 — dez 2023",
       exp_current: "Atualmente",
 
       // Textos da seção contato
@@ -160,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Footer
       footer_home: "Início",
       footer_about: "Sobre",
-      footer_skills: "Skills",
+      footer_skills: "Stack",
       footer_services: "Serviços",
       footer_portfolio: "Portfolio",
       footer_contact: "Contato",
@@ -208,14 +217,14 @@ document.addEventListener("DOMContentLoaded", function () {
       // Menu
       menu_home: "HOME",
       menu_about: "ABOUT",
-      menu_skills: "SKILLS",
+      menu_skills: "STACK",
       menu_services: "SERVICES",
       menu_portfolio: "PORTFOLIO",
       menu_contact: "CONTACT",
 
       // Seções principais
       welcome: "Pedro Léda",
-      skills: "Skills",
+      skills: "Stack",
       services: "Services",
       experiences: "Experiences",
       contact: "Contact",
@@ -234,36 +243,36 @@ document.addEventListener("DOMContentLoaded", function () {
       about_description:
         "Mobile developer specialized in React Native, Flutter and native iOS. Passionate about creating intuitive experiences and collaborating on high-impact projects.",
 
-      // Textos da seção skills
-      skills_subtitle: "Main Competencies",
-      hybrid_dev_title: "Hybrid Development",
+      // Skills (tech stack)
+      skills_subtitle: "Technologies and tools I use every day",
+      hybrid_dev_title: "Hybrid mobile",
       hybrid_dev_desc:
-        "Creating cross-platform apps with React Native and Flutter, ensuring performance and responsive design.",
-      native_ios_title: "Native iOS Development",
+        "React Native and Flutter for cross-platform apps with strong typing and consistent UI.",
+      native_ios_title: "Native iOS",
       native_ios_desc:
-        "Native iOS apps with Swift and SwiftUI, focusing on usability and integration with the Apple ecosystem.",
-      frontend_title: "Front-End",
+        "Swift and SwiftUI focused on Apple APIs, architecture patterns and code quality.",
+      frontend_title: "Web front-end",
       frontend_desc:
-        "Development with HTML, CSS and JavaScript, creating dynamic and responsive interfaces with React and Angular.",
-      versioning_title: "Versioning",
+        "HTML, CSS, TypeScript, React and Angular for modern, accessible interfaces.",
+      versioning_title: "Git & delivery",
       versioning_desc:
-        "Code management with Git and Git Flow, ensuring a secure and organized development workflow.",
+        "Git, Git Flow and CI/CD practices for safe collaboration and predictable releases.",
 
-      // Textos da seção serviços
+      // Services (client offerings)
       services_subtitle:
-        "Development of modern, responsive and scalable digital solutions.",
-      frontend_service: "Front-End",
-      ios_native_service: "Native iOS",
-      hybrid_service: "Hybrid",
-      uiux_service: "UI/UX",
-      versioning_service: "Versioning",
-      performance_service: "Performance",
-      frontend_service_desc: "Responsive and high-performance web interfaces",
-      ios_native_service_desc: "Native apps with Swift and SwiftUI",
-      hybrid_service_desc: "Cross-platform apps with React Native and Flutter",
-      uiux_service_desc: "User-centered design and prototyping",
-      versioning_service_desc: "Git Flow and continuous integration",
-      performance_service_desc: "App optimization and smooth experience",
+        "How I can help your product — from idea to a published app.",
+      frontend_service: "Web interfaces",
+      ios_native_service: "iOS apps",
+      hybrid_service: "Cross-platform apps",
+      uiux_service: "Product UI/UX",
+      versioning_service: "Delivery workflow",
+      performance_service: "Optimization",
+      frontend_service_desc: "Custom responsive landing pages and dashboards",
+      ios_native_service_desc: "From prototype to the App Store with Swift/SwiftUI",
+      hybrid_service_desc: "One codebase, iOS and Android with RN or Flutter",
+      uiux_service_desc: "Clear flows, prototyping and handoff to engineering",
+      versioning_service_desc: "Git Flow, reviews and CI/CD pipelines",
+      performance_service_desc: "Audits, profiling and smoother UX",
 
       // Textos da seção portfolio
       portfolio_subtitle:
@@ -277,7 +286,14 @@ document.addEventListener("DOMContentLoaded", function () {
       exp_compass_desc:
         "Working on iOS and React Native application development, collaborating on large-scale projects. Focus on architecture, best practices and usability and performance improvements.",
       exp_akross_desc:
-        "Hybrid app development with React Native and Flutter, plus native iOS solutions with Swift. Focus on performance, user experience and code optimization.",
+        "Mobile development with React Native and Flutter, evolving production apps and a native iOS Swift SDK. Worked on a white-label rewards platform, Firebase integrations and partner SDKs.",
+      exp_akross_date: "Dec 2023 — May 2026",
+      exp_segware_desc:
+        "Mobile Developer on electronic security and monitoring solutions. Mainly React Native, with occasional native iOS and Android work, for products used by monitoring centers and end customers.",
+      exp_segware_date: "May 2026 — Present",
+      exp_bb_date: "Sep 2020 — Jun 2021",
+      exp_usemobile_date: "Jun 2021 — Sep 2021",
+      exp_compass_date: "Oct 2021 — Dec 2023",
       exp_current: "Currently",
 
       // Textos da seção contato
@@ -301,7 +317,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Footer
       footer_home: "Home",
       footer_about: "About",
-      footer_skills: "Skills",
+      footer_skills: "Stack",
       footer_services: "Services",
       footer_portfolio: "Portfolio",
       footer_contact: "Contact",
@@ -384,10 +400,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
 
-      // Atualiza botão de idioma
+      // Atualiza botão de idioma e lang do documento
       if (langToggle) {
         langToggle.innerText = currentLang === "pt" ? "EN" : "PT";
       }
+      document.documentElement.lang = currentLang === "pt" ? "pt-BR" : "en";
     } catch (error) {
       console.error("Erro ao atualizar textos:", error);
     }
@@ -414,9 +431,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Melhorias de acessibilidade - navegação por teclado
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape" && menuAberto.classList.contains("active")) {
-      menuToggle.checked = false;
-      menuAberto.classList.remove("active");
-      body.classList.remove("no-scroll");
+      setMenuOpen(false);
     }
   });
 });

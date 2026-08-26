@@ -18,6 +18,8 @@
     />
     <meta name="author" content="Pedro Leda" />
     <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="canonical" href="https://pedrinholeda.github.io/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -29,7 +31,7 @@
     />
     <meta
       property="og:image"
-      content="https://pedrinholeda.github.io/assets/img/perfil.png"
+      content="https://pedrinholeda.github.io/assets/img/og-image.jpg"
     />
 
     <!-- Twitter -->
@@ -45,7 +47,7 @@
     />
     <meta
       property="twitter:image"
-      content="https://pedrinholeda.github.io/assets/img/perfil.png"
+      content="https://pedrinholeda.github.io/assets/img/og-image.jpg"
     />
 
     <!-- Favicon -->
@@ -70,9 +72,7 @@
     <!--Bootstrap Icons-->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
-      integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd"
-      crossorigin="anonymous"
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
     />
 
     <!-- AOS -->
@@ -80,21 +80,7 @@
 
     <link
       rel="preload"
-      href="assets/fonts/ClashGrotesk-Regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="assets/fonts/ClashGrotesk-Bold.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="assets/fonts/ClashGrotesk-Light.woff2"
+      href="assets/fonts/ClashGrotesk-Variable.woff2"
       as="font"
       type="font/woff2"
       crossorigin
@@ -102,6 +88,8 @@
   </head>
 
   <body>
+    <a href="#inicio" class="skip-link">Pular para o conteúdo</a>
+
     <!--Botão voltar ao topo-->
     <div
       id="backToTop"
@@ -124,16 +112,19 @@
       <!--Header-->
       <header class="header" role="banner">
         <div class="logo">
-          <img
-            src="assets/img/logo-branco.png"
-            alt="Logo Pedro Leda"
-            loading="lazy"
-          />
+          <a href="#inicio" aria-label="Pedro Leda - Início">
+            <img
+              src="assets/img/logo-branco.png"
+              alt="Logo Pedro Leda"
+              width="90"
+              height="90"
+            />
+          </a>
         </div>
         <nav class="nav-desktop" role="navigation" aria-label="Menu principal">
           <a href="#inicio" data-i18n="menu_home" data-section="inicio">Início</a>
           <a href="#sobre" data-i18n="menu_about" data-section="sobre">Sobre</a>
-          <a href="#skills" data-i18n="menu_skills" data-section="skills">Skills</a>
+          <a href="#skills" data-i18n="menu_skills" data-section="skills">Stack</a>
           <a href="#servicos" data-i18n="menu_services" data-section="servicos">Serviços</a>
           <a href="#portfolio" data-i18n="menu_portfolio" data-section="portfolio">Portfolio</a>
           <a href="#contato" data-i18n="menu_contact" data-section="contato">Contato</a>
@@ -150,8 +141,11 @@
           <label
             class="hamburger"
             for="menuToggle"
+            id="menuToggleLabel"
             data-i18n-aria-label="open_menu"
             aria-label="Abrir menu de navegação"
+            aria-controls="navMenu"
+            aria-expanded="false"
           >
             <input type="checkbox" id="menuToggle" />
             <svg viewBox="0 0 32 32" aria-hidden="true">
@@ -163,8 +157,8 @@
             </svg>
           </label>
         </div>
-        <div class="menu-aberto">
-          <nav class="nav-menu" role="navigation" aria-label="Menu principal">
+        <div class="menu-aberto" id="mobileMenu">
+          <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Menu principal">
             <a
               href="#inicio"
               data-i18n-aria-label="go_to_home"
@@ -187,7 +181,7 @@
               aria-label="Ir para seção skills"
               data-i18n="menu_skills"
               data-section="skills"
-              >SKILLS</a
+              >STACK</a
             >
             <a
               href="#servicos"
@@ -229,11 +223,11 @@
           >
             <div class="titulo-inicio">
               <h1 id="welcome" data-i18n="welcome">Pedro Léda</h1>
-              <h1 class="destaque-inicio">
+              <p class="destaque-inicio">
                 <span data-i18n="hero_prefix">Sou desenvolvedor </span>
                 <span class="typed" aria-live="polite"></span>
                 <span data-i18n="hero_suffix"></span>
-              </h1>
+              </p>
             </div>
             <div
               class="paragrafo-inicio"
@@ -318,9 +312,9 @@
               data-aos-duration="1000"
             >
               <div class="textos-sobre">
-                <h1 id="sobre-titulo" data-i18n="about_title">
+                <h2 id="sobre-titulo" data-i18n="about_title">
                   Olá, me chamo Pedro :)
-                </h1>
+                </h2>
                 <p data-i18n="about_description">
                   Desenvolvedor mobile especializado em React Native, Flutter e iOS nativo.
                   Apaixonado por criar experiências intuitivas e colaborar em projetos de alto impacto.
@@ -363,8 +357,10 @@
             >
               <div class="imagem-sobre">
                 <img
-                  src="assets/img/perfil.png"
+                  src="assets/img/perfil.jpg"
                   alt="Foto de perfil do Pedro Leda"
+                  width="400"
+                  height="369"
                   loading="lazy"
                 />
               </div>
@@ -388,8 +384,10 @@
               data-aos-delay="200"
               data-aos-duration="1000"
             >
-              <h2 id="skills-titulo" data-i18n="skills">Skills</h2>
-              <p data-i18n="skills_subtitle">Competências Principais</p>
+              <h2 id="skills-titulo" data-i18n="skills">Stack</h2>
+              <p data-i18n="skills_subtitle">
+                Tecnologias e ferramentas que domino no dia a dia
+              </p>
             </div>
           </div>
           <div class="conteudo-skills">
@@ -487,7 +485,7 @@
             data-aos-duration="1000"
           >
             <div class="titulo-servicos">
-              <h1 id="servicos-titulo" data-i18n="services">Serviços</h1>
+              <h2 id="servicos-titulo" data-i18n="services">Serviços</h2>
             </div>
             <div
               class="descricao-servicos"
@@ -496,8 +494,7 @@
               data-aos-duration="1000"
             >
               <p data-i18n="services_subtitle">
-                Desenvolvimento de soluções digitais modernas, responsivas e
-                escaláveis.
+                Como posso ajudar no seu produto — da ideia ao app publicado.
               </p>
             </div>
           </div>
@@ -510,7 +507,7 @@
               data-aos-duration="1000"
             >
               <div class="card-titulo">
-                <h2 data-i18n="frontend_service">Front-End</h2>
+                <h3 data-i18n="frontend_service">Front-End</h3>
                 <p data-i18n="frontend_service_desc">Interfaces web responsivas e performáticas</p>
               </div>
               <div class="card-icon">
@@ -526,7 +523,7 @@
               data-aos-duration="1000"
             >
               <div class="card-titulo">
-                <h2 data-i18n="ios_native_service">iOS Nativo</h2>
+                <h3 data-i18n="ios_native_service">iOS Nativo</h3>
                 <p data-i18n="ios_native_service_desc">Apps nativos com Swift e SwiftUI</p>
               </div>
               <div class="card-icon">
@@ -542,7 +539,7 @@
               data-aos-duration="1000"
             >
               <div class="card-titulo">
-                <h2 data-i18n="hybrid_service">Híbrido</h2>
+                <h3 data-i18n="hybrid_service">Híbrido</h3>
                 <p data-i18n="hybrid_service_desc">Apps multiplataforma com React Native e Flutter</p>
               </div>
               <div class="card-icon">
@@ -558,7 +555,7 @@
               data-aos-duration="1000"
             >
               <div class="card-titulo">
-                <h2 data-i18n="uiux_service">UI/UX</h2>
+                <h3 data-i18n="uiux_service">UI/UX</h3>
                 <p data-i18n="uiux_service_desc">Design centrado no usuário e prototipação</p>
               </div>
               <div class="card-icon">
@@ -574,7 +571,7 @@
               data-aos-duration="1000"
             >
               <div class="card-titulo">
-                <h2 data-i18n="versioning_service">Versionamento</h2>
+                <h3 data-i18n="versioning_service">Versionamento</h3>
                 <p data-i18n="versioning_service_desc">Git Flow e integração contínua</p>
               </div>
               <div class="card-icon">
@@ -590,7 +587,7 @@
               data-aos-duration="1000"
             >
               <div class="card-titulo">
-                <h2 data-i18n="performance_service">Performance</h2>
+                <h3 data-i18n="performance_service">Performance</h3>
                 <p data-i18n="performance_service_desc">Otimização de apps e experiência fluida</p>
               </div>
               <div class="card-icon">
@@ -614,9 +611,9 @@
           data-aos-duration="1000"
         >
           <div class="headline-portfolio">
-            <h1 class="titulo" id="portfolio-titulo" data-i18n="experiences">
+            <h2 class="titulo" id="portfolio-titulo" data-i18n="experiences">
               Experiências
-            </h1>
+            </h2>
             <span class="descricao" data-i18n="portfolio_subtitle">
               Experiência em desenvolvimento, design e criação de projetos
               digitais.
@@ -641,14 +638,14 @@
               </div>
               <div class="textos-case">
                 <div class="conteudo-textos-case">
-                  <h1>
+                  <h3>
                     <a
                       href="https://www.bb.com.br"
                       target="_blank"
                       rel="noopener noreferrer"
                       >BB Tecnologia e Serviços</a
                     >
-                  </h1>
+                  </h3>
                   <p data-i18n="exp_bb_desc">
                     Desenvolvimento web e mobile com JavaScript, Angular e React
                     Native, além de desenvolvimento de microserviços para
@@ -660,7 +657,7 @@
                     <span>React Native</span>
                     <span>JavaScript</span>
                   </div>
-                  <span class="exp-date">set 2020/jun 2021</span>
+                  <span class="exp-date" data-i18n="exp_bb_date">set 2020 — jun 2021</span>
                 </div>
               </div>
             </div>
@@ -668,14 +665,14 @@
             <div class="case2" data-aos="fade-left" data-aos-delay="300">
               <div class="textos-case">
                 <div class="conteudo-textos-case">
-                  <h1>
+                  <h3>
                     <a
                       href="https://usemobile.com.br"
                       target="_blank"
                       rel="noopener noreferrer"
                       >Usemobile</a
                     >
-                  </h1>
+                  </h3>
                   <p data-i18n="exp_usemobile_desc">
                     Desenvolvimento de aplicativos Nativos iOS com Swift,
                     seguindo padrões de código e implementando novas
@@ -687,7 +684,7 @@
                     <span>iOS</span>
                     <span>Git Flow</span>
                   </div>
-                  <span class="exp-date">jun 2021/set 2021</span>
+                  <span class="exp-date" data-i18n="exp_usemobile_date">jun 2021 — set 2021</span>
                 </div>
               </div>
               <div class="imagens-case">
@@ -723,14 +720,14 @@
               </div>
               <div class="textos-case">
                 <div class="conteudo-textos-case">
-                  <h1>
+                  <h3>
                     <a
                       href="https://compass.uol"
                       target="_blank"
                       rel="noopener noreferrer"
                       >Compass.uol</a
                     >
-                  </h1>
+                  </h3>
                   <p data-i18n="exp_compass_desc">
                     Atuação no desenvolvimento de aplicações IOS e React Native,
                     colaborando em projetos de grande escala. Foco em
@@ -742,34 +739,35 @@
                     <span>Swift</span>
                     <span>iOS</span>
                   </div>
-                  <span class="exp-date">out 2021/dez 2023</span>
+                  <span class="exp-date" data-i18n="exp_compass_date">out 2021 — dez 2023</span>
                 </div>
               </div>
             </div>
-            <!--Case 4-->
+            <!--Case 4 - Akross-->
             <div class="case4" data-aos="fade-left" data-aos-delay="500">
               <div class="textos-case">
                 <div class="conteudo-textos-case">
-                  <h1>
+                  <h3>
                     <a
                       href="https://akross.com.br"
                       target="_blank"
                       rel="noopener noreferrer"
                       >Akross</a
                     >
-                  </h1>
+                  </h3>
                   <p data-i18n="exp_akross_desc">
-                    Desenvolvimento de apps híbridos com React Native e Flutter,
-                    além de soluções nativas para iOS com Swift. Foco em
-                    performance, experiência do usuário, implementação de novas
-                    funcionalidades e otimização de código.
+                    Desenvolvimento de aplicações mobile com React Native e
+                    Flutter, evolução de apps em produção e SDK nativa iOS em
+                    Swift. Atuação em plataforma de rewards white-label,
+                    integrações Firebase e SDKs de parceiros.
                   </p>
                   <div class="exp-techs">
                     <span>React Native</span>
                     <span>Flutter</span>
                     <span>Swift</span>
+                    <span>Firebase</span>
                   </div>
-                  <span class="exp-date" data-i18n="exp_current">Atualmente</span>
+                  <span class="exp-date" data-i18n="exp_akross_date">dez 2023 — mai 2026</span>
                 </div>
               </div>
               <div class="imagens-case">
@@ -787,6 +785,47 @@
                 </a>
               </div>
             </div>
+            <!--Case 5 - Segware (atual)-->
+            <div class="case5" data-aos="fade-right" data-aos-delay="600">
+              <div class="imagens-case">
+                <a
+                  href="https://segware.com.br"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="logo-experiencia"
+                >
+                  <img
+                    src="assets/img/logos/segware_logo.jpeg"
+                    alt="Logo Segware"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+              <div class="textos-case">
+                <div class="conteudo-textos-case">
+                  <h3>
+                    <a
+                      href="https://segware.com.br"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Segware</a
+                    >
+                  </h3>
+                  <p data-i18n="exp_segware_desc">
+                    Mobile Developer em soluções de segurança eletrônica e
+                    monitoramento. Desenvolvimento principalmente com React
+                    Native, e ocasionalmente iOS e Android nativos, para
+                    produtos usados por centrais e clientes finais.
+                  </p>
+                  <div class="exp-techs">
+                    <span>React Native</span>
+                    <span>iOS</span>
+                    <span>Android</span>
+                  </div>
+                  <span class="exp-date" data-i18n="exp_segware_date">mai 2026 — presente</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -801,7 +840,7 @@
         >
           <div class="headline-contato" data-aos="fade-up" data-aos-delay="200">
             <div class="titulo-contato">
-              <h1 id="contato-titulo" data-i18n="contact">Contato</h1>
+              <h2 id="contato-titulo" data-i18n="contact">Contato</h2>
             </div>
           </div>
           <div class="conteudo-contato" data-aos="fade-up" data-aos-delay="400">
@@ -945,11 +984,15 @@
       <footer class="footer" id="footer" role="contentinfo">
         <div class="container-footer">
           <div class="footer-column logo-column">
-            <img
-              src="assets/img/logo-branco.png"
-              alt="Logo Pedro Leda"
-              loading="lazy"
-            />
+            <a href="#inicio" aria-label="Pedro Leda - Início">
+              <img
+                src="assets/img/logo-branco.png"
+                alt="Logo Pedro Leda"
+                width="120"
+                height="120"
+                loading="lazy"
+              />
+            </a>
           </div>
           <div class="footer-column menu-column">
             <nav
@@ -959,7 +1002,7 @@
             >
               <a href="#inicio" data-i18n="footer_home">Início</a>
               <a href="#sobre" data-i18n="footer_about">Sobre</a>
-              <a href="#skills" data-i18n="footer_skills">Skills</a>
+              <a href="#skills" data-i18n="footer_skills">Stack</a>
               <a href="#servicos" data-i18n="footer_services">Serviços</a>
               <a href="#portfolio" data-i18n="footer_portfolio">Portfolio</a>
               <a href="#contato" data-i18n="footer_contact">Contato</a>
@@ -1016,7 +1059,9 @@
 
     <!-- Inicialização do AOS -->
     <script>
-      AOS.init();
+      AOS.init({
+        disable: window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+      });
     </script>
 
     <!-- Função de scroll suave -->
