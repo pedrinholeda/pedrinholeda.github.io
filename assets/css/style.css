@@ -482,16 +482,51 @@ button:active,
   margin-bottom: 2rem;
 }
 
-/* Botão Inicio (CTA) */
+/* Botões Inicio (CTA) */
+.cta-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+}
+
 .cta {
   position: relative;
-  margin: auto;
+  margin: 0;
   padding: 14px 28px;
   transition: all 0.2s ease;
   border: none;
   background: none;
   cursor: pointer;
   box-shadow: none;
+}
+
+.cta-secondary {
+  position: relative;
+  margin: 0;
+  padding: 14px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50px;
+  background: transparent;
+  color: var(--color-white);
+  font-family: var(--font-pequena);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: border-color 0.3s ease, color 0.3s ease, background 0.3s ease,
+    transform 0.2s ease;
+}
+
+.cta-secondary:hover {
+  border-color: var(--color-destaque1);
+  color: var(--color-destaque1);
+  background: rgba(231, 252, 0, 0.06);
+}
+
+.cta-secondary:active {
+  transform: scale(0.95);
 }
 
 .cta:hover {
@@ -1742,6 +1777,20 @@ button:active,
     padding: 1rem 0;
   }
 
+  .cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cta {
+    width: 180px;
+  }
+
+  .cta-secondary {
+    width: 180px;
+    text-align: center;
+  }
+
   /* Sobre */
   .sobre {
     padding: 3rem 1rem;
@@ -2161,6 +2210,140 @@ button:active,
   .logo img {
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
+  }
+}
+
+/* Tablet (iPad e similares) */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0;
+  }
+
+  .conteudo-sobre {
+    flex-direction: column-reverse;
+    gap: 3rem;
+  }
+
+  .left-sobre,
+  .right-sobre {
+    width: 100%;
+  }
+
+  .imagem-sobre {
+    justify-content: center;
+    position: static;
+  }
+
+  .headline-servicos,
+  .headline-portfolio,
+  .headline-contato {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .titulo-servicos,
+  .titulo-contato,
+  .headline-portfolio .titulo {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .titulo-servicos h1,
+  .titulo-contato h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+  }
+
+  .descricao-servicos,
+  .headline-portfolio .descricao,
+  .descricao-contato {
+    width: 100%;
+    text-align: left;
+    font-size: clamp(1rem, 2vw, 1.4rem);
+  }
+
+  .headline-portfolio .titulo {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  .case1,
+  .case3 {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .case2,
+  .case4 {
+    flex-direction: column-reverse;
+    height: auto;
+  }
+
+  .imagens-case {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    max-height: 280px;
+    height: auto;
+  }
+
+  .textos-case {
+    width: 100%;
+    height: auto;
+  }
+
+  .conteudo-contato {
+    flex-direction: column;
+  }
+
+  .formulario-contato {
+    width: 100%;
+  }
+}
+
+/* Telas muito estreitas (iPhone SE, Galaxy Fold) */
+@media (max-width: 360px) {
+  .header {
+    padding: 0.6rem;
+  }
+
+  .logo img {
+    width: 60px;
+  }
+
+  .titulo-inicio h1 {
+    font-size: 1.75rem;
+  }
+
+  .destaque-inicio {
+    font-size: 1.25rem;
+  }
+
+  .paragrafo-inicio p {
+    font-size: 0.9rem;
+  }
+
+  .cta {
+    width: 100%;
+    max-width: 160px;
+    padding: 0.6rem 0;
+  }
+
+  .headline-portfolio .titulo,
+  .titulo-servicos h1,
+  .titulo-contato h1 {
+    font-size: 1.75rem;
+  }
+
+  .conteudo-textos-case h1 {
+    font-size: 1.25rem;
+  }
+
+  .fixed-button {
+    width: 44px;
+    height: 44px;
+  }
+
+  .cta-group {
+    flex-direction: column;
+    width: 100%;
   }
 }
 

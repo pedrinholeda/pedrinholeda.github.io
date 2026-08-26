@@ -85,6 +85,8 @@ document.addEventListener("DOMContentLoaded", function () {
       intro_text:
         "Trabalho criando aplicativos móveis usando tecnologias nativas e híbridas.",
       cta_button: "Fale Comigo",
+      cta_secondary: "Ver experiências",
+      experiences_section: "Ir para seção de experiências",
 
       // Textos da seção sobre
       about_title: "Olá, me chamo Pedro :)",
@@ -224,6 +226,8 @@ document.addEventListener("DOMContentLoaded", function () {
       intro_text:
         "I work creating mobile applications using native and hybrid technologies.",
       cta_button: "Get in Touch",
+      cta_secondary: "View experience",
+      experiences_section: "Go to experience section",
 
       // Textos da seção sobre
       about_title: "Hello, I'm Pedro :)",
