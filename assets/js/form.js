@@ -54,12 +54,6 @@ document.addEventListener("DOMContentLoaded", function () {
     return re.test(email);
   }
 
-  // Função para validar telefone (formato brasileiro)
-  function validatePhone(phone) {
-    const re = /^\(?[1-9]{2}\)? ?(?:[2-8]|9[1-9])[0-9]{3}\-?[0-9]{4}$/;
-    return re.test(phone.replace(/\s/g, ""));
-  }
-
   // Função para limpar erros
   function clearErrors() {
     const errorMessages = form.querySelectorAll(".error-message");
@@ -101,14 +95,6 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!validateEmail(value)) {
           field.classList.add("error");
           errorElement.textContent = t("validation_email_invalid");
-          return false;
-        }
-        break;
-
-      case "tel":
-        if (value.trim() && !validatePhone(value)) {
-          field.classList.add("error");
-          errorElement.textContent = t("validation_phone_invalid");
           return false;
         }
         break;
@@ -219,23 +205,4 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-});
-
-// Função para máscara de telefone
-function maskPhone(input) {
-  let value = input.value.replace(/\D/g, "");
-  value = value.replace(/(\d{2})(\d)/, "($1) $2");
-  value = value.replace(/(\d{5})(\d)/, "$1-$2");
-  value = value.replace(/(-\d{4})\d+?$/, "$1");
-  input.value = value;
-}
-
-// Aplica máscara de telefone
-document.addEventListener("DOMContentLoaded", function () {
-  const phoneInput = document.getElementById("telefone");
-  if (phoneInput) {
-    phoneInput.addEventListener("input", function () {
-      maskPhone(this);
-    });
-  }
 });

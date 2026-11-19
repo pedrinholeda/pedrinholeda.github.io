@@ -71,14 +71,12 @@ document.addEventListener("DOMContentLoaded", function () {
       menu_about: "SOBRE",
       menu_skills: "STACK",
       menu_experience: "EXPERIÊNCIA",
-      menu_projects: "PROJETOS",
       menu_contact: "CONTATO",
 
       // Seções principais
       welcome: "Pedro Léda",
       skills: "Stack",
       experiences: "Experiência",
-      projects: "Projetos",
       contact: "Contato",
 
       // Textos da seção início (Hero) - "Sou desenvolvedor [Frontend/Mobile/iOS]"
@@ -93,10 +91,13 @@ document.addEventListener("DOMContentLoaded", function () {
       // Textos da seção sobre
       about_title: "Olá, me chamo Pedro :)",
       about_description:
-        "Desenvolvedor mobile especializado em React Native, Flutter e iOS nativo. Apaixonado por criar experiências intuitivas e colaborar em projetos de alto impacto.",
+        "Comecei a programar profissionalmente em 2020 e encontrei no mobile o que mais gosto de fazer: transformar ideias em apps que as pessoas usam todos os dias. Já trabalhei com iOS nativo, React Native e Flutter, em produtos internos, projetos de grande escala e plataformas white-label. Hoje desenvolvo apps de segurança e monitoramento na Segware, direto de Brasília.",
+      stat_years: "anos de experiência",
+      stat_companies: "empresas",
+      stat_platforms: "plataformas: iOS, Android e Web",
 
       // Skills (stack / competências técnicas)
-      skills_subtitle: "Tecnologias e ferramentas que domino no dia a dia",
+      skills_subtitle: "Tecnologias e ferramentas que uso no dia a dia",
       hybrid_dev_title: "Mobile híbrido",
       hybrid_dev_desc:
         "React Native e Flutter para apps multiplataforma com tipagem forte e UI consistente.",
@@ -115,15 +116,6 @@ document.addEventListener("DOMContentLoaded", function () {
       experiences_subtitle:
         "Mais de 6 anos construindo apps em produção, de produtos internos a plataformas white-label.",
       exp_bb_role: "Desenvolvedor Web & Mobile",
-      projects_subtitle:
-        "Projetos pessoais onde exploro novas tecnologias de ponta a ponta.",
-      proj_alfie_desc:
-        "Simulador de entrevistas técnicas com feedback gerado por IA para respostas técnicas e comportamentais.",
-      proj_cartaralho_desc:
-        "Jogo de cartas multiplayer com salas em tempo real para Android, iOS e Web.",
-      proj_movie_desc: "Catálogo de filmes nativo para iOS consumindo a API do TMDB.",
-      view_code: "Ver código",
-      more_projects: "Mais projetos no GitHub",
 
       // Experiências profissionais
       exp_bb_desc:
@@ -143,18 +135,15 @@ document.addEventListener("DOMContentLoaded", function () {
       exp_compass_date: "out 2021 — dez 2023",
 
       // Textos da seção contato
-      contact_title: "Entre em contato",
       contact_description:
-        "Tem alguma dúvida ou deseja conversar? Entre em contato pelo formulário ou pelas redes abaixo. Respondo o mais rápido possível!",
-      contact_connect: "Ou conecte-se diretamente:",
+        "Aberto a projetos, colaborações e boas conversas sobre mobile. Mande uma mensagem ou me encontre nas redes.",
+      contact_connect: "Prefere as redes?",
 
       // Formulário
       name_placeholder: "Digite seu nome completo",
-      phone_placeholder: "(55) 22222-2222",
       email_placeholder: "Seu melhor email",
       message_placeholder: "Escreva o que você deseja aqui...",
       name_label: "Nome",
-      phone_label: "Telefone",
       email_label: "Email",
       message_label: "Mensagem",
       submit_button: "Enviar",
@@ -165,15 +154,11 @@ document.addEventListener("DOMContentLoaded", function () {
       footer_about: "Sobre",
       footer_skills: "Stack",
       footer_experience: "Experiência",
-      footer_projects: "Projetos",
       footer_contact: "Contato",
-      copyright: `© ${new Date().getFullYear()} Todos os direitos reservados.`,
-      developed_by: "Desenvolvido por Pedro│Dev.",
+      copyright: `© ${new Date().getFullYear()} Pedro Léda`,
 
-      // Free your mind section
-      made_with: "FEITO COM",
-      coffee: "CAFÉ",
-      and_code: "E CÓDIGO",
+      // Rodapé
+      made_with: "Feito com café e código",
 
       // Aria labels
       back_to_top: "Voltar ao topo",
@@ -183,7 +168,6 @@ document.addEventListener("DOMContentLoaded", function () {
       go_to_about: "Ir para seção sobre",
       go_to_skills: "Ir para seção skills",
       go_to_experience: "Ir para seção experiência",
-      go_to_projects: "Ir para seção projetos",
       go_to_contact: "Ir para seção contato",
       contact_section: "Ir para seção de contato",
       visit_github: "Visitar GitHub",
@@ -195,14 +179,13 @@ document.addEventListener("DOMContentLoaded", function () {
       validation_name_min: "Nome deve ter pelo menos 2 caracteres",
       validation_email_required: "Email é obrigatório",
       validation_email_invalid: "Email inválido",
-      validation_phone_invalid: "Telefone inválido (formato: (11) 99999-9999)",
       validation_message_required: "Mensagem é obrigatória",
       validation_form_errors: "Por favor, corrija os erros no formulário.",
       validation_success: "Mensagem enviada com sucesso! Entrarei em contato em breve.",
       validation_error: "Erro ao enviar mensagem. Tente novamente ou entre em contato diretamente.",
 
       // Typed (efeito de digitação)
-      typed_strings: ["Mobile", "React Native", "Flutter", "iOS"],
+      typed_strings: ["mobile", "React Native", "Flutter", "iOS"],
     },
     en: {
       // Menu
@@ -210,14 +193,12 @@ document.addEventListener("DOMContentLoaded", function () {
       menu_about: "ABOUT",
       menu_skills: "STACK",
       menu_experience: "EXPERIENCE",
-      menu_projects: "PROJECTS",
       menu_contact: "CONTACT",
 
       // Seções principais
       welcome: "Pedro Léda",
       skills: "Stack",
       experiences: "Experience",
-      projects: "Projects",
       contact: "Contact",
 
       // Textos da seção início (Hero)
@@ -232,7 +213,10 @@ document.addEventListener("DOMContentLoaded", function () {
       // Textos da seção sobre
       about_title: "Hello, I'm Pedro :)",
       about_description:
-        "Mobile developer specialized in React Native, Flutter and native iOS. Passionate about creating intuitive experiences and collaborating on high-impact projects.",
+        "I started coding professionally in 2020 and found in mobile what I enjoy most: turning ideas into apps people use every day. I've worked with native iOS, React Native and Flutter on internal products, large-scale projects and white-label platforms. Today I build security and monitoring apps at Segware, from Brasília, Brazil.",
+      stat_years: "years of experience",
+      stat_companies: "companies",
+      stat_platforms: "platforms: iOS, Android and Web",
 
       // Skills (tech stack)
       skills_subtitle: "Technologies and tools I use every day",
@@ -254,15 +238,6 @@ document.addEventListener("DOMContentLoaded", function () {
       experiences_subtitle:
         "6+ years building production apps, from internal products to white-label platforms.",
       exp_bb_role: "Web & Mobile Developer",
-      projects_subtitle:
-        "Personal projects where I explore new technologies end to end.",
-      proj_alfie_desc:
-        "Tech interview simulator with AI-generated feedback on technical and behavioral answers.",
-      proj_cartaralho_desc:
-        "Multiplayer card game with real-time rooms for Android, iOS and Web.",
-      proj_movie_desc: "Native iOS movie catalog consuming the TMDB API.",
-      view_code: "View code",
-      more_projects: "More projects on GitHub",
 
       // Experiências profissionais
       exp_bb_desc:
@@ -282,18 +257,15 @@ document.addEventListener("DOMContentLoaded", function () {
       exp_compass_date: "Oct 2021 — Dec 2023",
 
       // Textos da seção contato
-      contact_title: "Get in touch",
       contact_description:
-        "Have questions or want to chat? Get in touch via the form or through the links below. I'll respond as soon as possible!",
-      contact_connect: "Or connect directly:",
+        "Open to projects, collaborations and good conversations about mobile. Send a message or find me online.",
+      contact_connect: "Prefer social media?",
 
       // Formulário
       name_placeholder: "Enter your full name",
-      phone_placeholder: "(55) 22222-2222",
       email_placeholder: "Your best email",
       message_placeholder: "Write what you want here...",
       name_label: "Name",
-      phone_label: "Phone",
       email_label: "Email",
       message_label: "Message",
       submit_button: "Send",
@@ -304,15 +276,11 @@ document.addEventListener("DOMContentLoaded", function () {
       footer_about: "About",
       footer_skills: "Stack",
       footer_experience: "Experience",
-      footer_projects: "Projects",
       footer_contact: "Contact",
-      copyright: `© ${new Date().getFullYear()} All rights reserved.`,
-      developed_by: "Developed by Pedro│Dev.",
+      copyright: `© ${new Date().getFullYear()} Pedro Léda`,
 
-      // Free your mind section
-      made_with: "MADE WITH",
-      coffee: "COFFEE",
-      and_code: "AND CODE",
+      // Footer credits
+      made_with: "Made with coffee and code",
 
       // Aria labels
       back_to_top: "Back to top",
@@ -322,7 +290,6 @@ document.addEventListener("DOMContentLoaded", function () {
       go_to_about: "Go to about section",
       go_to_skills: "Go to skills section",
       go_to_experience: "Go to experience section",
-      go_to_projects: "Go to projects section",
       go_to_contact: "Go to contact section",
       contact_section: "Go to contact section",
       visit_github: "Visit GitHub",
@@ -334,14 +301,13 @@ document.addEventListener("DOMContentLoaded", function () {
       validation_name_min: "Name must be at least 2 characters",
       validation_email_required: "Email is required",
       validation_email_invalid: "Invalid email",
-      validation_phone_invalid: "Invalid phone (format: (11) 99999-9999)",
       validation_message_required: "Message is required",
       validation_form_errors: "Please fix the errors in the form.",
       validation_success: "Message sent successfully! I'll get in touch soon.",
       validation_error: "Error sending message. Try again or contact me directly.",
 
       // Typed (typing effect)
-      typed_strings: ["Mobile", "React Native", "Flutter", "iOS"],
+      typed_strings: ["mobile", "React Native", "Flutter", "iOS"],
     },
   };
 
