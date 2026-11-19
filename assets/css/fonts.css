@@ -11,3 +11,17 @@
   font-display: swap;
   font-style: normal;
 }
+
+/**
+ * Satoshi — Variable only (woff2)
+ * Designed by Indian Type Foundry
+ * https://www.fontshare.com/fonts/satoshi
+ */
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/Satoshi-Variable.woff2") format("woff2-variations"),
+    url("../fonts/Satoshi-Variable.woff2") format("woff2");
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+}

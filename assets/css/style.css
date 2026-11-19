@@ -1,5 +1,5 @@
 /******************** Fontes usadas */
-@import url("clash-grotesk.css");
+@import url("fonts.css");
 
 * {
   margin: 0;
@@ -8,8 +8,8 @@
 }
 
 :root {
-  --font-grande: "ClashGrotesk", sans-serif;
-  --font-pequena: "ClashGrotesk", sans-serif;
+  --font-grande: "ClashGrotesk", system-ui, sans-serif;
+  --font-pequena: "Satoshi", system-ui, sans-serif;
   --color-black: #000;
   --color-gray1: #3d4143;
   --color-gray2: #9c9d9d;
@@ -73,6 +73,13 @@ li {
 
 a {
   text-decoration: none;
+}
+
+/* Títulos em Clash Grotesk, textos em Satoshi */
+h1,
+h2,
+h3 {
+  font-family: var(--font-grande);
 }
 
 /* Skip link — acessibilidade */
@@ -625,7 +632,7 @@ button:active,
 }
 
 .headline-scroll .light {
-  font-weight: lighter;
+  font-weight: 300;
   color: var(--color-gray2);
 }
 
@@ -849,7 +856,7 @@ button:active,
 .headline-secao h2 {
   color: var(--color-white);
   font-size: clamp(2.5rem, 6vw, 5rem);
-  font-weight: lighter;
+  font-weight: 300;
   font-family: var(--font-grande);
   line-height: 1.1;
 }
