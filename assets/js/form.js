@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Validação em tempo real
-  const inputs = form.querySelectorAll("input, textarea");
+  const inputs = form.querySelectorAll("input:not(.honeypot), textarea");
   inputs.forEach((input) => {
     input.addEventListener("blur", () => {
       validateField(input, input.value);
@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Valida campos opcionais que têm valor
     const optionalFields = form.querySelectorAll(
-      "input:not([required]), textarea:not([required])"
+      "input:not([required]):not(.honeypot), textarea:not([required])"
     );
     optionalFields.forEach((field) => {
       if (field.value.trim() && !validateField(field, field.value)) {
@@ -207,7 +207,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Melhoria de acessibilidade para navegação por teclado
-  const focusableElements = form.querySelectorAll("input, textarea, button");
+  const focusableElements = form.querySelectorAll("input:not(.honeypot), textarea, button");
   focusableElements.forEach((element, index) => {
     element.addEventListener("keydown", (e) => {
       if (e.key === "Enter" && e.target.type !== "textarea") {

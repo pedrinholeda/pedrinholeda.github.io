@@ -424,8 +424,6 @@ body.no-scroll {
 /* Glassmorphism para cards e menus */
 .menu-aberto,
 .box-skills,
-.card-servicos,
-.card-servicos-left,
 .formulario-contato,
 .footer {
   background: rgba(30, 30, 30, 0.7);
@@ -439,8 +437,6 @@ body.no-scroll {
 button,
 a,
 .box-skills,
-.card-servicos,
-.card-servicos-left,
 .footer-nav a,
 .social-links a {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -520,6 +516,9 @@ button:active,
 
 .cta {
   position: relative;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
   margin: 0;
   padding: 14px 28px;
   transition: all 0.2s ease;
@@ -919,146 +918,6 @@ button:active,
   }
 }
 
-/*************** SERVIÇOS *****/
-.servicos {
-  background-color: var(--color-black);
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--section-padding) 1rem;
-}
-
-.container-servicos {
-  background-color: transparent;
-  width: 100%;
-  max-width: 1400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-}
-
-.headline-servicos {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  margin-bottom: 1rem;
-}
-
-.titulo-servicos {
-  height: auto;
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.titulo-servicos h2 {
-  color: var(--color-white);
-  width: 100%;
-  font-size: clamp(3rem, 8vw + 1rem, 8rem);
-  font-weight: lighter;
-  font-family: var(--font-grande);
-  line-height: 1.1;
-}
-
-.descricao-servicos {
-  width: 50%;
-  font-size: clamp(1.2rem, 2vw + 0.8rem, 2rem);
-  text-align: right;
-  line-height: 1.6;
-  letter-spacing: 0.5px;
-  color: var(--color-gray2);
-}
-
-.servicos-cards {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 1.5rem;
-  padding: 1rem 0;
-}
-
-.card-servicos,
-.card-servicos-left {
-  background: rgba(30, 30, 30, 0.7);
-  border: 1px solid hsla(0, 0%, 100%, 0.15);
-  border-radius: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2rem;
-  color: var(--color-white);
-  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card-servicos:hover,
-.card-servicos-left:hover {
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 8px 40px rgba(231, 252, 0, 0.1);
-}
-
-.card-servicos-left {
-  margin-left: 5%;
-  width: 95%;
-  gap: 7%;
-}
-
-.card-servicos {
-  margin-right: 5%;
-  width: 95%;
-  margin-left: auto;
-  gap: 7%;
-}
-
-.card-titulo {
-  width: 68%;
-  font-family: var(--font-pequena);
-  font-weight: normal;
-  color: var(--color-white);
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.card-titulo h3 {
-  font-size: clamp(1.2rem, 2.5vw + 0.4rem, 2rem);
-  font-weight: 600;
-  color: var(--color-white);
-}
-
-.card-titulo p {
-  font-size: clamp(0.85rem, 1vw + 0.5rem, 1rem);
-  color: var(--color-gray2);
-  line-height: 1.5;
-  max-width: 90%;
-}
-
-.card-icon {
-  width: 25%;
-  max-width: 120px;
-  height: 60px;
-  border: 1px solid hsla(0, 0%, 100%, 0.15);
-  border-radius: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: rgba(30, 30, 30, 0.9);
-}
-
-.card-icon i {
-  font-size: 2rem;
-  color: var(--color-white);
-  margin-bottom: -7px;
-}
-
 /*************** FEITO COM CAFÉ E CÓDIGO *****/
 .free-your-mind {
   background-color: var(--color-black);
@@ -1119,145 +978,260 @@ button:active,
   margin: 0 clamp(1rem, 4vw, 4rem);
 }
 
-/*************** PORTFOLIO *****/
-.portfolio {
+/*************** CABEÇALHO DE SEÇÃO (Experiência / Projetos) *****/
+.headline-secao {
   width: 100%;
-  color: var(--color-white);
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--section-padding) 1rem;
-}
-
-.container-portfolio {
-  width: 100%;
-  max-width: 1400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
-  gap: 2rem;
-}
-
-.headline-portfolio {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 2rem;
   margin-bottom: 1rem;
 }
 
-.headline-portfolio .titulo {
-  width: 50%;
+.headline-secao h2 {
+  color: var(--color-white);
   font-size: clamp(2.5rem, 6vw, 5rem);
   font-weight: lighter;
   font-family: var(--font-grande);
   line-height: 1.1;
 }
 
-.headline-portfolio .descricao {
-  width: 50%;
-  font-size: clamp(1rem, 1.5vw + 0.5rem, 1.5rem);
+.headline-secao p {
+  max-width: 520px;
+  font-size: clamp(1rem, 1.2vw + 0.5rem, 1.3rem);
   text-align: right;
   line-height: 1.5;
-  letter-spacing: 0.5px;
   color: var(--color-gray2);
 }
 
-.container-case {
+/*************** EXPERIÊNCIA (timeline) *****/
+.experiencia,
+.projetos {
   width: 100%;
+  color: var(--color-white);
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: 3rem;
+  padding: var(--section-padding) 1rem;
 }
 
-.case1,
-.case2,
-.case3,
-.case4,
-.case5 {
+.container-experiencia,
+.container-projetos {
   width: 100%;
-  min-height: auto;
+  max-width: 1100px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 2rem;
 }
 
-.imagens-case {
-  width: 45%;
-  aspect-ratio: 16 / 10;
-  max-height: 320px;
+.timeline {
+  position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-}
-
-.logo-experiencia {
-  display: block;
-  width: 100%;
-  height: 100%;
-  border-radius: 15px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.logo-experiencia:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 30px rgba(231, 252, 0, 0.15);
-}
-
-.logo-experiencia img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.textos-case {
-  width: 55%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-}
-
-.conteudo-textos-case {
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
   flex-direction: column;
   gap: 1rem;
 }
 
-.conteudo-textos-case h3 {
-  color: var(--color-white);
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
-  letter-spacing: 1px;
-  margin-bottom: 0.25rem;
+/* Linha vertical que liga os logos */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 28px;
+  bottom: 28px;
+  left: calc(1.5rem + 27px);
+  width: 1px;
+  background: var(--color-gray1);
+}
+
+.exp-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.exp-item:hover {
+  background: rgba(30, 30, 30, 0.7);
+  border-color: hsla(0, 0%, 100%, 0.12);
+}
+
+.exp-logo {
+  position: relative;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  object-fit: cover;
+  background: var(--color-white);
+  box-shadow: 0 0 0 4px var(--color-black);
+}
+
+.exp-atual .exp-logo {
+  box-shadow: 0 0 0 4px var(--color-black), 0 0 0 5px var(--color-destaque1);
+}
+
+.exp-corpo {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.exp-topo {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+}
+
+.exp-topo h3 {
+  font-size: clamp(1.3rem, 1.5vw + 0.8rem, 1.75rem);
+  letter-spacing: 0.5px;
   line-height: 1.2;
 }
 
-.conteudo-textos-case h3 a {
+.exp-topo h3 a {
   color: inherit;
-  text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.conteudo-textos-case h3 a:hover {
+.exp-topo h3 a:hover {
   color: var(--color-destaque1);
 }
 
-.conteudo-textos-case p {
+.exp-date {
+  font-size: 0.9rem;
+  font-weight: 500;
   color: var(--color-gray2);
-  font-size: clamp(0.95rem, 1.2vw + 0.5rem, 1.15rem);
-  line-height: 1.6;
-  letter-spacing: 0.3px;
+  white-space: nowrap;
 }
+
+.exp-atual .exp-date {
+  color: var(--color-destaque1);
+}
+
+.exp-cargo {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-white);
+}
+
+.exp-corpo > p:not(.exp-cargo) {
+  color: var(--color-gray2);
+  font-size: clamp(0.95rem, 0.5vw + 0.8rem, 1.1rem);
+  line-height: 1.6;
+}
+
+/*************** PROJETOS *****/
+.projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.projeto-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  background: rgba(30, 30, 30, 0.7);
+  border: 1px solid hsla(0, 0%, 100%, 0.15);
+  border-radius: 20px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.projeto-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(231, 252, 0, 0.4);
+}
+
+.projeto-icone {
+  font-size: 2.5rem;
+  color: var(--color-destaque1);
+}
+
+.projeto-card h3 {
+  font-size: clamp(1.4rem, 1.5vw + 0.8rem, 1.8rem);
+}
+
+.projeto-card p {
+  flex: 1;
+  color: var(--color-gray2);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.projeto-link,
+.projetos-mais {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-white);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease;
+}
+
+.projeto-link:hover,
+.projetos-mais:hover {
+  color: var(--color-destaque1);
+}
+
+.projetos-mais {
+  align-self: center;
+  padding: 0.9rem 1.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50px;
+}
+
+.projetos-mais:hover {
+  border-color: var(--color-destaque1);
+}
+
+/* Honeypot do formulário: invisível para pessoas */
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  .headline-secao {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .headline-secao p {
+    text-align: left;
+  }
+
+  .exp-item {
+    gap: 1rem;
+    padding: 1.25rem 0.75rem;
+  }
+
+  .exp-logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+  }
+
+  .timeline::before {
+    left: calc(0.75rem + 21px);
+  }
+
+  .projeto-card {
+    padding: 1.5rem;
+  }
+}
+
 
 .exp-techs {
   display: flex;
@@ -1275,21 +1249,6 @@ button:active,
   letter-spacing: 0.5px;
 }
 
-.conteudo-textos-case .exp-date {
-  width: auto;
-  font-size: 0.85rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem 1.25rem;
-  height: auto;
-  background-color: var(--color-white);
-  border-radius: 50px;
-  color: var(--color-black);
-  font-weight: bold;
-  letter-spacing: 0.5px;
-  margin-top: 0.5rem;
-}
 
 /*************** CONTATO *****/
 .contato {
@@ -1809,7 +1768,7 @@ button:active,
   }
 
   .cta {
-    width: 180px;
+    min-width: 180px;
   }
 
   .cta-secondary {
@@ -1863,138 +1822,6 @@ button:active,
     min-height: 300px;
     padding: 1.5rem;
     gap: 1rem;
-  }
-
-  /* Serviços */
-  .servicos {
-    padding: 3rem 1rem;
-  }
-
-  .container-servicos {
-    gap: 1.5rem;
-  }
-
-  .headline-servicos {
-    flex-direction: column;
-    gap: 1rem;
-    min-height: auto;
-    margin-bottom: 0.5rem;
-  }
-
-  .titulo-servicos,
-  .titulo-contato {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .descricao-servicos,
-  .descricao-contato {
-    width: 100%;
-    text-align: center;
-  }
-
-  .servicos-cards {
-    gap: 1rem;
-    padding: 0.5rem 0;
-  }
-
-  .card-servicos,
-  .card-servicos-left {
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1.5rem;
-    border-radius: 20px;
-    margin-left: 0;
-    margin-right: 0;
-    width: 100%;
-  }
-
-  .card-titulo {
-    width: 100%;
-    text-align: center;
-  }
-
-  .card-icon {
-    width: 80px;
-    height: 80px;
-  }
-
-  /* Portfolio */
-  .portfolio {
-    padding: 3rem 1rem 2rem 1rem;
-  }
-
-  .container-portfolio {
-    gap: 1.5rem;
-  }
-
-  .headline-portfolio {
-    flex-direction: column;
-    height: auto;
-    margin-bottom: 0.5rem;
-  }
-
-  .headline-portfolio .titulo {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 4rem;
-  }
-
-  .headline-portfolio .descricao {
-    width: 100%;
-    text-align: center;
-    font-size: 1.4rem;
-  }
-
-  .container-case {
-    gap: 2rem;
-  }
-
-  .case1,
-  .case3,
-  .case5 {
-    flex-direction: column;
-    gap: 1rem;
-    height: auto;
-    justify-content: center;
-  }
-
-  .case2,
-  .case4 {
-    flex-direction: column-reverse;
-    gap: 1rem;
-    height: auto;
-    justify-content: center;
-  }
-
-  .imagens-case {
-    width: 100%;
-    aspect-ratio: 16 / 10;
-    max-height: 220px;
-    height: auto;
-    padding: 0;
-  }
-
-  .textos-case {
-    width: 100%;
-    height: auto;
-    padding: 1rem;
-  }
-
-  .conteudo-textos-case {
-    gap: 0.8rem;
-  }
-
-  .conteudo-textos-case h3 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .conteudo-textos-case p {
-    font-size: 1.2rem;
-    padding-bottom: 0.5rem;
   }
 
   /* Contato */
@@ -2103,55 +1930,6 @@ button:active,
 
   .box-skills p {
     font-size: 1rem;
-  }
-
-  /* Serviços */
-  .servicos {
-    padding: 2rem 0.8rem;
-  }
-
-  .titulo-servicos h2 {
-    font-size: 3rem;
-  }
-
-  .descricao-servicos p {
-    font-size: 1.2rem;
-  }
-
-  .card-servicos,
-  .card-servicos-left {
-    padding: 1.5rem;
-  }
-
-  .card-titulo h3 {
-    font-size: 1.5rem;
-  }
-
-  /* Portfolio */
-  .portfolio {
-    padding: 2rem 0.8rem 2rem 0.8rem;
-  }
-
-  .headline-portfolio .titulo {
-    font-size: 3rem;
-  }
-
-  .headline-portfolio .descricao {
-    font-size: 1.2rem;
-  }
-
-  .conteudo-textos-case h3 {
-    font-size: 2.5rem;
-  }
-
-  .conteudo-textos-case p {
-    font-size: 1rem;
-  }
-
-  .conteudo-textos-case span {
-    font-size: 1rem;
-    width: 150px;
-    height: 35px;
   }
 
   /* Contato */
@@ -2268,60 +2046,24 @@ button:active,
     position: static;
   }
 
-  .headline-servicos,
-  .headline-portfolio,
   .headline-contato {
     flex-direction: column;
     height: auto;
   }
 
-  .titulo-servicos,
-  .titulo-contato,
-  .headline-portfolio .titulo {
+  .titulo-contato {
     width: 100%;
     justify-content: flex-start;
   }
 
-  .titulo-servicos h2,
   .titulo-contato h2 {
     font-size: clamp(2.5rem, 6vw, 4rem);
   }
 
-  .descricao-servicos,
-  .headline-portfolio .descricao,
   .descricao-contato {
     width: 100%;
     text-align: left;
     font-size: clamp(1rem, 2vw, 1.4rem);
-  }
-
-  .headline-portfolio .titulo {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-  }
-
-  .case1,
-  .case3,
-  .case5 {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .case2,
-  .case4 {
-    flex-direction: column-reverse;
-    height: auto;
-  }
-
-  .imagens-case {
-    width: 100%;
-    aspect-ratio: 16 / 10;
-    max-height: 280px;
-    height: auto;
-  }
-
-  .textos-case {
-    width: 100%;
-    height: auto;
   }
 
   .conteudo-contato {
@@ -2356,20 +2098,14 @@ button:active,
   }
 
   .cta {
-    width: 100%;
-    max-width: 160px;
-    padding: 0.6rem 0;
+    min-width: 160px;
+    padding: 0.6rem 1rem;
   }
 
-  .headline-portfolio .titulo,
-  .titulo-servicos h2,
   .titulo-contato h2 {
     font-size: 1.75rem;
   }
 
-  .conteudo-textos-case h3 {
-    font-size: 1.25rem;
-  }
 
   .fixed-button {
     width: 44px;

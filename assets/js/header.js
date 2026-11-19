@@ -70,22 +70,22 @@ document.addEventListener("DOMContentLoaded", function () {
       menu_home: "INÍCIO",
       menu_about: "SOBRE",
       menu_skills: "STACK",
-      menu_services: "SERVIÇOS",
-      menu_portfolio: "PORTFOLIO",
+      menu_experience: "EXPERIÊNCIA",
+      menu_projects: "PROJETOS",
       menu_contact: "CONTATO",
 
       // Seções principais
       welcome: "Pedro Léda",
       skills: "Stack",
-      services: "Serviços",
-      experiences: "Experiências",
+      experiences: "Experiência",
+      projects: "Projetos",
       contact: "Contato",
 
       // Textos da seção início (Hero) - "Sou desenvolvedor [Frontend/Mobile/iOS]"
       hero_prefix: "Sou desenvolvedor ",
       hero_suffix: "",
       intro_text:
-        "Trabalho criando aplicativos móveis usando tecnologias nativas e híbridas.",
+        "Há mais de 6 anos criando aplicativos móveis com tecnologias nativas e multiplataforma, da arquitetura à publicação nas lojas.",
       cta_button: "Fale Comigo",
       cta_secondary: "Ver experiências",
       experiences_section: "Ir para seção de experiências",
@@ -103,50 +103,44 @@ document.addEventListener("DOMContentLoaded", function () {
       native_ios_title: "iOS nativo",
       native_ios_desc:
         "Swift e SwiftUI com foco em APIs da Apple, padrões de arquitetura e qualidade de código.",
-      frontend_title: "Web front-end",
-      frontend_desc:
-        "HTML, CSS, TypeScript, React e Angular para interfaces modernas e acessíveis.",
+      architecture_title: "Arquitetura",
+      architecture_desc:
+        "Código organizado e escalável com padrões consolidados, pensado para times e produtos que crescem.",
       versioning_title: "Git & entrega",
       versioning_desc:
         "Git, Git Flow e práticas de CI/CD para colaboração segura e releases previsíveis.",
 
-      // Serviços (o que ofereço ao cliente)
-      services_subtitle:
-        "Como posso ajudar no seu produto — da ideia ao app publicado.",
-      frontend_service: "Interfaces web",
-      ios_native_service: "Apps iOS",
-      hybrid_service: "Apps multiplataforma",
-      uiux_service: "UI/UX para produto",
-      versioning_service: "Fluxo de entrega",
-      performance_service: "Otimização",
-      frontend_service_desc: "Landing pages e painéis responsivos sob medida",
-      ios_native_service_desc: "Do protótipo à App Store com Swift/SwiftUI",
-      hybrid_service_desc: "Um código, iOS e Android com RN ou Flutter",
-      uiux_service_desc: "Fluxos claros, prototipação e handoff para dev",
-      versioning_service_desc: "Git Flow, reviews e pipelines de CI/CD",
-      performance_service_desc: "Auditoria, profiling e ganhos de fluidez",
 
-      // Textos da seção portfolio
-      portfolio_subtitle:
-        "Experiência em desenvolvimento, design e criação de projetos digitais.",
+      // Experiência e projetos
+      experiences_subtitle:
+        "Mais de 6 anos construindo apps em produção, de produtos internos a plataformas white-label.",
+      exp_bb_role: "Desenvolvedor Web & Mobile",
+      projects_subtitle:
+        "Projetos pessoais onde exploro novas tecnologias de ponta a ponta.",
+      proj_alfie_desc:
+        "Simulador de entrevistas técnicas com feedback gerado por IA para respostas técnicas e comportamentais.",
+      proj_cartaralho_desc:
+        "Jogo de cartas multiplayer com salas em tempo real para Android, iOS e Web.",
+      proj_movie_desc: "Catálogo de filmes nativo para iOS consumindo a API do TMDB.",
+      view_code: "Ver código",
+      more_projects: "Mais projetos no GitHub",
 
       // Experiências profissionais
       exp_bb_desc:
-        "Desenvolvimento web e mobile com JavaScript, Angular e React Native, além de microserviços para produtos internos, criando soluções para otimizar processos e melhorar a experiência do usuário.",
+        "Web e mobile com Angular e React Native, além de microserviços para produtos internos que otimizaram processos da empresa.",
       exp_usemobile_desc:
-        "Desenvolvimento de aplicativos nativos iOS com Swift, seguindo padrões de código e implementando novas funcionalidades. Trabalho com Git Flow para controle de versionamento.",
+        "Apps nativos iOS com Swift, implementando novas funcionalidades seguindo os padrões de código do time e Git Flow.",
       exp_compass_desc:
-        "Atuação no desenvolvimento de aplicações iOS e React Native, colaborando em projetos de grande escala. Foco em arquitetura, boas práticas e melhorias de usabilidade e performance.",
+        "Aplicações iOS e React Native em projetos de grande escala, com foco em arquitetura, boas práticas, usabilidade e performance.",
       exp_akross_desc:
-        "Desenvolvimento de aplicações mobile com React Native e Flutter, evolução de apps em produção e SDK nativa iOS em Swift. Atuação em plataforma de rewards white-label, integrações Firebase e SDKs de parceiros.",
+        "Apps em produção com React Native e Flutter e SDK nativa iOS em Swift. Atuação em plataforma de rewards white-label, integrações Firebase e SDKs de parceiros.",
       exp_akross_date: "dez 2023 — mai 2026",
       exp_segware_desc:
-        "Mobile Developer em soluções de segurança eletrônica e monitoramento. Desenvolvimento principalmente com React Native, e ocasionalmente iOS e Android nativos, para produtos usados por centrais e clientes finais.",
+        "Soluções de segurança eletrônica e monitoramento. Desenvolvimento principalmente com React Native, e ocasionalmente iOS e Android nativos, para produtos usados por centrais e clientes finais.",
       exp_segware_date: "mai 2026 — presente",
       exp_bb_date: "set 2020 — jun 2021",
       exp_usemobile_date: "jun 2021 — set 2021",
       exp_compass_date: "out 2021 — dez 2023",
-      exp_current: "Atualmente",
 
       // Textos da seção contato
       contact_title: "Entre em contato",
@@ -170,10 +164,10 @@ document.addEventListener("DOMContentLoaded", function () {
       footer_home: "Início",
       footer_about: "Sobre",
       footer_skills: "Stack",
-      footer_services: "Serviços",
-      footer_portfolio: "Portfolio",
+      footer_experience: "Experiência",
+      footer_projects: "Projetos",
       footer_contact: "Contato",
-      copyright: "© 2026 Todos os direitos reservados.",
+      copyright: `© ${new Date().getFullYear()} Todos os direitos reservados.`,
       developed_by: "Desenvolvido por Pedro│Dev.",
 
       // Free your mind section
@@ -188,13 +182,10 @@ document.addEventListener("DOMContentLoaded", function () {
       go_to_home: "Ir para seção início",
       go_to_about: "Ir para seção sobre",
       go_to_skills: "Ir para seção skills",
-      go_to_services: "Ir para seção serviços",
-      go_to_portfolio: "Ir para seção portfolio",
+      go_to_experience: "Ir para seção experiência",
+      go_to_projects: "Ir para seção projetos",
       go_to_contact: "Ir para seção contato",
       contact_section: "Ir para seção de contato",
-      previous_image: "Imagem anterior",
-      next_image: "Próxima imagem",
-      visit_instagram: "Visitar Instagram",
       visit_github: "Visitar GitHub",
       visit_linkedin: "Visitar LinkedIn",
       footer_menu: "Menu do rodapé",
@@ -211,29 +202,29 @@ document.addEventListener("DOMContentLoaded", function () {
       validation_error: "Erro ao enviar mensagem. Tente novamente ou entre em contato diretamente.",
 
       // Typed (efeito de digitação)
-      typed_strings: ["Frontend", "Mobile", "iOS"],
+      typed_strings: ["Mobile", "React Native", "Flutter", "iOS"],
     },
     en: {
       // Menu
       menu_home: "HOME",
       menu_about: "ABOUT",
       menu_skills: "STACK",
-      menu_services: "SERVICES",
-      menu_portfolio: "PORTFOLIO",
+      menu_experience: "EXPERIENCE",
+      menu_projects: "PROJECTS",
       menu_contact: "CONTACT",
 
       // Seções principais
       welcome: "Pedro Léda",
       skills: "Stack",
-      services: "Services",
-      experiences: "Experiences",
+      experiences: "Experience",
+      projects: "Projects",
       contact: "Contact",
 
       // Textos da seção início (Hero)
       hero_prefix: "I'm a ",
       hero_suffix: " developer",
       intro_text:
-        "I work creating mobile applications using native and hybrid technologies.",
+        "6+ years building mobile apps with native and cross-platform technologies, from architecture to store release.",
       cta_button: "Get in Touch",
       cta_secondary: "View experience",
       experiences_section: "Go to experience section",
@@ -251,50 +242,44 @@ document.addEventListener("DOMContentLoaded", function () {
       native_ios_title: "Native iOS",
       native_ios_desc:
         "Swift and SwiftUI focused on Apple APIs, architecture patterns and code quality.",
-      frontend_title: "Web front-end",
-      frontend_desc:
-        "HTML, CSS, TypeScript, React and Angular for modern, accessible interfaces.",
+      architecture_title: "Architecture",
+      architecture_desc:
+        "Organized, scalable code built on proven patterns, designed for growing teams and products.",
       versioning_title: "Git & delivery",
       versioning_desc:
         "Git, Git Flow and CI/CD practices for safe collaboration and predictable releases.",
 
-      // Services (client offerings)
-      services_subtitle:
-        "How I can help your product — from idea to a published app.",
-      frontend_service: "Web interfaces",
-      ios_native_service: "iOS apps",
-      hybrid_service: "Cross-platform apps",
-      uiux_service: "Product UI/UX",
-      versioning_service: "Delivery workflow",
-      performance_service: "Optimization",
-      frontend_service_desc: "Custom responsive landing pages and dashboards",
-      ios_native_service_desc: "From prototype to the App Store with Swift/SwiftUI",
-      hybrid_service_desc: "One codebase, iOS and Android with RN or Flutter",
-      uiux_service_desc: "Clear flows, prototyping and handoff to engineering",
-      versioning_service_desc: "Git Flow, reviews and CI/CD pipelines",
-      performance_service_desc: "Audits, profiling and smoother UX",
 
-      // Textos da seção portfolio
-      portfolio_subtitle:
-        "Experience in development, design and creation of digital projects.",
+      // Experience and projects
+      experiences_subtitle:
+        "6+ years building production apps, from internal products to white-label platforms.",
+      exp_bb_role: "Web & Mobile Developer",
+      projects_subtitle:
+        "Personal projects where I explore new technologies end to end.",
+      proj_alfie_desc:
+        "Tech interview simulator with AI-generated feedback on technical and behavioral answers.",
+      proj_cartaralho_desc:
+        "Multiplayer card game with real-time rooms for Android, iOS and Web.",
+      proj_movie_desc: "Native iOS movie catalog consuming the TMDB API.",
+      view_code: "View code",
+      more_projects: "More projects on GitHub",
 
       // Experiências profissionais
       exp_bb_desc:
-        "Web and mobile development with JavaScript, Angular and React Native, plus microservices for internal products, creating solutions to optimize processes and improve user experience.",
+        "Web and mobile with Angular and React Native, plus microservices for internal products that streamlined company processes.",
       exp_usemobile_desc:
-        "Native iOS app development with Swift, following code standards and implementing new features. Working with Git Flow for version control.",
+        "Native iOS apps in Swift, shipping new features following the team's code standards and Git Flow.",
       exp_compass_desc:
-        "Working on iOS and React Native application development, collaborating on large-scale projects. Focus on architecture, best practices and usability and performance improvements.",
+        "iOS and React Native apps on large-scale projects, focused on architecture, best practices, usability and performance.",
       exp_akross_desc:
-        "Mobile development with React Native and Flutter, evolving production apps and a native iOS Swift SDK. Worked on a white-label rewards platform, Firebase integrations and partner SDKs.",
+        "Production apps with React Native and Flutter and a native iOS SDK in Swift. Worked on a white-label rewards platform, Firebase integrations and partner SDKs.",
       exp_akross_date: "Dec 2023 — May 2026",
       exp_segware_desc:
-        "Mobile Developer on electronic security and monitoring solutions. Mainly React Native, with occasional native iOS and Android work, for products used by monitoring centers and end customers.",
+        "Electronic security and monitoring solutions. Mainly React Native, with occasional native iOS and Android work, for products used by monitoring centers and end customers.",
       exp_segware_date: "May 2026 — Present",
       exp_bb_date: "Sep 2020 — Jun 2021",
       exp_usemobile_date: "Jun 2021 — Sep 2021",
       exp_compass_date: "Oct 2021 — Dec 2023",
-      exp_current: "Currently",
 
       // Textos da seção contato
       contact_title: "Get in touch",
@@ -318,10 +303,10 @@ document.addEventListener("DOMContentLoaded", function () {
       footer_home: "Home",
       footer_about: "About",
       footer_skills: "Stack",
-      footer_services: "Services",
-      footer_portfolio: "Portfolio",
+      footer_experience: "Experience",
+      footer_projects: "Projects",
       footer_contact: "Contact",
-      copyright: "© 2026 All rights reserved.",
+      copyright: `© ${new Date().getFullYear()} All rights reserved.`,
       developed_by: "Developed by Pedro│Dev.",
 
       // Free your mind section
@@ -336,13 +321,10 @@ document.addEventListener("DOMContentLoaded", function () {
       go_to_home: "Go to home section",
       go_to_about: "Go to about section",
       go_to_skills: "Go to skills section",
-      go_to_services: "Go to services section",
-      go_to_portfolio: "Go to portfolio section",
+      go_to_experience: "Go to experience section",
+      go_to_projects: "Go to projects section",
       go_to_contact: "Go to contact section",
       contact_section: "Go to contact section",
-      previous_image: "Previous image",
-      next_image: "Next image",
-      visit_instagram: "Visit Instagram",
       visit_github: "Visit GitHub",
       visit_linkedin: "Visit LinkedIn",
       footer_menu: "Footer menu",
@@ -359,7 +341,7 @@ document.addEventListener("DOMContentLoaded", function () {
       validation_error: "Error sending message. Try again or contact me directly.",
 
       // Typed (typing effect)
-      typed_strings: ["Frontend", "Mobile", "iOS"],
+      typed_strings: ["Mobile", "React Native", "Flutter", "iOS"],
     },
   };
 

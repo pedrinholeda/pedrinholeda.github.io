@@ -125,8 +125,7 @@
           <a href="#inicio" data-i18n="menu_home" data-section="inicio">Início</a>
           <a href="#sobre" data-i18n="menu_about" data-section="sobre">Sobre</a>
           <a href="#skills" data-i18n="menu_skills" data-section="skills">Stack</a>
-          <a href="#servicos" data-i18n="menu_services" data-section="servicos">Serviços</a>
-          <a href="#portfolio" data-i18n="menu_portfolio" data-section="portfolio">Portfolio</a>
+          <a href="#experiencia" data-i18n="menu_experience" data-section="experiencia">Experiência</a>
           <a href="#contato" data-i18n="menu_contact" data-section="contato">Contato</a>
         </nav>
         <div class="menu">
@@ -184,20 +183,12 @@
               >STACK</a
             >
             <a
-              href="#servicos"
-              data-i18n-aria-label="go_to_services"
-              aria-label="Ir para seção serviços"
-              data-i18n="menu_services"
-              data-section="servicos"
-              >SERVIÇOS</a
-            >
-            <a
-              href="#portfolio"
-              data-i18n-aria-label="go_to_portfolio"
-              aria-label="Ir para seção portfolio"
-              data-i18n="menu_portfolio"
-              data-section="portfolio"
-              >PORTFOLIO</a
+              href="#experiencia"
+              data-i18n-aria-label="go_to_experience"
+              aria-label="Ir para seção experiência"
+              data-i18n="menu_experience"
+              data-section="experiencia"
+              >EXPERIÊNCIA</a
             >
             <a
               href="#contato"
@@ -236,8 +227,8 @@
               data-aos-duration="1000"
             >
               <p data-i18n="intro_text">
-                Trabalho criando aplicativos móveis usando tecnologias nativas e
-                híbridas.
+                Há mais de 6 anos criando aplicativos móveis com tecnologias
+                nativas e multiplataforma, da arquitetura à publicação nas lojas.
               </p>
             </div>
             <div
@@ -265,7 +256,7 @@
               </button>
               <button
                 class="cta-secondary"
-                onclick="scrollToSection('portfolio')"
+                onclick="scrollToSection('experiencia')"
                 data-i18n-aria-label="experiences_section"
                 aria-label="Ir para seção de experiências"
               >
@@ -438,16 +429,16 @@
               data-aos-delay="300"
               data-aos-duration="1000"
             >
-              <i class="bi bi-code-slash" aria-hidden="true"></i>
-              <h3 data-i18n="frontend_title">Front-End</h3>
-              <p data-i18n="frontend_desc">
-                Desenvolvimento com HTML, CSS e JavaScript, criando interfaces
-                dinâmicas e responsivas com React e Angular.
+              <i class="bi bi-diagram-3" aria-hidden="true"></i>
+              <h3 data-i18n="architecture_title">Arquitetura</h3>
+              <p data-i18n="architecture_desc">
+                Código organizado e escalável com padrões consolidados, pensado
+                para times e produtos que crescem.
               </p>
               <div class="skills-techs">
-                <span>React</span>
-                <span>Angular</span>
-                <span>TypeScript</span>
+                <span>MVVM</span>
+                <span>Clean Architecture</span>
+                <span>SOLID</span>
               </div>
             </div>
 
@@ -476,361 +467,173 @@
 
       <!--Fim Skills-->
 
-      <!--Serviços-->
-      <section id="servicos" class="servicos" aria-labelledby="servicos-titulo">
-        <div class="container-servicos">
-          <div
-            class="headline-servicos"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-          >
-            <div class="titulo-servicos">
-              <h2 id="servicos-titulo" data-i18n="services">Serviços</h2>
-            </div>
-            <div
-              class="descricao-servicos"
-              data-aos="fade-up"
-              data-aos-delay="200"
-              data-aos-duration="1000"
-            >
-              <p data-i18n="services_subtitle">
-                Como posso ajudar no seu produto — da ideia ao app publicado.
-              </p>
-            </div>
-          </div>
-          <div class="servicos-cards">
-            <!-- Desenvolvimento Front-End -->
-            <div
-              class="card-servicos-left"
-              data-aos="fade-right"
-              data-aos-delay="300"
-              data-aos-duration="1000"
-            >
-              <div class="card-titulo">
-                <h3 data-i18n="frontend_service">Front-End</h3>
-                <p data-i18n="frontend_service_desc">Interfaces web responsivas e performáticas</p>
-              </div>
-              <div class="card-icon">
-                <i class="bi bi-code-slash" aria-hidden="true"></i>
-              </div>
-            </div>
-
-            <!-- Desenvolvimento Nativo iOS -->
-            <div
-              class="card-servicos"
-              data-aos="fade-left"
-              data-aos-delay="400"
-              data-aos-duration="1000"
-            >
-              <div class="card-titulo">
-                <h3 data-i18n="ios_native_service">iOS Nativo</h3>
-                <p data-i18n="ios_native_service_desc">Apps nativos com Swift e SwiftUI</p>
-              </div>
-              <div class="card-icon">
-                <i class="bi bi-apple" aria-hidden="true"></i>
-              </div>
-            </div>
-
-            <!-- Desenvolvimento Híbrido -->
-            <div
-              class="card-servicos-left"
-              data-aos="fade-right"
-              data-aos-delay="500"
-              data-aos-duration="1000"
-            >
-              <div class="card-titulo">
-                <h3 data-i18n="hybrid_service">Híbrido</h3>
-                <p data-i18n="hybrid_service_desc">Apps multiplataforma com React Native e Flutter</p>
-              </div>
-              <div class="card-icon">
-                <i class="bi bi-phone" aria-hidden="true"></i>
-              </div>
-            </div>
-
-            <!-- UI/UX Design -->
-            <div
-              class="card-servicos"
-              data-aos="fade-left"
-              data-aos-delay="600"
-              data-aos-duration="1000"
-            >
-              <div class="card-titulo">
-                <h3 data-i18n="uiux_service">UI/UX</h3>
-                <p data-i18n="uiux_service_desc">Design centrado no usuário e prototipação</p>
-              </div>
-              <div class="card-icon">
-                <i class="bi bi-brush" aria-hidden="true"></i>
-              </div>
-            </div>
-
-            <!-- Versionamento e Controle de Código -->
-            <div
-              class="card-servicos-left"
-              data-aos="fade-right"
-              data-aos-delay="700"
-              data-aos-duration="1000"
-            >
-              <div class="card-titulo">
-                <h3 data-i18n="versioning_service">Versionamento</h3>
-                <p data-i18n="versioning_service_desc">Git Flow e integração contínua</p>
-              </div>
-              <div class="card-icon">
-                <i class="bi bi-git" aria-hidden="true"></i>
-              </div>
-            </div>
-
-            <!-- Otimização e Performance -->
-            <div
-              class="card-servicos"
-              data-aos="fade-left"
-              data-aos-delay="800"
-              data-aos-duration="1000"
-            >
-              <div class="card-titulo">
-                <h3 data-i18n="performance_service">Performance</h3>
-                <p data-i18n="performance_service_desc">Otimização de apps e experiência fluida</p>
-              </div>
-              <div class="card-icon">
-                <i class="bi bi-speedometer2" aria-hidden="true"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--Fim Serviços-->
-
-      <!--Portfolio-->
+      <!--Experiência-->
       <section
-        id="portfolio"
-        class="portfolio"
-        aria-labelledby="portfolio-titulo"
+        id="experiencia"
+        class="experiencia"
+        aria-labelledby="experiencia-titulo"
       >
-        <div
-          class="container-portfolio"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-        >
-          <div class="headline-portfolio">
-            <h2 class="titulo" id="portfolio-titulo" data-i18n="experiences">
-              Experiências
-            </h2>
-            <span class="descricao" data-i18n="portfolio_subtitle">
-              Experiência em desenvolvimento, design e criação de projetos
-              digitais.
-            </span>
+        <div class="container-experiencia">
+          <div class="headline-secao" data-aos="fade-up" data-aos-duration="1000">
+            <h2 id="experiencia-titulo" data-i18n="experiences">Experiência</h2>
+            <p data-i18n="experiences_subtitle">
+              Mais de 6 anos construindo apps em produção, de produtos internos a
+              plataformas white-label.
+            </p>
           </div>
-          <div class="container-case">
-            <!--Case 1-->
-            <div class="case1" data-aos="fade-right" data-aos-delay="200">
-              <div class="imagens-case">
-                <a
-                  href="https://www.bb.com.br"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="logo-experiencia"
-                >
-                  <img
-                    src="assets/img/logos/bbtecnologiaeservicos_logo.jpeg"
-                    alt="Logo BB Tecnologia e Serviços"
-                    loading="lazy"
-                  />
-                </a>
-              </div>
-              <div class="textos-case">
-                <div class="conteudo-textos-case">
+
+          <ol class="timeline">
+            <li class="exp-item exp-atual" data-aos="fade-up">
+              <img
+                class="exp-logo"
+                src="assets/img/logos/segware_logo.jpeg"
+                alt=""
+                width="56"
+                height="56"
+                loading="lazy"
+              />
+              <div class="exp-corpo">
+                <div class="exp-topo">
                   <h3>
-                    <a
-                      href="https://www.bb.com.br"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >BB Tecnologia e Serviços</a
-                    >
+                    <a href="https://segware.com.br" target="_blank" rel="noopener noreferrer">Segware</a>
                   </h3>
-                  <p data-i18n="exp_bb_desc">
-                    Desenvolvimento web e mobile com JavaScript, Angular e React
-                    Native, além de desenvolvimento de microserviços para
-                    produtos internos criando soluções internas para otimizar
-                    processos e melhorar a experiência do usuário.
-                  </p>
-                  <div class="exp-techs">
-                    <span>Angular</span>
-                    <span>React Native</span>
-                    <span>JavaScript</span>
-                  </div>
-                  <span class="exp-date" data-i18n="exp_bb_date">set 2020 — jun 2021</span>
-                </div>
-              </div>
-            </div>
-            <!--Case 2-->
-            <div class="case2" data-aos="fade-left" data-aos-delay="300">
-              <div class="textos-case">
-                <div class="conteudo-textos-case">
-                  <h3>
-                    <a
-                      href="https://usemobile.com.br"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >Usemobile</a
-                    >
-                  </h3>
-                  <p data-i18n="exp_usemobile_desc">
-                    Desenvolvimento de aplicativos Nativos iOS com Swift,
-                    seguindo padrões de código e implementando novas
-                    funcionalidades. Trabalho com GitFlow para controle de
-                    versionamento.
-                  </p>
-                  <div class="exp-techs">
-                    <span>Swift</span>
-                    <span>iOS</span>
-                    <span>Git Flow</span>
-                  </div>
-                  <span class="exp-date" data-i18n="exp_usemobile_date">jun 2021 — set 2021</span>
-                </div>
-              </div>
-              <div class="imagens-case">
-                <a
-                  href="https://usemobile.com.br"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="logo-experiencia"
-                >
-                  <img
-                    src="assets/img/logos/usemobile_logo.jpeg"
-                    alt="Logo Usemobile"
-                    loading="lazy"
-                  />
-                </a>
-              </div>
-            </div>
-            <!--Case 3-->
-            <div class="case3" data-aos="fade-right" data-aos-delay="400">
-              <div class="imagens-case">
-                <a
-                  href="https://compass.uol"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="logo-experiencia"
-                >
-                  <img
-                    src="assets/img/logos/compass_uol_logo.jpeg"
-                    alt="Logo Compass.uol"
-                    loading="lazy"
-                  />
-                </a>
-              </div>
-              <div class="textos-case">
-                <div class="conteudo-textos-case">
-                  <h3>
-                    <a
-                      href="https://compass.uol"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >Compass.uol</a
-                    >
-                  </h3>
-                  <p data-i18n="exp_compass_desc">
-                    Atuação no desenvolvimento de aplicações IOS e React Native,
-                    colaborando em projetos de grande escala. Foco em
-                    arquitetura, boas práticas e melhorias de usabilidade e
-                    performance.
-                  </p>
-                  <div class="exp-techs">
-                    <span>React Native</span>
-                    <span>Swift</span>
-                    <span>iOS</span>
-                  </div>
-                  <span class="exp-date" data-i18n="exp_compass_date">out 2021 — dez 2023</span>
-                </div>
-              </div>
-            </div>
-            <!--Case 4 - Akross-->
-            <div class="case4" data-aos="fade-left" data-aos-delay="500">
-              <div class="textos-case">
-                <div class="conteudo-textos-case">
-                  <h3>
-                    <a
-                      href="https://akross.com.br"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >Akross</a
-                    >
-                  </h3>
-                  <p data-i18n="exp_akross_desc">
-                    Desenvolvimento de aplicações mobile com React Native e
-                    Flutter, evolução de apps em produção e SDK nativa iOS em
-                    Swift. Atuação em plataforma de rewards white-label,
-                    integrações Firebase e SDKs de parceiros.
-                  </p>
-                  <div class="exp-techs">
-                    <span>React Native</span>
-                    <span>Flutter</span>
-                    <span>Swift</span>
-                    <span>Firebase</span>
-                  </div>
-                  <span class="exp-date" data-i18n="exp_akross_date">dez 2023 — mai 2026</span>
-                </div>
-              </div>
-              <div class="imagens-case">
-                <a
-                  href="https://akross.com.br"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="logo-experiencia"
-                >
-                  <img
-                    src="assets/img/logos/akross_logo.jpeg"
-                    alt="Logo Akross"
-                    loading="lazy"
-                  />
-                </a>
-              </div>
-            </div>
-            <!--Case 5 - Segware (atual)-->
-            <div class="case5" data-aos="fade-right" data-aos-delay="600">
-              <div class="imagens-case">
-                <a
-                  href="https://segware.com.br"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="logo-experiencia"
-                >
-                  <img
-                    src="assets/img/logos/segware_logo.jpeg"
-                    alt="Logo Segware"
-                    loading="lazy"
-                  />
-                </a>
-              </div>
-              <div class="textos-case">
-                <div class="conteudo-textos-case">
-                  <h3>
-                    <a
-                      href="https://segware.com.br"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >Segware</a
-                    >
-                  </h3>
-                  <p data-i18n="exp_segware_desc">
-                    Mobile Developer em soluções de segurança eletrônica e
-                    monitoramento. Desenvolvimento principalmente com React
-                    Native, e ocasionalmente iOS e Android nativos, para
-                    produtos usados por centrais e clientes finais.
-                  </p>
-                  <div class="exp-techs">
-                    <span>React Native</span>
-                    <span>iOS</span>
-                    <span>Android</span>
-                  </div>
                   <span class="exp-date" data-i18n="exp_segware_date">mai 2026 — presente</span>
                 </div>
+                <p class="exp-cargo">Mobile Developer</p>
+                <p data-i18n="exp_segware_desc">
+                  Soluções de segurança eletrônica e monitoramento. Desenvolvimento
+                  principalmente com React Native, e ocasionalmente iOS e Android
+                  nativos, para produtos usados por centrais e clientes finais.
+                </p>
+                <div class="exp-techs">
+                  <span>React Native</span>
+                  <span>iOS</span>
+                  <span>Android</span>
+                </div>
               </div>
-            </div>
-          </div>
+            </li>
+
+            <li class="exp-item" data-aos="fade-up">
+              <img
+                class="exp-logo"
+                src="assets/img/logos/akross_logo.jpeg"
+                alt=""
+                width="56"
+                height="56"
+                loading="lazy"
+              />
+              <div class="exp-corpo">
+                <div class="exp-topo">
+                  <h3>
+                    <a href="https://akross.com.br" target="_blank" rel="noopener noreferrer">Akross</a>
+                  </h3>
+                  <span class="exp-date" data-i18n="exp_akross_date">dez 2023 — mai 2026</span>
+                </div>
+                <p class="exp-cargo">Mobile Developer</p>
+                <p data-i18n="exp_akross_desc">
+                  Apps em produção com React Native e Flutter e SDK nativa iOS em
+                  Swift. Atuação em plataforma de rewards white-label, integrações
+                  Firebase e SDKs de parceiros.
+                </p>
+                <div class="exp-techs">
+                  <span>React Native</span>
+                  <span>Flutter</span>
+                  <span>Swift</span>
+                  <span>Firebase</span>
+                </div>
+              </div>
+            </li>
+
+            <li class="exp-item" data-aos="fade-up">
+              <img
+                class="exp-logo"
+                src="assets/img/logos/compass_uol_logo.jpeg"
+                alt=""
+                width="56"
+                height="56"
+                loading="lazy"
+              />
+              <div class="exp-corpo">
+                <div class="exp-topo">
+                  <h3>
+                    <a href="https://compass.uol" target="_blank" rel="noopener noreferrer">Compass.uol</a>
+                  </h3>
+                  <span class="exp-date" data-i18n="exp_compass_date">out 2021 — dez 2023</span>
+                </div>
+                <p class="exp-cargo">iOS &amp; React Native Developer</p>
+                <p data-i18n="exp_compass_desc">
+                  Aplicações iOS e React Native em projetos de grande escala, com
+                  foco em arquitetura, boas práticas, usabilidade e performance.
+                </p>
+                <div class="exp-techs">
+                  <span>React Native</span>
+                  <span>Swift</span>
+                  <span>iOS</span>
+                </div>
+              </div>
+            </li>
+
+            <li class="exp-item" data-aos="fade-up">
+              <img
+                class="exp-logo"
+                src="assets/img/logos/usemobile_logo.jpeg"
+                alt=""
+                width="56"
+                height="56"
+                loading="lazy"
+              />
+              <div class="exp-corpo">
+                <div class="exp-topo">
+                  <h3>
+                    <a href="https://usemobile.com.br" target="_blank" rel="noopener noreferrer">Usemobile</a>
+                  </h3>
+                  <span class="exp-date" data-i18n="exp_usemobile_date">jun 2021 — set 2021</span>
+                </div>
+                <p class="exp-cargo">iOS Developer</p>
+                <p data-i18n="exp_usemobile_desc">
+                  Apps nativos iOS com Swift, implementando novas funcionalidades
+                  seguindo os padrões de código do time e Git Flow.
+                </p>
+                <div class="exp-techs">
+                  <span>Swift</span>
+                  <span>iOS</span>
+                  <span>Git Flow</span>
+                </div>
+              </div>
+            </li>
+
+            <li class="exp-item" data-aos="fade-up">
+              <img
+                class="exp-logo"
+                src="assets/img/logos/bbtecnologiaeservicos_logo.jpeg"
+                alt=""
+                width="56"
+                height="56"
+                loading="lazy"
+              />
+              <div class="exp-corpo">
+                <div class="exp-topo">
+                  <h3>
+                    <a href="https://www.bb.com.br" target="_blank" rel="noopener noreferrer">BB Tecnologia e Serviços</a>
+                  </h3>
+                  <span class="exp-date" data-i18n="exp_bb_date">set 2020 — jun 2021</span>
+                </div>
+                <p class="exp-cargo" data-i18n="exp_bb_role">Desenvolvedor Web &amp; Mobile</p>
+                <p data-i18n="exp_bb_desc">
+                  Web e mobile com Angular e React Native, além de microserviços
+                  para produtos internos que otimizaram processos da empresa.
+                </p>
+                <div class="exp-techs">
+                  <span>Angular</span>
+                  <span>React Native</span>
+                  <span>JavaScript</span>
+                </div>
+              </div>
+            </li>
+          </ol>
         </div>
       </section>
-      <!--Fim Portfolio-->
-
+      <!--Fim Experiência-->
       <!--Contato-->
       <section id="contato" class="contato" aria-labelledby="contato-titulo">
         <div
@@ -880,6 +683,15 @@
                 action="https://formspree.io/f/mwpqedyk"
                 method="POST"
               >
+                <!-- Honeypot anti-spam do Formspree: fica oculto para pessoas -->
+                <input
+                  type="text"
+                  name="_gotcha"
+                  class="honeypot"
+                  tabindex="-1"
+                  autocomplete="off"
+                  aria-hidden="true"
+                />
                 <div class="form-group">
                   <label for="nome" class="sr-only" data-i18n="name_label">Nome</label>
                   <input
@@ -1003,8 +815,7 @@
               <a href="#inicio" data-i18n="footer_home">Início</a>
               <a href="#sobre" data-i18n="footer_about">Sobre</a>
               <a href="#skills" data-i18n="footer_skills">Stack</a>
-              <a href="#servicos" data-i18n="footer_services">Serviços</a>
-              <a href="#portfolio" data-i18n="footer_portfolio">Portfolio</a>
+              <a href="#experiencia" data-i18n="footer_experience">Experiência</a>
               <a href="#contato" data-i18n="footer_contact">Contato</a>
             </nav>
           </div>
