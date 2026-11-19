@@ -36,6 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
   backToTopButton.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.smoothScrollTo(0);
   });
 });
