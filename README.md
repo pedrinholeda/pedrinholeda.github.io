@@ -24,3 +24,7 @@ Portfólio pessoal focado em desenvolvimento mobile (React Native, Flutter, iOS)
 ---
 
 Desenvolvido por Pedro Leda
+
+## Licença
+
+[MIT](LICENSE)
