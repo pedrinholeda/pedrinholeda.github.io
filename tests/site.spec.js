@@ -1,4 +1,5 @@
 const { test, expect } = require("@playwright/test");
+const AxeBuilder = require("@axe-core/playwright").default;
 
 // Posição horizontal do trilho do carrossel de apps.
 const posicaoTrilho = (page) =>
@@ -35,10 +36,11 @@ test("troca o idioma para inglês e volta", async ({ page }) => {
 test("menu do celular abre e fecha", async ({ page, isMobile }) => {
   test.skip(!isMobile, "o menu sanduíche só aparece no celular");
   const botao = page.locator("#menuToggleLabel");
+  const estado = page.locator("#menuToggle");
   await botao.click();
-  await expect(botao).toHaveAttribute("aria-expanded", "true");
+  await expect(estado).toBeChecked();
   await page.locator(".nav-menu a[data-section=apps]").click();
-  await expect(botao).toHaveAttribute("aria-expanded", "false");
+  await expect(estado).not.toBeChecked();
 });
 
 test("carrossel de apps anda sozinho", async ({ page }) => {
@@ -79,4 +81,12 @@ test("menu destaca a seção que ocupa a tela", async ({ page }) => {
 test("menu destaca a última seção no fim da página", async ({ page }) => {
   await page.evaluate(() => window.scrollTo({ top: document.body.scrollHeight, behavior: "instant" }));
   await expect(page.locator(".nav-desktop a[data-section=contato]")).toHaveClass(/active/);
+});
+
+test("sem violações de acessibilidade (axe)", async ({ page }) => {
+  // As animações de entrada (AOS) deixam o conteúdo semitransparente até rolar; mostra tudo antes.
+  await page.evaluate(() => document.querySelectorAll("[data-aos]").forEach((el) => el.classList.add("aos-animate")));
+  await page.waitForTimeout(1500);
+  const { violations } = await new AxeBuilder({ page }).analyze();
+  expect(violations.map((v) => `${v.id}: ${v.nodes.map((n) => n.target.join(" ")).join(", ")}`)).toEqual([]);
 });

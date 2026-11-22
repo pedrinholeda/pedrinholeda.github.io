@@ -75,7 +75,7 @@
     <!--CSS-->
     <link rel="stylesheet" href="assets/css/style.css" />
 
-    <!--�cones (SVG do Bootstrap Icons)-->
+    <!--Ícones (SVG do Bootstrap Icons)-->
     <link rel="stylesheet" href="assets/css/icons.css" />
 
     <!-- AOS -->
@@ -140,19 +140,21 @@
             id="lang-toggle"
             class="lang-toggle"
             data-i18n-aria-label="change_language"
-            aria-label="Trocar idioma"
+            aria-label="EN: mudar o idioma para inglês"
           >
             EN
           </button>
           <label
             class="hamburger"
             id="menuToggleLabel"
-            data-i18n-aria-label="open_menu"
-            aria-label="Abrir menu de navegação"
-            aria-controls="navMenu"
-            aria-expanded="false"
           >
-            <input type="checkbox" id="menuToggle" />
+            <input
+              type="checkbox"
+              id="menuToggle"
+              aria-controls="navMenu"
+              data-i18n-aria-label="open_menu"
+              aria-label="Abrir menu de navegação"
+            />
             <svg viewBox="0 0 32 32" aria-hidden="true">
               <path
                 class="line line-top-bottom"
@@ -255,8 +257,6 @@
                 type="button"
                 class="cta"
                 onclick="scrollToSection('contato')"
-                data-i18n-aria-label="contact_section"
-                aria-label="Ir para seção de contato"
               >
                 <span data-i18n="cta_button">Fale Comigo</span>
                 <svg
@@ -273,8 +273,6 @@
                 type="button"
                 class="cta-secondary"
                 onclick="scrollToSection('experiencia')"
-                data-i18n-aria-label="experiences_section"
-                aria-label="Ir para seção de experiências"
               >
                 <span data-i18n="cta_secondary">Ver experiências</span>
               </button>
