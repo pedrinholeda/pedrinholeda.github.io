@@ -1,4 +1,4 @@
-// Carrossel da seção Apps: setas, pontos e esmaecimento nas bordas.
+// Carrossel da seção Apps: avanço automático, setas, pontos e esmaecimento nas bordas.
 // A rolagem em si é nativa (toque, trackpad, teclado); o script só a controla.
 (function () {
   const carrossel = document.querySelector(".apps-carrossel");
@@ -75,4 +75,37 @@
   );
   window.addEventListener("resize", atualizar);
   atualizar();
+
+  // Avanço automático. O tempo vem da animação do ponto ativo (CSS), que o
+  // próprio CSS pausa com o mouse em cima ou o foco de teclado dentro.
+  carrossel.classList.add("autoplay");
+
+  function avancar() {
+    const noFim = trilho.scrollLeft >= trilho.scrollWidth - trilho.clientWidth - 2;
+    trilho.scrollTo({ left: noFim ? 0 : trilho.scrollLeft + passo(), behavior: "smooth" });
+  }
+
+  pontosEl.addEventListener("animationend", (e) => {
+    if (e.animationName === "apps-progresso") avancar();
+  });
+
+  // Pausa enquanto a pessoa arrasta no celular e por um tempo depois.
+  let retomar = 0;
+  function pausarPorToque() {
+    clearTimeout(retomar);
+    carrossel.classList.add("pausado");
+  }
+  function retomarDepois() {
+    clearTimeout(retomar);
+    retomar = setTimeout(() => carrossel.classList.remove("pausado"), 4000);
+  }
+  trilho.addEventListener("touchstart", pausarPorToque, { passive: true });
+  trilho.addEventListener("touchend", retomarDepois, { passive: true });
+
+  // Fora da tela, fica parado.
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(([entrada]) => {
+      carrossel.classList.toggle("fora-da-tela", !entrada.isIntersecting);
+    }).observe(carrossel);
+  }
 })();

@@ -1031,6 +1031,44 @@ button:active,
   background: var(--color-destaque1);
 }
 
+/* Com o avanço automático, o ponto ativo enche durante o intervalo.
+   O fim dessa animação é o que faz o carrossel passar para o próximo app. */
+.apps-carrossel.autoplay .apps-ponto.ativo {
+  position: relative;
+  overflow: hidden;
+  background: rgba(231, 252, 0, 0.25);
+}
+
+.apps-carrossel.autoplay .apps-ponto.ativo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--color-destaque1);
+  transform-origin: left;
+  animation: apps-progresso 3.5s linear forwards;
+}
+
+.apps-carrossel.pausado .apps-ponto.ativo::after,
+.apps-carrossel.fora-da-tela .apps-ponto.ativo::after,
+.apps-carrossel:has(:focus-visible) .apps-ponto.ativo::after {
+  animation-play-state: paused;
+}
+
+@media (hover: hover) {
+  .apps-carrossel:hover .apps-ponto.ativo::after {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes apps-progresso {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
 .apps-setas {
   display: flex;
   gap: 0.5rem;
