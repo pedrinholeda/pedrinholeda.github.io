@@ -145,10 +145,10 @@ document.addEventListener("DOMContentLoaded", function () {
       exp_compass_desc:
         "Apps iOS para Natura, Livelo, Dass e Iguatemi 365, com Swift e UIKit, além de React Native em projetos híbridos.",
       exp_akross_desc:
-        "Apps de recompensas e atendimento para operadoras, em React Native e Flutter, e uma SDK nativa iOS em Swift. TIM FUN e Vivo Free (10M+ downloads cada), Prezão Free (5M+) e Nio (1M+).",
+        "Apps de recompensas e atendimento para operadoras de telefonia, em React Native e Flutter, e uma SDK nativa iOS em Swift.",
       exp_akross_date: "dez 2023 — mai 2026",
       exp_segware_desc:
-        "Desenvolvimento do SCond, app de segurança e gestão para condomínios com nota 4,7+ nas lojas. React Native e TypeScript, arquitetura MVVM e testes automatizados.",
+        "Desenvolvimento do SCond, app de segurança e gestão para condomínios, em React Native e TypeScript, com arquitetura MVVM e testes automatizados.",
       exp_segware_date: "mai 2026 — presente",
       exp_bb_date: "set 2020 — jun 2021",
       exp_usemobile_date: "jun 2021 — set 2021",
@@ -292,10 +292,10 @@ document.addEventListener("DOMContentLoaded", function () {
       exp_compass_desc:
         "iOS apps for Natura, Livelo, Dass and Iguatemi 365 with Swift and UIKit, plus React Native on hybrid projects.",
       exp_akross_desc:
-        "Rewards and customer service apps for telecom carriers, built with React Native and Flutter, plus a native iOS SDK in Swift. TIM FUN and Vivo Free (10M+ downloads each), Prezão Free (5M+) and Nio (1M+).",
+        "Rewards and customer service apps for telecom carriers, built with React Native and Flutter, plus a native iOS SDK in Swift.",
       exp_akross_date: "Dec 2023 — May 2026",
       exp_segware_desc:
-        "Building SCond, a security and management app for condominiums rated 4.7+ on the stores. React Native and TypeScript, MVVM architecture and automated tests.",
+        "Building SCond, a security and management app for condominiums, with React Native and TypeScript, MVVM architecture and automated tests.",
       exp_segware_date: "May 2026 — Present",
       exp_bb_date: "Sep 2020 — Jun 2021",
       exp_usemobile_date: "Jun 2021 — Sep 2021",
