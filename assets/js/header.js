@@ -126,6 +126,8 @@ document.addEventListener("DOMContentLoaded", function () {
       app_nio_desc: "Gestão da internet fibra, antiga Oi Fibra.",
       app_scond_desc:
         "Segurança e gestão para condomínios, residências e empresas.",
+      app_livelo_desc: "Programa de pontos e recompensas. Nota 4,8 na App Store.",
+      app_natura_desc: "Compra de perfumes e cosméticos. Nota 4,8 na App Store.",
 
       // Experiência e projetos
       experiences_subtitle:
@@ -268,6 +270,8 @@ document.addEventListener("DOMContentLoaded", function () {
       app_nio_desc: "Fiber internet management, formerly Oi Fibra.",
       app_scond_desc:
         "Security and management for condominiums, homes and businesses.",
+      app_livelo_desc: "Points and rewards program. Rated 4.8 on the App Store.",
+      app_natura_desc: "Perfume and cosmetics shopping. Rated 4.8 on the App Store.",
 
       // Experience and projects
       experiences_subtitle:
