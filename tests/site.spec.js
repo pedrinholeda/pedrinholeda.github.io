@@ -64,3 +64,19 @@ test("cópias do carrossel ficam fora do teclado e do leitor de tela", async ({ 
   expect(await copias.count()).toBeGreaterThan(0);
   expect(await copias.evaluateAll((els) => els.every((el) => el.inert))).toBe(true);
 });
+
+test("menu destaca a seção que ocupa a tela", async ({ page }) => {
+  // Seção Apps começando a um terço da altura da tela: é ela que a pessoa está vendo.
+  await page.evaluate(() => {
+    const apps = document.getElementById("apps");
+    const topo = apps.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({ top: topo - window.innerHeight / 3, behavior: "instant" });
+  });
+  await expect(page.locator(".nav-desktop a[data-section=apps]")).toHaveClass(/active/);
+  await expect(page.locator(".nav-desktop a.active")).toHaveCount(1);
+});
+
+test("menu destaca a última seção no fim da página", async ({ page }) => {
+  await page.evaluate(() => window.scrollTo({ top: document.body.scrollHeight, behavior: "instant" }));
+  await expect(page.locator(".nav-desktop a[data-section=contato]")).toHaveClass(/active/);
+});
