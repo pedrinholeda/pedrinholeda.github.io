@@ -350,8 +350,8 @@ document.addEventListener("DOMContentLoaded", function () {
       validation_success: "Message sent successfully! I'll get in touch soon.",
       validation_error: "Error sending message. Try again or contact me directly.",
 
-      // Typed (typing effect)
-      typed_strings: ["mobile", "React Native", "TypeScript", "iOS", "Flutter"],
+      // Typed (typing effect). "Swift" no lugar de "iOS" evita "I'm a iOS developer".
+      typed_strings: ["mobile", "React Native", "TypeScript", "Swift", "Flutter"],
     },
   };
 
