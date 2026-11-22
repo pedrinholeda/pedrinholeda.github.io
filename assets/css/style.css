@@ -867,49 +867,47 @@ button:active,
   gap: 1.5rem;
 }
 
-/* Trilho com rolagem nativa e encaixe por card */
-.conteudo-apps {
-  display: flex;
-  gap: 1rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  overscroll-behavior-x: contain;
-  scrollbar-width: none;
-  padding: 0.25rem 0.25rem 0.5rem;
-  margin: -0.25rem -0.25rem -0.5rem;
-  scroll-padding-inline: 0.25rem;
+/* Janela fixa; o trilho dentro dela anda com transform (appsCarrossel.js) */
+.apps-janela {
+  overflow: hidden;
+  padding: 0.5rem 0;
+  margin: -0.5rem 0;
+  touch-action: pan-y;
+  user-select: none;
+  cursor: grab;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 3rem,
+    #000 calc(100% - 3rem),
+    transparent
+  );
 }
 
-.conteudo-apps::-webkit-scrollbar {
-  display: none;
+.apps-janela.arrastando {
+  cursor: grabbing;
 }
 
-.conteudo-apps:focus-visible {
+.apps-janela:focus-visible {
   outline: 2px solid var(--color-destaque1);
   outline-offset: 4px;
   border-radius: 20px;
 }
 
-/* Esmaece a borda que ainda tem cards escondidos */
-.apps-carrossel.tem-depois .conteudo-apps {
-  mask-image: linear-gradient(to right, #000 calc(100% - 4rem), transparent);
+.conteudo-apps {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+  will-change: transform;
 }
-.apps-carrossel.tem-antes .conteudo-apps {
-  mask-image: linear-gradient(to left, #000 calc(100% - 4rem), transparent);
-}
-.apps-carrossel.tem-antes.tem-depois .conteudo-apps {
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    #000 4rem,
-    #000 calc(100% - 4rem),
-    transparent
-  );
+
+.conteudo-apps img {
+  -webkit-user-drag: none;
+  pointer-events: none;
 }
 
 .app-card {
-  flex: 0 0 clamp(260px, 82%, 300px);
-  scroll-snap-align: start;
+  flex: 0 0 clamp(260px, 78vw, 300px);
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -996,73 +994,7 @@ button:active,
 
 .apps-controles {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.apps-carrossel.sem-rolagem .apps-controles {
-  display: none;
-}
-
-.apps-pontos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-}
-
-.apps-ponto {
-  width: 8px;
-  height: 8px;
-  padding: 0;
-  border: 0;
-  border-radius: 999px;
-  background: var(--color-gray1);
-  cursor: pointer;
-  transition: width 0.3s ease, background-color 0.3s ease;
-}
-
-.apps-ponto.ativo {
-  width: 24px;
-  background: var(--color-destaque1);
-}
-
-/* Com o avanço automático, o ponto ativo enche durante o intervalo.
-   O fim dessa animação é o que faz o carrossel passar para o próximo app. */
-.apps-carrossel.autoplay .apps-ponto.ativo {
-  position: relative;
-  overflow: hidden;
-  background: rgba(231, 252, 0, 0.25);
-}
-
-.apps-carrossel.autoplay .apps-ponto.ativo::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--color-destaque1);
-  transform-origin: left;
-  animation: apps-progresso 3.5s linear forwards;
-}
-
-.apps-carrossel.pausado .apps-ponto.ativo::after,
-.apps-carrossel.fora-da-tela .apps-ponto.ativo::after,
-.apps-carrossel:has(:focus-visible) .apps-ponto.ativo::after {
-  animation-play-state: paused;
-}
-
-@media (hover: hover) {
-  .apps-carrossel:hover .apps-ponto.ativo::after {
-    animation-play-state: paused;
-  }
-}
-
-@keyframes apps-progresso {
-  from {
-    transform: scaleX(0);
-  }
-  to {
-    transform: scaleX(1);
-  }
+  justify-content: flex-end;
 }
 
 .apps-setas {
@@ -1084,20 +1016,14 @@ button:active,
   transition: color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
 }
 
-.apps-seta:hover:not(:disabled),
+.apps-seta:hover,
 .apps-seta:focus-visible {
   color: var(--color-destaque1);
   border-color: var(--color-destaque1);
 }
 
-.apps-seta:disabled {
-  opacity: 0.3;
-  cursor: default;
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .app-card,
-  .apps-ponto {
+  .app-card {
     transition: none;
   }
   .app-card:hover {
