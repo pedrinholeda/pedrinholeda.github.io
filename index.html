@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>
-      Pedro Léda - Mobile Developer | React Native, TypeScript, iOS & Flutter
+      Pedro Léda - Mobile Developer | React Native, TypeScript, iOS &amp; Flutter
     </title>
 
     <!-- SEO Meta Tags -->
@@ -118,7 +118,7 @@
     <!--Container Geral-->
     <div class="container">
       <!--Header-->
-      <header class="header" role="banner">
+      <header class="header">
         <div class="logo">
           <a href="#inicio" aria-label="Pedro Léda - Início">
             <img
@@ -129,7 +129,7 @@
             />
           </a>
         </div>
-        <nav class="nav-desktop" role="navigation" aria-label="Menu principal">
+        <nav class="nav-desktop" aria-label="Menu principal">
           <a href="#inicio" data-i18n="menu_home" data-section="inicio">Início</a>
           <a href="#sobre" data-i18n="menu_about" data-section="sobre">Sobre</a>
           <a href="#skills" data-i18n="menu_skills" data-section="skills">Stack</a>
@@ -139,6 +139,7 @@
         </nav>
         <div class="menu">
           <button
+            type="button"
             id="lang-toggle"
             class="lang-toggle"
             data-i18n-aria-label="change_language"
@@ -148,7 +149,6 @@
           </button>
           <label
             class="hamburger"
-            for="menuToggle"
             id="menuToggleLabel"
             data-i18n-aria-label="open_menu"
             aria-label="Abrir menu de navegação"
@@ -166,7 +166,7 @@
           </label>
         </div>
         <div class="menu-aberto" id="mobileMenu">
-          <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Menu principal">
+          <nav class="nav-menu" id="navMenu" aria-label="Menu de navegação">
             <a
               href="#inicio"
               data-i18n-aria-label="go_to_home"
@@ -221,7 +221,7 @@
       <!--Fim Header-->
 
       <!--Início-->
-      <main id="inicio" class="inicio" role="main">
+      <main id="inicio" class="inicio">
         <div class="container-inicio">
           <div id="particles-js" aria-hidden="true"></div>
           <div
@@ -255,6 +255,7 @@
               data-aos-duration="1000"
             >
               <button
+                type="button"
                 class="cta"
                 onclick="scrollToSection('contato')"
                 data-i18n-aria-label="contact_section"
@@ -272,6 +273,7 @@
                 </svg>
               </button>
               <button
+                type="button"
                 class="cta-secondary"
                 onclick="scrollToSection('experiencia')"
                 data-i18n-aria-label="experiences_section"
@@ -662,7 +664,7 @@
           </div>
 
           <div class="apps-carrossel" data-aos="fade-up" data-aos-duration="1000">
-          <div class="apps-janela" tabindex="0" role="region" aria-label="Apps em que trabalhei" data-i18n-aria-label="apps_carousel">
+          <section class="apps-janela" tabindex="0" aria-label="Apps em que trabalhei" data-i18n-aria-label="apps_carousel">
           <ul class="conteudo-apps">
             <li class="app-card">
               <div class="app-topo">
@@ -755,7 +757,7 @@
               </div>
             </li>
           </ul>
-          </div>
+          </section>
 
           <div class="apps-controles">
             <div class="apps-setas">
@@ -875,7 +877,7 @@
       </section>
       <!--Fim Contato-->
       <!--Footer-->
-      <footer class="footer" id="footer" role="contentinfo">
+      <footer class="footer" id="footer">
         <div class="container-footer">
           <div class="footer-column logo-column">
             <a href="#inicio" aria-label="Pedro Léda - Início">

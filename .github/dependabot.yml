@@ -1,0 +1,20 @@
+# Atualizações semanais e agrupadas: um PR por ecossistema.
+version: 2
+updates:
+  # Mantém as actions (inclusive a fixada por SHA) em dia.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      actions:
+        patterns: ["*"]
+
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    groups:
+      dev:
+        dependency-type: development
