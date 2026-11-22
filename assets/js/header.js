@@ -99,18 +99,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Skills (stack / competências técnicas)
       skills_subtitle: "Tecnologias e ferramentas que uso no dia a dia",
-      hybrid_dev_title: "Mobile híbrido",
+      hybrid_dev_title: "Multiplataforma",
       hybrid_dev_desc:
-        "React Native e Flutter para apps multiplataforma com tipagem forte e UI consistente.",
+        "React Native e Flutter para apps em iOS e Android com uma base de código, tipagem forte e UI consistente.",
       native_ios_title: "iOS nativo",
       native_ios_desc:
         "Swift e SwiftUI com foco em APIs da Apple, padrões de arquitetura e qualidade de código.",
       architecture_title: "Arquitetura",
       architecture_desc:
         "Código organizado e escalável com padrões consolidados, pensado para times e produtos que crescem.",
-      versioning_title: "Git & entrega",
-      versioning_desc:
-        "Git, Git Flow e práticas de CI/CD para colaboração segura e releases previsíveis.",
+      quality_title: "Qualidade",
+      quality_desc:
+        "Testes automatizados, análise estática e code review para entregar com segurança e manter o app saudável.",
 
 
       // Apps em produção
@@ -238,18 +238,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Skills (tech stack)
       skills_subtitle: "Technologies and tools I use every day",
-      hybrid_dev_title: "Hybrid mobile",
+      hybrid_dev_title: "Cross-platform",
       hybrid_dev_desc:
-        "React Native and Flutter for cross-platform apps with strong typing and consistent UI.",
+        "React Native and Flutter for iOS and Android apps from a single codebase, with strong typing and consistent UI.",
       native_ios_title: "Native iOS",
       native_ios_desc:
         "Swift and SwiftUI focused on Apple APIs, architecture patterns and code quality.",
       architecture_title: "Architecture",
       architecture_desc:
         "Organized, scalable code built on proven patterns, designed for growing teams and products.",
-      versioning_title: "Git & delivery",
-      versioning_desc:
-        "Git, Git Flow and CI/CD practices for safe collaboration and predictable releases.",
+      quality_title: "Quality",
+      quality_desc:
+        "Automated tests, static analysis and code review to ship safely and keep the app healthy.",
 
 
       // Production apps
