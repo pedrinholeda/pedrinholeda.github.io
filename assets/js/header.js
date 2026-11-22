@@ -14,15 +14,11 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
-  const menuToggleLabel = document.getElementById("menuToggleLabel");
-
+  // O estado aberto/fechado é o do próprio checkbox (marcado = aberto).
   function setMenuOpen(isOpen) {
     menuToggle.checked = isOpen;
     menuAberto.classList.toggle("active", isOpen);
     body.classList.toggle("no-scroll", isOpen);
-    if (menuToggleLabel) {
-      menuToggleLabel.setAttribute("aria-expanded", String(isOpen));
-    }
   }
 
   // Abre/fecha o menu ao mudar o estado do checkbox
@@ -90,7 +86,6 @@ document.addEventListener("DOMContentLoaded", function () {
         "Há mais de 5 anos criando aplicativos móveis com tecnologias nativas e multiplataforma, da arquitetura à publicação nas lojas.",
       cta_button: "Fale Comigo",
       cta_secondary: "Ver experiências",
-      experiences_section: "Ir para seção de experiências",
 
       // Textos da seção sobre
       about_title: "Olá, me chamo Pedro :)",
@@ -190,14 +185,13 @@ document.addEventListener("DOMContentLoaded", function () {
       // Aria labels
       back_to_top: "Voltar ao topo",
       open_menu: "Abrir menu de navegação",
-      change_language: "Trocar idioma",
+      change_language: "EN: mudar o idioma para inglês",
       go_to_home: "Ir para seção início",
       go_to_about: "Ir para seção sobre",
       go_to_skills: "Ir para seção skills",
       go_to_apps: "Ir para seção apps",
       go_to_experience: "Ir para seção experiência",
       go_to_contact: "Ir para seção contato",
-      contact_section: "Ir para seção de contato",
       visit_github: "Visitar GitHub",
       visit_linkedin: "Visitar LinkedIn",
       footer_menu: "Menu do rodapé",
@@ -237,7 +231,6 @@ document.addEventListener("DOMContentLoaded", function () {
         "5+ years building mobile apps with native and cross-platform technologies, from architecture to store release.",
       cta_button: "Get in Touch",
       cta_secondary: "View experience",
-      experiences_section: "Go to experience section",
 
       // Textos da seção sobre
       about_title: "Hello, I'm Pedro :)",
@@ -337,14 +330,13 @@ document.addEventListener("DOMContentLoaded", function () {
       // Aria labels
       back_to_top: "Back to top",
       open_menu: "Open navigation menu",
-      change_language: "Change language",
+      change_language: "PT: switch the language to Portuguese",
       go_to_home: "Go to home section",
       go_to_about: "Go to about section",
       go_to_skills: "Go to skills section",
       go_to_apps: "Go to apps section",
       go_to_experience: "Go to experience section",
       go_to_contact: "Go to contact section",
-      contact_section: "Go to contact section",
       visit_github: "Visit GitHub",
       visit_linkedin: "Visit LinkedIn",
       footer_menu: "Footer menu",

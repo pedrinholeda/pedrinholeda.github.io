@@ -15,6 +15,7 @@ Portfólio pessoal focado em desenvolvimento mobile (React Native, Flutter, iOS)
 1. **Formspree** — Crie um formulário em [formspree.io](https://formspree.io) e substitua o `action` no `index.html`
 2. **Personalização** — Atualize imagens, textos e links em `index.html` e `assets/js/header.js`
 3. **Cores** — Variáveis CSS em `assets/css/style.css` (`:root`)
+4. **Ícones** — Só os ícones usados ficam em `assets/css/icons.css`, como SVG do [Bootstrap Icons](https://icons.getbootstrap.com). Para usar um novo, copie o SVG dele para uma classe `.bi-nome` no mesmo formato
 
 ## Desenvolvimento
 
