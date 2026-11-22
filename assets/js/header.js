@@ -148,6 +148,9 @@ document.addEventListener("DOMContentLoaded", function () {
       exp_bb_date: "set 2020 — jun 2021",
       exp_usemobile_date: "jun 2021 — set 2021",
       exp_compass_date: "out 2021 — dez 2023",
+      exp_firstdecision_date: "ago 2019 — set 2020",
+      exp_firstdecision_desc:
+        "Estágio em desenvolvimento web e mobile, com projetos em JavaScript, Node.js e React Native.",
 
       // Textos da seção contato
       contact_description:
@@ -287,6 +290,9 @@ document.addEventListener("DOMContentLoaded", function () {
       exp_bb_date: "Sep 2020 — Jun 2021",
       exp_usemobile_date: "Jun 2021 — Sep 2021",
       exp_compass_date: "Oct 2021 — Dec 2023",
+      exp_firstdecision_date: "Aug 2019 — Sep 2020",
+      exp_firstdecision_desc:
+        "Web and mobile development internship, with projects in JavaScript, Node.js and React Native.",
 
       // Textos da seção contato
       contact_description:

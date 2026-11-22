@@ -1035,6 +1035,17 @@ button:active,
   box-shadow: 0 0 0 4px var(--color-black);
 }
 
+/* Logo em texto para empresas sem imagem */
+.exp-logo-texto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-grande);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-black);
+}
+
 .exp-atual .exp-logo {
   box-shadow: 0 0 0 4px var(--color-black), 0 0 0 5px var(--color-destaque1);
 }
