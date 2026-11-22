@@ -796,8 +796,15 @@ button:active,
   z-index: 1;
 }
 
+.box-skills {
+  container-type: inline-size;
+}
+
+/* O tamanho segue a largura do card (cqi), para que palavras longas como
+   "Multiplataforma" caibam inteiras numa linha. */
 .box-skills h3 {
-  font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
+  font-size: clamp(1.25rem, 12cqi, 2rem);
+  overflow-wrap: normal;
   color: var(--color-white);
   position: relative;
   z-index: 1;

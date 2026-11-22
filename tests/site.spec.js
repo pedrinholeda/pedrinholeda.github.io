@@ -90,3 +90,32 @@ test("sem violações de acessibilidade (axe)", async ({ page }) => {
   const { violations } = await new AxeBuilder({ page }).analyze();
   expect(violations.map((v) => `${v.id}: ${v.nodes.map((n) => n.target.join(" ")).join(", ")}`)).toEqual([]);
 });
+
+// Nenhuma palavra do título dos cards de Stack pode quebrar no meio, em PT e EN.
+// Quebrar no hífen ("Cross-/platform") é permitido.
+for (const largura of [360, 700, 900, 1024, 1366, 1920]) {
+  test(`títulos da Stack não quebram palavras em ${largura}px`, async ({ page, isMobile }) => {
+    test.skip(isMobile, "as larguras são definidas no próprio teste");
+    await page.setViewportSize({ width: largura, height: 900 });
+    for (const idioma of ["pt", "en"]) {
+      if (idioma === "en") await page.locator("#lang-toggle").click();
+      const quebradas = await page.evaluate(() => {
+        const ruins = [];
+        document.querySelectorAll(".box-skills h3").forEach((h3) => {
+          const texto = h3.firstChild;
+          const re = /[^\s-]+/g;
+          let m;
+          while ((m = re.exec(texto.textContent))) {
+            const r = document.createRange();
+            r.setStart(texto, m.index);
+            r.setEnd(texto, m.index + m[0].length);
+            const linhas = new Set([...r.getClientRects()].map((c) => Math.round(c.top)));
+            if (linhas.size > 1) ruins.push(m[0]);
+          }
+        });
+        return ruins;
+      });
+      expect(quebradas, idioma).toEqual([]);
+    }
+  });
+}
