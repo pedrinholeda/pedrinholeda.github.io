@@ -70,6 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
       menu_home: "INÍCIO",
       menu_about: "SOBRE",
       menu_skills: "STACK",
+      menu_apps: "APPS",
       menu_experience: "EXPERIÊNCIA",
       menu_contact: "CONTATO",
 
@@ -112,6 +113,20 @@ document.addEventListener("DOMContentLoaded", function () {
         "Git, Git Flow e práticas de CI/CD para colaboração segura e releases previsíveis.",
 
 
+      // Apps em produção
+      apps: "Apps",
+      apps_subtitle:
+        "Alguns dos apps em produção em que trabalhei. Downloads da Google Play.",
+      apps_downloads: "downloads",
+      apps_rating: "de nota nas lojas",
+      app_timfun_desc: "Programa de recompensas da TIM. Nota 4,8 na App Store.",
+      app_vivofree_desc: "Troca de pontos por internet para clientes Vivo.",
+      app_prezao_desc:
+        "Clube de benefícios da Claro para o pré-pago. Nota 4,8 na App Store.",
+      app_nio_desc: "Gestão da internet fibra, antiga Oi Fibra.",
+      app_scond_desc:
+        "Segurança e gestão para condomínios, residências e empresas.",
+
       // Experiência e projetos
       experiences_subtitle:
         "Mais de 5 anos construindo apps em produção, de produtos internos a apps com milhões de downloads.",
@@ -153,6 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
       footer_home: "Início",
       footer_about: "Sobre",
       footer_skills: "Stack",
+      footer_apps: "Apps",
       footer_experience: "Experiência",
       footer_contact: "Contato",
       copyright: `© ${new Date().getFullYear()} Pedro Léda`,
@@ -167,6 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
       go_to_home: "Ir para seção início",
       go_to_about: "Ir para seção sobre",
       go_to_skills: "Ir para seção skills",
+      go_to_apps: "Ir para seção apps",
       go_to_experience: "Ir para seção experiência",
       go_to_contact: "Ir para seção contato",
       contact_section: "Ir para seção de contato",
@@ -192,6 +209,7 @@ document.addEventListener("DOMContentLoaded", function () {
       menu_home: "HOME",
       menu_about: "ABOUT",
       menu_skills: "STACK",
+      menu_apps: "APPS",
       menu_experience: "EXPERIENCE",
       menu_contact: "CONTACT",
 
@@ -234,6 +252,20 @@ document.addEventListener("DOMContentLoaded", function () {
         "Git, Git Flow and CI/CD practices for safe collaboration and predictable releases.",
 
 
+      // Production apps
+      apps: "Apps",
+      apps_subtitle:
+        "Some of the production apps I worked on. Downloads from Google Play.",
+      apps_downloads: "downloads",
+      apps_rating: "rating on the stores",
+      app_timfun_desc: "TIM's rewards program. Rated 4.8 on the App Store.",
+      app_vivofree_desc: "Points-for-data rewards for Vivo customers.",
+      app_prezao_desc:
+        "Claro's benefits club for prepaid customers. Rated 4.8 on the App Store.",
+      app_nio_desc: "Fiber internet management, formerly Oi Fibra.",
+      app_scond_desc:
+        "Security and management for condominiums, homes and businesses.",
+
       // Experience and projects
       experiences_subtitle:
         "5+ years building production apps, from internal products to apps with millions of downloads.",
@@ -275,6 +307,7 @@ document.addEventListener("DOMContentLoaded", function () {
       footer_home: "Home",
       footer_about: "About",
       footer_skills: "Stack",
+      footer_apps: "Apps",
       footer_experience: "Experience",
       footer_contact: "Contact",
       copyright: `© ${new Date().getFullYear()} Pedro Léda`,
@@ -289,6 +322,7 @@ document.addEventListener("DOMContentLoaded", function () {
       go_to_home: "Go to home section",
       go_to_about: "Go to about section",
       go_to_skills: "Go to skills section",
+      go_to_apps: "Go to apps section",
       go_to_experience: "Go to experience section",
       go_to_contact: "Go to contact section",
       contact_section: "Go to contact section",
