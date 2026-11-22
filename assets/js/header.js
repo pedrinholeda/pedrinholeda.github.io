@@ -46,10 +46,13 @@ document.addEventListener("DOMContentLoaded", function () {
       if (header) {
         header.classList.toggle("header-scrolled", window.scrollY > 50);
       }
-      const scrollPos = window.scrollY + 120;
+      // Ativa a última seção cujo topo já passou de 40% da altura da tela, ou
+      // seja, a que a pessoa está vendo. No fim da página, a última seção.
+      const linha = window.innerHeight * 0.4;
+      const noFim = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
       let current = "inicio";
       sections.forEach((section) => {
-        if (section.id && section.offsetTop <= scrollPos) {
+        if (section.id && (noFim || section.getBoundingClientRect().top <= linha)) {
           current = section.id;
         }
       });
