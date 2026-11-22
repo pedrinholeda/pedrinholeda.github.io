@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "Comecei a programar profissionalmente em 2019 e encontrei no mobile o que mais gosto de fazer: transformar ideias em apps que as pessoas usam todos os dias. Já trabalhei com iOS nativo, React Native e Flutter, de produtos internos a apps usados por milhões de pessoas. Hoje desenvolvo o SCond na Segware, direto de João Pessoa.",
       stat_years: "anos de experiência",
       stat_companies: "empresas",
-      stat_platforms: "plataformas: iOS, Android e Web",
+      stat_downloads: "downloads nos apps em que trabalhei",
 
       // Skills (stack / competências técnicas)
       skills_subtitle: "Tecnologias e ferramentas que uso no dia a dia",
@@ -123,12 +123,12 @@ document.addEventListener("DOMContentLoaded", function () {
       exp_usemobile_desc:
         "Apps nativos iOS com Swift, implementando novas funcionalidades seguindo os padrões de código do time e Git Flow.",
       exp_compass_desc:
-        "Aplicações iOS e React Native em projetos de grande escala, com foco em arquitetura, boas práticas, usabilidade e performance.",
+        "Apps iOS para Natura, Livelo, Dass e Iguatemi 365, com Swift e UIKit, além de React Native em projetos híbridos.",
       exp_akross_desc:
-        "Apps em produção com React Native e Flutter e SDK nativa iOS em Swift. Atuação em plataforma de rewards white-label, integrações Firebase e SDKs de parceiros.",
+        "Apps de recompensas e atendimento para operadoras, em React Native e Flutter, e uma SDK nativa iOS em Swift. TIM FUN e Vivo Free (10M+ downloads cada), Prezão Free (5M+) e Nio (1M+).",
       exp_akross_date: "dez 2023 — mai 2026",
       exp_segware_desc:
-        "Soluções de segurança eletrônica e monitoramento. Desenvolvimento principalmente com React Native, e ocasionalmente iOS e Android nativos, para produtos usados por centrais e clientes finais.",
+        "Desenvolvimento do SCond, app de segurança e gestão para condomínios com nota 4,7+ nas lojas. React Native e TypeScript, arquitetura MVVM e testes automatizados.",
       exp_segware_date: "mai 2026 — presente",
       exp_bb_date: "set 2020 — jun 2021",
       exp_usemobile_date: "jun 2021 — set 2021",
@@ -216,7 +216,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "I started coding professionally in 2019 and found in mobile what I enjoy most: turning ideas into apps people use every day. I've worked with native iOS, React Native and Flutter, from internal products to apps used by millions of people. Today I build SCond at Segware, from João Pessoa, Brazil.",
       stat_years: "years of experience",
       stat_companies: "companies",
-      stat_platforms: "platforms: iOS, Android and Web",
+      stat_downloads: "downloads across the apps I worked on",
 
       // Skills (tech stack)
       skills_subtitle: "Technologies and tools I use every day",
@@ -245,12 +245,12 @@ document.addEventListener("DOMContentLoaded", function () {
       exp_usemobile_desc:
         "Native iOS apps in Swift, shipping new features following the team's code standards and Git Flow.",
       exp_compass_desc:
-        "iOS and React Native apps on large-scale projects, focused on architecture, best practices, usability and performance.",
+        "iOS apps for Natura, Livelo, Dass and Iguatemi 365 with Swift and UIKit, plus React Native on hybrid projects.",
       exp_akross_desc:
-        "Production apps with React Native and Flutter and a native iOS SDK in Swift. Worked on a white-label rewards platform, Firebase integrations and partner SDKs.",
+        "Rewards and customer service apps for telecom carriers, built with React Native and Flutter, plus a native iOS SDK in Swift. TIM FUN and Vivo Free (10M+ downloads each), Prezão Free (5M+) and Nio (1M+).",
       exp_akross_date: "Dec 2023 — May 2026",
       exp_segware_desc:
-        "Electronic security and monitoring solutions. Mainly React Native, with occasional native iOS and Android work, for products used by monitoring centers and end customers.",
+        "Building SCond, a security and management app for condominiums rated 4.7+ on the stores. React Native and TypeScript, MVVM architecture and automated tests.",
       exp_segware_date: "May 2026 — Present",
       exp_bb_date: "Sep 2020 — Jun 2021",
       exp_usemobile_date: "Jun 2021 — Sep 2021",
