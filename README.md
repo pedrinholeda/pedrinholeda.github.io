@@ -5,6 +5,7 @@ Portfólio pessoal focado em desenvolvimento mobile (React Native, Flutter, iOS)
 ## Funcionalidades
 
 - Design responsivo (mobile e desktop)
+- Seção de apps em produção, com números e links para App Store e Google Play
 - Formulário de contato (Formspree)
 - Internacionalização (PT/EN)
 - SEO e acessibilidade
@@ -17,7 +18,7 @@ Portfólio pessoal focado em desenvolvimento mobile (React Native, Flutter, iOS)
 
 ## Deploy
 
-**GitHub Pages:** Push para o repositório → Settings → Pages → branch `main`
+**GitHub Pages:** Push para o repositório → Settings → Pages → branch `master`
 
 **Netlify:** Conecte o repositório (sem build necessário)
 
