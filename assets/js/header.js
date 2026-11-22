@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
       hero_prefix: "Sou desenvolvedor ",
       hero_suffix: "",
       intro_text:
-        "Há mais de 6 anos criando aplicativos móveis com tecnologias nativas e multiplataforma, da arquitetura à publicação nas lojas.",
+        "Há mais de 5 anos criando aplicativos móveis com tecnologias nativas e multiplataforma, da arquitetura à publicação nas lojas.",
       cta_button: "Fale Comigo",
       cta_secondary: "Ver experiências",
       experiences_section: "Ir para seção de experiências",
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Textos da seção sobre
       about_title: "Olá, me chamo Pedro :)",
       about_description:
-        "Comecei a programar profissionalmente em 2020 e encontrei no mobile o que mais gosto de fazer: transformar ideias em apps que as pessoas usam todos os dias. Já trabalhei com iOS nativo, React Native e Flutter, em produtos internos, projetos de grande escala e plataformas white-label. Hoje desenvolvo apps de segurança e monitoramento na Segware, direto de Brasília.",
+        "Comecei a programar profissionalmente em 2019 e encontrei no mobile o que mais gosto de fazer: transformar ideias em apps que as pessoas usam todos os dias. Já trabalhei com iOS nativo, React Native e Flutter, de produtos internos a apps usados por milhões de pessoas. Hoje desenvolvo o SCond na Segware, direto de João Pessoa.",
       stat_years: "anos de experiência",
       stat_companies: "empresas",
       stat_platforms: "plataformas: iOS, Android e Web",
@@ -114,8 +114,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Experiência e projetos
       experiences_subtitle:
-        "Mais de 6 anos construindo apps em produção, de produtos internos a plataformas white-label.",
-      exp_bb_role: "Desenvolvedor Web & Mobile",
+        "Mais de 5 anos construindo apps em produção, de produtos internos a apps com milhões de downloads.",
+      exp_bb_role: "Junior Developer",
 
       // Experiências profissionais
       exp_bb_desc:
@@ -205,7 +205,7 @@ document.addEventListener("DOMContentLoaded", function () {
       hero_prefix: "I'm a ",
       hero_suffix: " developer",
       intro_text:
-        "6+ years building mobile apps with native and cross-platform technologies, from architecture to store release.",
+        "5+ years building mobile apps with native and cross-platform technologies, from architecture to store release.",
       cta_button: "Get in Touch",
       cta_secondary: "View experience",
       experiences_section: "Go to experience section",
@@ -213,7 +213,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Textos da seção sobre
       about_title: "Hello, I'm Pedro :)",
       about_description:
-        "I started coding professionally in 2020 and found in mobile what I enjoy most: turning ideas into apps people use every day. I've worked with native iOS, React Native and Flutter on internal products, large-scale projects and white-label platforms. Today I build security and monitoring apps at Segware, from Brasília, Brazil.",
+        "I started coding professionally in 2019 and found in mobile what I enjoy most: turning ideas into apps people use every day. I've worked with native iOS, React Native and Flutter, from internal products to apps used by millions of people. Today I build SCond at Segware, from João Pessoa, Brazil.",
       stat_years: "years of experience",
       stat_companies: "companies",
       stat_platforms: "platforms: iOS, Android and Web",
@@ -236,8 +236,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Experience and projects
       experiences_subtitle:
-        "6+ years building production apps, from internal products to white-label platforms.",
-      exp_bb_role: "Web & Mobile Developer",
+        "5+ years building production apps, from internal products to apps with millions of downloads.",
+      exp_bb_role: "Junior Developer",
 
       // Experiências profissionais
       exp_bb_desc:
