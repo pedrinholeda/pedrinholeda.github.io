@@ -16,6 +16,20 @@ Portfólio pessoal focado em desenvolvimento mobile (React Native, Flutter, iOS)
 2. **Personalização** — Atualize imagens, textos e links em `index.html` e `assets/js/header.js`
 3. **Cores** — Variáveis CSS em `assets/css/style.css` (`:root`)
 
+## Desenvolvimento
+
+O site não tem build. O Node só serve para as verificações:
+
+```bash
+npm install
+npx playwright install chromium
+npm run serve       # http://localhost:4173
+npm run lint:html   # valida o index.html (html-validate)
+npm test            # testes de ponta a ponta (Playwright, desktop e celular)
+```
+
+O CI (`.github/workflows/ci.yml`) roda essas verificações em todo PR e checa os links do site com o [lychee](https://lychee.cli.rs) (configuração em `lychee.toml`). Os links também são checados toda segunda, para pegar link de loja que quebrou sem ninguém mexer no site.
+
 ## Deploy
 
 **GitHub Pages:** Push para o repositório → Settings → Pages → branch `master`
