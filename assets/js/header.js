@@ -118,6 +118,9 @@ document.addEventListener("DOMContentLoaded", function () {
       apps_subtitle:
         "Alguns dos apps em produção em que trabalhei. Downloads da Google Play.",
       apps_downloads: "downloads",
+      apps_carousel: "Apps em que trabalhei",
+      apps_prev: "Apps anteriores",
+      apps_next: "Próximos apps",
       apps_rating: "de nota nas lojas",
       app_timfun_desc: "Programa de recompensas da TIM. Nota 4,8 na App Store.",
       app_vivofree_desc: "Troca de pontos por internet para clientes Vivo.",
@@ -262,6 +265,9 @@ document.addEventListener("DOMContentLoaded", function () {
       apps_subtitle:
         "Some of the production apps I worked on. Downloads from Google Play.",
       apps_downloads: "downloads",
+      apps_carousel: "Apps I worked on",
+      apps_prev: "Previous apps",
+      apps_next: "Next apps",
       apps_rating: "rating on the stores",
       app_timfun_desc: "TIM's rewards program. Rated 4.8 on the App Store.",
       app_vivofree_desc: "Points-for-data rewards for Vivo customers.",

@@ -477,12 +477,14 @@
             </p>
           </div>
 
-          <ul class="conteudo-apps">
-            <li class="app-card" data-aos="fade-up">
+          <div class="apps-carrossel" data-aos="fade-up" data-aos-duration="1000">
+          <ul class="conteudo-apps" tabindex="0" aria-label="Apps em que trabalhei" data-i18n-aria-label="apps_carousel">
+            <li class="app-card">
               <div class="app-topo">
-                <h3>TIM FUN</h3>
+                <img class="app-logo" src="assets/img/logos/akross_logo.jpeg" alt="" width="40" height="40" loading="lazy" />
                 <span class="app-empresa">Akross</span>
               </div>
+              <h3>TIM FUN</h3>
               <p class="app-numero">10M+ <span data-i18n="apps_downloads">downloads</span></p>
               <p class="app-desc" data-i18n="app_timfun_desc">Programa de recompensas da TIM. Nota 4,8 na App Store.</p>
               <div class="app-lojas">
@@ -491,11 +493,12 @@
               </div>
             </li>
 
-            <li class="app-card" data-aos="fade-up" data-aos-delay="100">
+            <li class="app-card">
               <div class="app-topo">
-                <h3>Vivo Free</h3>
+                <img class="app-logo" src="assets/img/logos/akross_logo.jpeg" alt="" width="40" height="40" loading="lazy" />
                 <span class="app-empresa">Akross</span>
               </div>
+              <h3>Vivo Free</h3>
               <p class="app-numero">10M+ <span data-i18n="apps_downloads">downloads</span></p>
               <p class="app-desc" data-i18n="app_vivofree_desc">Troca de pontos por internet para clientes Vivo.</p>
               <div class="app-lojas">
@@ -504,11 +507,12 @@
               </div>
             </li>
 
-            <li class="app-card" data-aos="fade-up" data-aos-delay="200">
+            <li class="app-card">
               <div class="app-topo">
-                <h3>Prezão Free</h3>
+                <img class="app-logo" src="assets/img/logos/akross_logo.jpeg" alt="" width="40" height="40" loading="lazy" />
                 <span class="app-empresa">Akross</span>
               </div>
+              <h3>Prezão Free</h3>
               <p class="app-numero">5M+ <span data-i18n="apps_downloads">downloads</span></p>
               <p class="app-desc" data-i18n="app_prezao_desc">Clube de benefícios da Claro para o pré-pago. Nota 4,8 na App Store.</p>
               <div class="app-lojas">
@@ -517,11 +521,12 @@
               </div>
             </li>
 
-            <li class="app-card" data-aos="fade-up" data-aos-delay="300">
+            <li class="app-card">
               <div class="app-topo">
-                <h3>Nio</h3>
+                <img class="app-logo" src="assets/img/logos/akross_logo.jpeg" alt="" width="40" height="40" loading="lazy" />
                 <span class="app-empresa">Akross</span>
               </div>
+              <h3>Nio</h3>
               <p class="app-numero">1M+ <span data-i18n="apps_downloads">downloads</span></p>
               <p class="app-desc" data-i18n="app_nio_desc">Gestão da internet fibra, antiga Oi Fibra.</p>
               <div class="app-lojas">
@@ -530,11 +535,12 @@
               </div>
             </li>
 
-            <li class="app-card" data-aos="fade-up" data-aos-delay="400">
+            <li class="app-card">
               <div class="app-topo">
-                <h3>SCond</h3>
+                <img class="app-logo" src="assets/img/logos/segware_logo.jpeg" alt="" width="40" height="40" loading="lazy" />
                 <span class="app-empresa">Segware</span>
               </div>
+              <h3>SCond</h3>
               <p class="app-numero">4,7+ <span data-i18n="apps_rating">de nota nas lojas</span></p>
               <p class="app-desc" data-i18n="app_scond_desc">Segurança e gestão para condomínios, residências e empresas.</p>
               <div class="app-lojas">
@@ -543,11 +549,12 @@
               </div>
             </li>
 
-            <li class="app-card" data-aos="fade-up" data-aos-delay="100">
+            <li class="app-card">
               <div class="app-topo">
-                <h3>Livelo</h3>
+                <img class="app-logo" src="assets/img/logos/compass_uol_logo.jpeg" alt="" width="40" height="40" loading="lazy" />
                 <span class="app-empresa">Compass UOL</span>
               </div>
+              <h3>Livelo</h3>
               <p class="app-numero">10M+ <span data-i18n="apps_downloads">downloads</span></p>
               <p class="app-desc" data-i18n="app_livelo_desc">Programa de pontos e recompensas. Nota 4,8 na App Store.</p>
               <div class="app-lojas">
@@ -556,11 +563,12 @@
               </div>
             </li>
 
-            <li class="app-card" data-aos="fade-up" data-aos-delay="200">
+            <li class="app-card">
               <div class="app-topo">
-                <h3>Natura</h3>
+                <img class="app-logo" src="assets/img/logos/compass_uol_logo.jpeg" alt="" width="40" height="40" loading="lazy" />
                 <span class="app-empresa">Compass UOL</span>
               </div>
+              <h3>Natura</h3>
               <p class="app-numero">10M+ <span data-i18n="apps_downloads">downloads</span></p>
               <p class="app-desc" data-i18n="app_natura_desc">Compra de perfumes e cosméticos. Nota 4,8 na App Store.</p>
               <div class="app-lojas">
@@ -569,6 +577,19 @@
               </div>
             </li>
           </ul>
+
+          <div class="apps-controles">
+            <div class="apps-pontos" aria-hidden="true"></div>
+            <div class="apps-setas">
+              <button type="button" class="apps-seta" data-direcao="-1" aria-label="Apps anteriores" data-i18n-aria-label="apps_prev">
+                <i class="bi bi-arrow-left" aria-hidden="true"></i>
+              </button>
+              <button type="button" class="apps-seta" data-direcao="1" aria-label="Próximos apps" data-i18n-aria-label="apps_next">
+                <i class="bi bi-arrow-right" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+          </div>
         </div>
       </section>
       <!--Fim Apps-->
@@ -943,6 +964,7 @@
     <script src="assets/js/header.js"></script>
     <script src="assets/js/actionButton.js"></script>
     <script src="assets/js/slideSobre.js"></script>
+    <script src="assets/js/appsCarrossel.js"></script>
     <script src="assets/vendor/typed.min.js"></script>
     <script src="assets/js/typed.js"></script>
 
