@@ -5,7 +5,7 @@ Portfólio pessoal focado em desenvolvimento mobile (React Native, Flutter, iOS)
 ## Funcionalidades
 
 - Design responsivo (mobile e desktop)
-- Seção de apps em produção, com números e links para App Store e Google Play
+- Carrossel dos apps em produção, com ícones, números e links para App Store e Google Play
 - Formulário de contato (Formspree)
 - Internacionalização (PT/EN)
 - SEO e acessibilidade
