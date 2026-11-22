@@ -717,6 +717,12 @@ button:active,
   position: relative;
 }
 
+/* O picture (WebP com JPG de reserva) não cria caixa: a largura em % da foto
+   continua relativa a .imagem-sobre. */
+.imagem-sobre picture {
+  display: contents;
+}
+
 .imagem-sobre img {
   width: 80%;
   max-width: 400px;
