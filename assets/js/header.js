@@ -202,7 +202,7 @@ document.addEventListener("DOMContentLoaded", function () {
       validation_error: "Erro ao enviar mensagem. Tente novamente ou entre em contato diretamente.",
 
       // Typed (efeito de digitação)
-      typed_strings: ["mobile", "React Native", "Flutter", "iOS"],
+      typed_strings: ["mobile", "React Native", "TypeScript", "iOS", "Flutter"],
     },
     en: {
       // Menu
@@ -341,7 +341,7 @@ document.addEventListener("DOMContentLoaded", function () {
       validation_error: "Error sending message. Try again or contact me directly.",
 
       // Typed (typing effect)
-      typed_strings: ["mobile", "React Native", "Flutter", "iOS"],
+      typed_strings: ["mobile", "React Native", "TypeScript", "iOS", "Flutter"],
     },
   };
 

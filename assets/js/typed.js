@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!typedEl) return;
 
   const getStrings = () =>
-    window.getI18n?.().typedStrings ?? ["mobile", "React Native", "Flutter", "iOS"];
+    window.getI18n?.().typedStrings ?? ["mobile", "React Native", "TypeScript", "iOS", "Flutter"];
 
   let typedInstance = new Typed(typedEl, {
     strings: getStrings(),
