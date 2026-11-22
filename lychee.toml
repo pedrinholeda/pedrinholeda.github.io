@@ -1,0 +1,11 @@
+# Verificação de links (lychee), usada pelo CI.
+max_retries = 3
+timeout = 30
+# 429: a loja limitou as requisições do CI; o link em si existe.
+accept = ["200..=299", "429"]
+exclude = [
+  # O LinkedIn responde 999 para qualquer acesso automatizado.
+  "linkedin\.com",
+  # Endpoint do formulário: só aceita POST.
+  "formspree\.io",
+]
